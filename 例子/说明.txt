@@ -1,0 +1,11 @@
+1. div.html:是点击一下出来小X 再点击再出现小X 点击X关闭
+
+2. left.html:是手风琴的样子
+
+3. table.html:是table投禁的时候点击加载更多
+
+4. box.html:是带有灯泡的提示
+
+5. click.html:是三个不同的按钮点击一个变 点击另一个前一个恢复
+
+6. drop.html: 是拖拽的样式 没有完全实现

@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="My97DatePicker/WdatePicker.js"></script>
+    <title></title>
+    <script>
+
+    </script>
+</head>
+<body>
+<!-- 弹层开始-->
+<div class="wrap">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <button class="Click1">点击</button>
+    <table style="width:100%" border="1" cellspacing="0" cellpadding="0" id="key">
+        <thead>
+        <th width="5%"><input type="checkbox" id="allcheckbox" /></th>
+        <th width="10%">日期</th>
+        <th width="19%"><input type="checkbox"  name="id" class="abc1"/>00:00-05:00</th>
+        <th  width="19%"><input type="checkbox" name="id" class="abc2"/>06:00-11:00</th>
+        <th  width="19%"><input type="checkbox" name="id" class="abc3"/>12:00-17:00</th>
+        <th  width="19%"><input type="checkbox" name="id" class="abc4"/>18:00-23:00</th>
+        <th width="5%">状态</th>
+        <th width="4%">操作</th>
+        </thead>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">星期一</td>
+            <td align="center" name="abc1">
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" name="abc2">
+                <button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">9</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center" name="abc3">
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center" name="abc4">
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+        </tr>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">星期二</td>
+            <td align="center" name="abc1">
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" name="abc2">
+                <button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">9</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center" name="abc3">
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center" name="abc4">
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+
+        </tr>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">星期三</td>
+            <td align="center" name="abc1">
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" name="abc2">
+                <button class="tableButton">5</button><button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center" name="abc3">
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center" name="abc4">
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+        </tr>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">星期四</td>
+            <td align="center" name="abc1">
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" name="abc2">
+                <button class="tableButton">5</button><button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center" name="abc3">
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center" name="abc4">
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+
+        </tr>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">星期五</td>
+            <td align="center" name="abc1">
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" name="abc2">
+                <button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">9</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center" name="abc3">
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center" name="abc4">
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+
+        </tr>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">星期六</td>
+            <td align="center" name="abc1">
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" name="abc2">
+                <button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">9</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center" name="abc3">
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center" name="abc4">
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+
+        </tr>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">星期日</td>
+
+            <td align="center" name="abc1">
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" name="abc2">
+                <button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">9</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center" name="abc3">
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center" name="abc4">
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <button class="Click">点击</button>
+    <table style="width:100%" border="1" cellspacing="0" cellpadding="0" class="key">
+        <thead>
+        <th width="5%"><input type="checkbox" id="alcheckbox" /></th>
+        <th width="10%">日期</th>
+        <th width="19%">00:00-05:00</th>
+        <th  width="19%">06:00-11:00</th>
+        <th  width="19%">12:00-17:00</th>
+        <th  width="19%">18:00-23:00</th>
+        <th width="5%">状态</th>
+        <th width="4%">操作</th>
+        </thead>
+        <tr>
+            <td align="center"><input type="checkbox"  name="id"/></td>
+            <td align="center">通用</td>
+            <td align="center" >
+                <button class="tableButton">0</button><button class="tableButton">1</button><button class="tableButton">2</button><button class="tableButton">3</button><button class="tableButton">4</button><button class="tableButton">5</button>
+            </td>
+            <td align="center" >
+                <button class="tableButton">6</button><button class="tableButton">7</button><button class="tableButton">8</button><button class="tableButton">9</button><button class="tableButton">10</button><button class="tableButton">11</button>
+            </td>
+            <td align="center"  >
+                <button class="tableButton">12</button><button class="tableButton">13</button><button class="tableButton">14</button><button class="tableButton">15</button><button class="tableButton">16</button><button class="tableButton">17</button>
+            </td>
+            <td align="center"  >
+                <button class="tableButton">18</button><button class="tableButton">19</button><button class="tableButton">20</button><button class="tableButton">21</button><button class="tableButton">22</button><button class="tableButton">23</button>
+            </td>
+            <td align="center"><button class="upButton">投</button></td>
+            <td align="center"><span class="box_out">X</span></td>
+        </tr>
+    </table>
+</div>
+<!-- 弹层结束-->
+</body>
+<script>
+    $(document).ready(function(){
+
+//      添加一行开始
+        $(".Click").click(function(){
+            $(".key").append( "<tr>" +
+                    "<td align='center'> <input type='checkbox'  name='id' onclick='rowAll(this)'/>  </td>" +
+                    "<td align='center'> <input type='text' class='Wdate' onFocus='WdatePicker({ })' />  </td>" +
+
+            "<td align='center'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 0+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 1+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 2+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 3+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 4+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 5+"</button>"
+                    + "</td>" +
+                    "<td align='center'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 6+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 7+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 8+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 9+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+10+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 11+"</button>"
+                    + "</td>" +
+            "<td align='center'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 12+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 13+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 14+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 15+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 16+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 17+"</button>"+ "</td>" +
+            "<td align='center'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 18+"</button>"+
+                   "<button class='tableButton' onclick='hourButClick(this)'>"+ 19+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 20+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 21+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 22+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 23+"</button>"+ "</td>" +
+                    "<td align='center'>" +"<button class='upButton' onclick='throwButClick(this)'>"+"投"+"</button>"+ "</td>" +
+                    "<td align='center'>" +"<span class='box_out' onclick='nodate(this)'>"+"X"+"</span>" + "</td>" +
+
+
+            "</tr>");
+
+
+        });
+        $(".Click1").click(function(){
+            $("#key").append( "<tr>" +
+                    "<td align='center'> <input type='checkbox'  name='id' onclick='rowAll(this)'/>  </td>" +
+                    "<td align='center'> <input type='text' class='Wdate' onFocus='WdatePicker({ })' />  </td>" +
+
+                    "<td align='center'  name='abc1'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 0+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 1+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 2+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 3+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 4+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 5+"</button>"
+                    + "</td>" +
+                    "<td align='center'  name='abc2'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 6+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 7+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 8+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 9+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+10+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 11+"</button>"
+                    + "</td>" +
+                    "<td align='center'  name='abc3'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 12+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 13+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 14+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 15+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 16+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 17+"</button>"+ "</td>" +
+                    "<td align='center'  name='abc4'>" +
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 18+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 19+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 20+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 21+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 22+"</button>"+
+                    "<button class='tableButton' onclick='hourButClick(this)'>"+ 23+"</button>"+ "</td>" +
+                    "<td align='center'>" +"<button class='upButton' onclick='throwButClick(this)'>"+"投"+"</button>"+ "</td>" +
+                    "<td align='center'>" +"<span class='box_out' onclick='nodate(this)'>"+"X"+"</span>" + "</td>" +
+
+
+                    "</tr>");
+
+
+        });
+
+//      添加一行结束
+        // 单个的选中和取消选中开始
+        $(".tableButton").click(function(){
+            $(this).toggleClass("blue");
+        });
+        $(".upButton").click(function(){
+            if($(this).text()=="投"){
+                $(this).text("禁").removeClass("blue").addClass("red");
+                $(this).parent().parent().find(".tableButton").attr({"disabled":"disabled"});
+            }else{
+                $(this).text("投").removeClass("red").addClass("blue");
+                $(this).parent().parent().find(".tableButton").removeAttr("disabled");
+            }
+        });
+//  单个的选中和取消结束
+//        竖的选中开始
+        //全选
+
+
+        $("#allcheckbox").click(function(){
+            if( this.checked){
+                $(".tableButton").addClass("blue");
+            }else{
+                $(".tableButton").removeClass("blue");
+            }
+        });
+        $("#alcheckbox").click(function(){
+            if( this.checked){
+                $(".tableButton").addClass("blue");
+            }else{
+                $(".tableButton").removeClass("blue");
+            }
+        });
+        $("#allcheckbox").click(function(){
+            $("input[name=id]").prop("checked",$("#allcheckbox").prop("checked"));
+        });
+        $("#alcheckbox").click(function(){
+            $("input[name=id]").prop("checked",$("#alcheckbox").prop("checked"));
+        });
+        $(".abc1").click(function(){
+            if( $(this).prop("checked"))   {
+                $("td[name=abc1]").find("button").addClass("blue");
+            }else{
+                $("td[name=abc1]").find("button").removeClass("blue");
+            }
+        });
+        $(".abc2").click(function(){
+            if( $(this).prop("checked"))   {
+                $("td[name=abc2]").find("button").addClass("blue");
+            }else{
+                $("td[name=abc2]").find("button").removeClass("blue");
+            }
+        });
+        $(".abc3").click(function(){
+            if( $(this).prop("checked"))   {
+                $("td[name=abc3]").find("button").addClass("blue");
+            }else{
+                $("td[name=abc3]").find("button").removeClass("blue");
+            }
+        });
+        $(".abc4").click(function(){
+            if( $(this).prop("checked"))   {
+                $("td[name=abc4]").find("button").addClass("blue");
+            }else{
+                $("td[name=abc4]").find("button").removeClass("blue");
+            }
+        });
+//        竖的选中结束
+//        横的选中开始
+        $("input[name=id]").click(function () {
+            if( $(this).prop("checked"))   {
+                $(this).parent().parent().find(".tableButton").addClass("blue");
+            }else{
+                $(this).parent().parent().find(".tableButton").removeClass("blue");
+            }
+        });
+//        横的选中结束
+//      删除一条数据开始
+        $(".box_out").click(function(){
+            $(this).parent().parent().hide();
+        });
+//      删除一条数据结束
+    });
+
+    function hourButClick(oa){
+        $(oa).toggleClass("blue");
+    }
+    function nodate(date){
+        $(date).parent().parent().hide();
+    }
+    function throwButClick(tou){
+        if($(tou).text()=="投"){
+            $(tou).text("禁").removeClass("blue").addClass("red");
+            $(tou).parent().parent().find(".tableButton").attr({"disabled":"disabled"});
+        }else{
+            $(tou).text("投").removeClass("red").addClass("blue");
+            $(tou).parent().parent().find(".tableButton").removeAttr("disabled");
+        }
+    }
+    function rowAll(rA){
+        if( $(rA).prop("checked"))   {
+            $(rA).parent().parent().find(".tableButton").addClass("blue");
+        }else{
+            $(rA).parent().parent().find(".tableButton").removeClass("blue");
+        }
+    }
+</script>
+</html>

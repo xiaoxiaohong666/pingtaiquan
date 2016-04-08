@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>演示：漂亮实用的提示框插件SweetAlert</title>
+<meta name="keywords" content="Javascript" />
+<meta name="description" content="Helloweba文章结合实例演示HTML5、CSS3、jquery、PHP等WEB技术应用。" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.7.2/jquery.min.js"></script>
+<style>
+.demo{width:300px; margin:60px auto 10px auto}
+@media only screen and (min-width: 420px) {
+	.demo{width:500px; margin:60px auto 10px auto}
+}
+button, .button {
+  background-color: #AEDEF4;color: white;border: none;box-shadow: none;
+  font-size: 17px;font-weight: 500;font-weight: 600;
+  border-radius: 3px;padding: 15px 35px;margin: 26px 5px 0 5px;cursor: pointer; }
+button:hover, .button:hover {background-color: #a1d9f2; }
+</style>
+<script src="sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="sweetalert.css">
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+<div id="main">
+	<h2 class="top_title"><a href="http://www.helloweba.com/view-blog-308.html">漂亮实用的提示框插件SweetAlert</a></h2>
+	
+	<div >
+		<div class="demo_1">
+			info三个参数：<button onclick="demo1()">点击这里</button>
+		</div>
+		<div class="demo_2">
+			alert俩个参数：<button onclick="demo2()">点击这里</button>
+		</div>
+		<div class="demo_3">
+			提示确认：<button onclick="demo3()">点击这里</button>
+		</div>
+		<div class="demo_4">
+			提示确认：<button onclick="demo3()">点击这里</button>
+		</div>
+		<div class="demo_5">
+			定义内容：<button onclick="demo3()">点击这里</button>
+		</div>
+		<div class="demo_6">
+			确认输入：<button onclick="demo3()">点击这里</button>
+		</div>
+	</div>
+</div>
+<script>
+
+
+$(function(){
+	$.messagers = {
+		info:function(title,text,type){
+			if(type==null||type==''){
+				type="warning";
+			}
+			swal(title,text,type);
+		},
+		alert:function(title,text){
+			swal(title,text,"warning");
+		},
+		waring:function(title){
+				swal({
+					title: title,
+					type: "warning",
+					showCancelButton: true,
+					closeOnConfirm: false,
+					confirmButtonText: "确认",
+					confirmButtonColor: "#ec6c62"
+				}, function() {
+					$.ajax({
+						url: "do.php",
+						type: "DELETE"
+					}).done(function(data) {
+						swal("操作成功!", "已成功删除数据！", "success");
+					}).error(function(data) {
+						swal("OMG", "删除操作失败了!", "error");
+					});
+				});
+		}
+	};
+});
+	function demo1(){
+		$.messagers.info("成功","弹出了一个任何框","success");
+//		$.messagers.info("警告","弹出了一个任何框","warning");
+//		$.messagers.info("错误","弹出了一个任何框","error");
+//		$.messagers.info("信息","弹出了一个任何框","info");
+	}
+function demo2(){
+	$.messagers.alert("你确认要删除吗？？？？","确认吗？？？");
+}
+	function demo3(){
+		$.messagers.waring("你确认要删除吗？？？？");
+	}
+</script>
+</body>
+</html>

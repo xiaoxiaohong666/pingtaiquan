@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/jquery-1.11.3.js"></script>
+    <!--//<script>-->
+//        var data = " [ {name:'6101',value:'北京市',age:'11'}, {name:'6102',value:'天津市',age:'11'}, {name:'6103',value:'上海市',age:'22'}]";    //创建Json字符串
+//        var dataObj = eval("(" + data + ")");       //转换为json对象
+//        var $tab1 = $("#mytab");
+//        for (var i = 0; i < dataObj.length; i++) {
+//            $tab1.append("<tr>");
+//            $.each(dataObj[i], function (j, val) {
+//                $("#mytab").append("<td>"+val+"</td>");
+//            });
+//            $tab1.append("</tr>");
+//        }
+
+   <!--</script>-->
+    <script>
+        var data = [{name:'6101',value:'<a href="https://www.baidu.com/s?wd=%E5%8C%97%E4%BA%AC%E5%B8%82&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1YLuWmznjRsnHT4PWw9PHDd0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPHfzPW6dPWDs" target="_blank" class="baidu-highlight">北京市</a>',age:'11'}, {name:'6102',value:'<a href="https://www.baidu.com/s?wd=%E5%A4%A9%E6%B4%A5%E5%B8%82&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1YLuWmznjRsnHT4PWw9PHDd0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPHfzPW6dPWDs" target="_blank" class="baidu-highlight">天津市</a>',age:'11'}, {name:'6103',value:'<a href="https://www.baidu.com/s?wd=%E4%B8%8A%E6%B5%B7%E5%B8%82&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1YLuWmznjRsnHT4PWw9PHDd0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPHfzPW6dPWDs" target="_blank" class="baidu-highlight">上海市</a>',age:'22'}];
+        function getRow(row) {
+            var tr = $('<tr></tr>');
+            for(var i in row) {
+                tr.append('<td>' + row[i] + '</td>');
+            }
+            return tr;
+        }
+        var tbody = $('<tbody></tbody>');
+        for(var i = 0; i < data.lenght; i ++ )
+            tbody.append(getRow(data[i]));
+        $('#myTable tbody').replaceWith(tbody);
+    </script>
+</head>
+<body>
+<table id="mytab" border="1">
+    <tr>
+        <th>代号</th>
+        <th>城市</th>
+        <th>附加数字</th>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../header/ics/css/header.css"/>
+    <link rel="stylesheet" href="../../footer/ics/footer.css"/>
+    <link rel="stylesheet" href="../../css/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <script src="../../js/jquery-1.11.3.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <title>功能主页面</title>
+</head>
+<body style="overflow-x:hidden;">
+  <div class="DomUpBody">
+      <!--页面头部 css的样式放在header.css-->
+      <!DOCTYPE html>
+      <html>
+      <head lang="en">
+          <meta charset="UTF-8">
+          <title></title>
+      </head>
+      <body>
+      <!--header开始-->
+      <div class="header">
+          <div  class="headerTopRight">
+              <div class="wrap">
+                  <ul>
+                      <li>
+                          <a href="news.html" class="News">消息 <span class="NewsBar">(1)</span></a>
+                      </li>
+                      <li>
+                          <h1 class="User"><i></i>用户名<b></b></h1>
+                          <div class="change" >
+                              <a class="changePwd" href=""> <i></i>修改密码</a>
+                              <a class="changeExit" href=""> <i></i>退出</a>
+                          </div>
+                      </li>
+                      <li><a class="SDK" href="">SDK下载</a></li>
+                  </ul>
+
+              </div>
+          </div>
+          <div class="wrap">
+              <a href=""><img src="../../img/logo.jpg" class="logo" alt=""/></a>
+          </div>
+          <div class="headerNav" id="divid">
+              <ul class="nav">
+                  <li>
+                      <a href="#"><b></b>报表中心</a>
+                      <ul>
+                          <li><a href="">我的网站</a></li>
+                          <li><a href="">你的网站</a></li>
+                          <li><a href="">他的网站</a></li>
+                          <li><a href="">是的网站</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>媒体管理</a>
+                      <ul>
+                          <li><a href="#">我我我</a></li>
+                          <li><a href="#">你你你</a></li>
+                          <li><a href="#">他他他</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>客户管理</a>
+                      <ul>
+                          <li><a href="#">他他他他</a></li>
+                          <li><a href="#">他他他他</a></li>
+                          <li><a href="#">他他他他</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>运维监控</a>
+                      <ul>
+                          <li><a href="#">你你你你你</a></li>
+                          <li><a href="#">你你你你你</a></li>
+                          <li><a href="#">你你你你你</a></li>
+                          <li><a href="#">你你你你你</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>结算中心</a>
+                      <ul>
+                          <li><a href="#">他他他他他</a></li>
+                          <li><a href="#">他他他他他</a></li>
+                          <li><a href="#">他他他他他</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>系统管理</a>
+                      <ul>
+                          <li><a href="#">html</a></li>
+                          <li><a href="#">js</a></li>
+                          <li><a href="#">Jquery</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>你想</a>
+                      <ul>
+                          <li><a href="#">你想要的</a></li>
+                          <li><a href="#">你没有的</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>其他</a>
+                      <ul>
+                          <li><a href="#">你想要的</a></li>
+                          <li><a href="#">你没有的</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>其他</a>
+                      <ul>
+                          <li><a href="#">你想要的</a></li>
+                          <li><a href="#">你没有的</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>其他</a>
+                      <ul>
+                          <li><a href="#">你想要的</a></li>
+                          <li><a href="#">你没有的</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="#"><b></b>我想</a>
+                      <ul>
+                          <li><a href="#">你想要的</a></li>
+                          <li><a href="#">你没有的</a></li>
+                      </ul>
+                  </li>
+
+              </ul>
+              <button  class="right" type="button" onclick="rfun()"></button>
+              <button  class="left" type="button" onclick="lfun()"></button>
+          </div>
+
+      </div>
+      <div class="headerNavBar"></div>
+      <div class="ask">
+          <ul>
+              <li>
+                  <a href=""  class="askword asked">销售咨询</a>
+              </li>
+              <li>
+                  <a href="" class="askword asked">商务咨询</a>
+              </li>
+              <li>
+                  <a href="" class="askword asked">运营咨询</a>
+              </li>
+              <li>
+                  <a href="" class="askword customAsked">客服咨询</a>
+              </li>
+              <li>
+                  <a href="" class="askword back">返回顶部</a>
+              </li>
+              <li>
+                  <button type="button" class="closeAsk">关闭</button>
+              </li>
+          </ul>
+      </div>
+      <div class="left_middle" >
+          <h1 class="Title">移动导航</h1>
+          <ul>
+              <li><a href="">统计报表</a></li>
+              <li><a href="">统计报表</a></li>
+              <li><a href="">我要去三</a></li>
+              <li><a href="">我要去四</a></li>
+          </ul>
+          <button type="button" class="closeTitle">关闭</button>
+      </div>
+      </body>
+      <script>
+          $(document).ready(function() {
+              $(".nav li").hover(function() {
+                  $('ul', this).fadeIn("fast");
+                  $("a b",this).slideDown("fast");
+                  $(this).children().addClass("hover");
+              }, function() {
+                  $('ul', this).fadeOut("fast");
+                  $(this).children().removeClass("hover");
+                  $("a b",this).slideUp("fast");
+              });
+          });
+          $(document).ready(function(){
+              $(".nav li a b").css("display","none");
+          })
+          var  i=5;
+          var a = $("#divid > ul > li").length;
+          $("#divid > ul > li").each(function(index,demo){
+              if(index>i){
+                  $(this).hide();
+              }else{
+                  $(this).show();
+              }
+          });
+          function rfun(){
+              var a = $("#divid > ul > li").length;
+              var i=a-6;
+              $("#divid > ul > li").each(function(index,demo){
+                  if(index>=i){
+                      $(this).show();
+                  }
+                  else{
+                      $(this).hide();
+                  }
+              });
+          }
+          function lfun(){
+              var a = $("#divid > ul > li").length;
+              $("#divid > ul > li").each(function(index,demo){
+                  if(index>=0&&index<=5){
+                      $(this).show();
+                  }
+                  else{
+                      $(this).hide();
+                  }
+              });
+          }
+          $(document).ready(function(){
+              $(".hide").click(function(){
+                  $(".right_middle p,.right_middle ul").show();
+              });
+              $(".show").click(function(){
+                  $(".right_middle p,.right_middle ul").hide();
+              })
+          });
+          $(document).ready(function(){
+              $(".User").click(function(){
+                  if($(".change").css("display")=="none"){
+                      $(".change").slideDown();
+                  }else{
+                      $(".change").slideUp();
+                  }
+              });
+              $(".News").click(function(){
+                  if($(".NewsDeta").css("display")=="none"){
+                      $(".NewsDeta").slideDown();
+                  }else{
+                      $(".NewsDeta").slideUp();
+                  }
+              });
+          });
+          $(document).ready(function(){
+              $(".closeAsk").click(function(){
+                  $(".ask").hide();
+              });
+              $(".closeTitle").click(function(){
+                  $(".left_middle").hide();
+              })
+          })
+      </script>
+      </html>
+
+      <div class="DomBody"> <!--内容区样式全部放在pagebody.css-->
+          <div class="DomBread wrap">
+              <!--bread_nav面包屑开始-->
+              <div class="DomBread_nav">
+                  <i></i> <a href="" class="first">媒体管理</a>
+                  <a>> </a>
+                  <a href="">订单管理</a>
+                  <a>></a>
+                  <a href="">投放政策</a>
+                  <a>></a>
+                  <a href="">编辑策略</a>
+                  <a>> </a>
+                  <a href="">添加策略</a>
+                  <a>> </a>
+                  <a href="">添加策略</a>
+              </div>
+              <!--bread_nav面包屑结束-->
+          </div> <!--面包屑（功能引栏）-->
+          <!--按钮区-->
+          <div class="DomSelect"> <!--查询条件区-->
+              <div class="DomSelectLine">
+                  <p class="wrap">
+                      <button type="button" class="first">查询</button>
+                      <button type="button" class="last"></button>
+                  </p>
+              </div>
+              <table class="DomSelectTable wrap">
+                  <tr>
+                      <td>名 称：</td>
+                      <td>
+                          <input type="text" class="pageText"/>
+                      </td>
+                      <td>类 型：</td>
+                      <td>
+                           <select name="" class="pageSelect">
+                              <option value="">请选择</option>
+                              <option value="">项目1</option>
+                              <option value="">项目2</option>
+                              <option value="">项目3</option>
+                          </select>
+                      </td>
+                      <td>折扣系数：</td>
+                      <td>
+                          <select name="" class="pageSelect">
+                              <option value="">请选择</option>
+                              <option value="">项目1</option>
+                              <option value="">项目2</option>
+                              <option value="">项目3</option>
+                          </select>
+                      </td>
+                      <td> 折扣系数：</td>
+                      <td>
+                         <select name="" class="pageSelect">
+                          <option value="">请选择</option>
+                          <option value="">项目1</option>
+                          <option value="">项目2</option>
+                          <option value="">项目3</option>
+                      </select>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td> 日 期：</td>
+                      <td>
+                         <select name="" class="pageSelect">
+                              <option value="">请选择</option>
+                              <option value="">项目1</option>
+                              <option value="">项目2</option>
+                              <option value="">项目3</option>
+                          </select>
+                      </td>
+                      <td> 日 期：</td>
+                      <td>
+                         <select name="" class="pageSelect">
+                          <option value="">请选择</option>
+                          <option value="">项目1</option>
+                          <option value="">项目2</option>
+                          <option value="">项目3</option>
+                      </select>
+                      </td>
+                      <td>审 核 人:</td>
+                      <td>
+                       <input type="text" class="pageText"/>
+                      </td>
+                      <td>
+                          <button type="button" class="pageButton button"><img src="../../img/search.gif" alt=""/></button>
+                      </td>
+                      <td></td>
+                  </tr>
+              </table>
+          </div><!--查询条件区-->
+          <!--按钮区-->
+          <!--页面的四个块-->
+          <div class="DomView">
+               <div class="wrap">
+                   <div class="exposeSun flyL">
+                       <img src="../../img/exposeSun.jpg" alt=""/>
+                       <span class="word">1,000万</span>
+                   </div>
+                   <div class="clickSun flyL">
+                       <img src="../../img/clickSun.jpg" alt=""/>
+                       <span class="word">2,000万</span>
+                   </div>
+                   <div class="total flyR">
+                       <img src="../../img/total.jpg" alt=""/>
+                       <span class="word">2,000万</span>
+                   </div>
+                   <div class="clickRate flyR">
+                       <img src="../../img/clickRate.jpg" alt=""/>
+                       <span class="word">100%</span>
+                   </div>
+               </div>
+          </div>
+          <div class="clear"></div>
+          <div class="DomMatter wrap"><!--内容区-->
+              <div class="DomPageMatter">
+                   <div class="TableHeader">
+                       <h2 class="first">广告组统计报表</h2>
+                       <a href="" class="last">下载列表</a>
+                   </div>
+                  <div class="clear"></div>
+                  <table  class="TablePage" border="1" bordercolor="#ddd" cellspacing="0" cellpadding="0" >
+                      <thead>
+                      <tr>
+                          <th>序号</th>
+                          <th>日期</th>
+                          <th>广告组</th>
+                          <th>订单</th>
+                          <th>策略</th>
+                          <th>曝光数</th>
+                          <th>点击数</th>
+                          <th>点击率</th>
+                          <th>消费(元)</th>
+                      </tr>
+                      </thead>
+                      <tr>
+                          <td>1</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                      </tr>
+                      <tr>
+                          <td>6</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                      </tr>
+                      <tr>
+                          <td>7</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                      </tr>
+                      <tr>
+                          <td>8</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                      </tr>
+                      <tr>
+                          <td>9</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                      </tr>
+                      <tr>
+                          <td>10</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+
+                      </tr>
+                      <tr>
+                          <td>11</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                      </tr>
+                  </table>
+                  <!-- 编辑的table -->
+                  <div id="a" class="DomEditMatter">
+                      <table class="TableEdit" border="1" cellspacing="0" cellpadding="0" width="100%">
+                          <thead><tr><th colspan="8" align="left">基本信息</th></tr></thead>
+                          <tr>
+                              <td width="15%" align="right">所属媒体：</td>
+                              <td width="25%">
+                                  <select name="" class="pageSelect">
+                                      <option value=""></option>
+                                      <option value=""></option>
+                                  </select>
+                              </td>
+                              <td width="10%" align="right">所属应用：</td>
+                              <td width="40%">
+                                  <select name="" class="pageSelect">
+                                      <option value=""></option>
+                                      <option value=""></option>
+                                  </select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td align="right">广告位名称：</td>
+                              <td><input type="text" class="pageText"/></td>
+                              <td align="right">折扣率：</td>
+                              <td><input type="text" class="pageText"/></td>
+                          </tr>
+                          <tr>
+                              <td align="right">广告样式：</td>
+                              <td>
+                                  <input type="radio" name="adv" class="pageRadio"/>banner广告
+                                  <input type="radio" name="adv" value="" class="pageRadio"/>插屏广告
+                                  <input type="radio" name="adv" value="" class="pageRadio"/>开屏广告
+                                  <input type="radio" name="adv" value="" class="pageRadio"/>视频
+                              </td>
+                              <td align="right">广告对接：</td>
+                              <td>
+                                  <input type="radio" name="adv" class="pageRadio"/>无需对接
+                                  <input type="radio" name="adv" value="" class="pageRadio"/>需要对接
+                              </td>
+                          </tr>
+                          <tr>
+                              <td align="right">采购方式：</td>
+                              <td>
+                                  <input type="radio" name="adv" class="radio"/>CPC
+                                  <input type="radio" name="adv" value="" class="pageRadio"/>CPM
+                                  <input type="radio" name="adv" value="" class="pageRadio"/>CPD
+                              </td>
+                              <td align="right">CPC售卖单价：</td>
+                              <td><input type="text" class="pageText"/></td>
+                          </tr>
+                          <tr>
+                              <td align="right">CPC起售量：</td>
+                              <td><input type="text" class="pageText"/></td>
+                              <td align="right">CPM售卖单价：</td>
+                              <td><input type="text" class="pageText"/></td>
+                          </tr>
+                          <tr>
+                              <td align="right">CPM起售量：</td>
+                              <td><input type="text" class="pageText"/></td>
+                              <td align="right">采购单价：</td>
+                              <td><input type="text" class="pageText"/></td>
+                          </tr>
+                          <tr>
+                              <td align="right">CPM最大量：</td>
+                              <td><input type="text" class="pageText"/></td>
+                              <td align="right">CPM最小量：</td>
+                              <td><input type="text" class="pageText"/></td>
+                          </tr>
+                          <tr>
+                              <td align="right">CPC最大量：</td>
+                              <td><input type="text" class="pageText"/></td>
+                              <td align="right">CPC最大量：</td>
+                              <td><input type="text" class="pageText"/></td>
+                          </tr>
+                          <thead><th colspan="8" align="left" style="border-bottom:1px dashed #d1d2d4 background:none;">附加消息</th></thead>
+                          <tr>
+                              <td align="right">图片尺寸：</td>
+                              <td><input type="text"  style="width:100px;height:30px; border-radius:5px;"/>*<input type="text"  style="width:100px;height:30px;border-radius:5px;"/></td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td align="right">文件大小限制：</td>
+                              <td><input type="text" class="pageText"/> k</td>
+                              <td align="right">文字长度限制：</td>
+                              <td><input type="text" class="pageText"/> 字</td>
+                          </tr>
+                          <tr>
+                              <td align="right">视频时长限制：</td>
+                              <td><input type="text" class="pageText"/> 秒</td>
+                              <td align="right">文件的后缀名：</td>
+                              <td><input type="text" class="pageText"/></td>
+                          </tr>
+                          <tr>
+                              <td align="right">广告位描述：</td>
+                              <td>
+                                    <textarea class="pageTextarea">
+
+                                    </textarea>
+                              </td>
+                              <td><button type="button" class="button sub"><img src="../../img/sub.jpg" alt=""/></button></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <!-- 查看的table -->
+                  <div id="b" class="DomViewMatter">
+                      <table class="TableView" border="1" cellspacing="0" cellpadding="0">
+                          <thead><th colspan="2" align="left">广告位查看</th></thead>
+                          <tr>
+                              <td>所 属 媒 体：</td>
+                              <td>虚拟媒体</td>
+                          </tr>
+                          <tr>
+                              <td>广告位名称：</td>
+                              <td>虚拟拼图</td>
+                          </tr>
+                          <tr>
+                              <td>图 片 尺 寸：</td>
+                              <td>640*100</td>
+                          </tr>
+                          <tr>
+                              <td>文 件 大 小：</td>
+                              <td>580k</td>
+                          </tr>
+                          <tr>
+                              <td>文 字 长 度：</td>
+                              <td>58字</td>
+                          </tr>
+                          <tr>
+                              <td>视频限制时长：</td>
+                              <td>600秒</td>
+                          </tr>
+                          <tr>
+                              <td>文件后缀名：</td>
+                              <td>600秒</td>
+                          </tr>
+                          <tr>
+                              <td>日 最 小 量：</td>
+                              <td>未设置日最小量</td>
+                          </tr>
+                          <tr>
+                              <td>广告位描述：</td>
+                              <td>未添加描述</td>
+                          </tr>
+                          <tr>
+                              <td>所 属 应 用：</td>
+                              <td>经典拼图</td>
+                          </tr>
+                          <tr>
+                              <td>广 告 样 式：</td>
+                              <td>开屏广告</td>
+                          </tr>
+                          <tr>
+                              <td>审 核 人：</td>
+                              <td>未设置审核人</td>
+                          </tr>
+                          <tr>
+                              <td>日 最 大 量：</td>
+                              <td>未设置日最大量</td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div class="clear"></div>
+              </div>
+              <div id=""></div>
+          </div>
+      </div>
+  </div>
+    <!--页面尾部 footer.css-->
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <div class="footer">
+        <div class="link">
+            <a href="#">关于我们</a>
+            <a href="">|</a>
+            <a href="#">联系我们</a>
+            <a href="">|</a>
+            <a href="#">服务条款</a>
+            <a href="">|</a>
+            <a href="#">隐私政策</a>
+            <a href="">|</a>
+            <a href="#">常见问题</a>
+            <a href="">京ICP备05032905号</a>
+        </div>
+    </div>
+    </body>
+    </html>
+    <!-- 页面尾部结束-->
+</body>
+
+<script>
+    $(document).ready(function(){
+        $(".last").click(function(){
+            if($(".DomSelectTable").css("display")=="none"){
+                $(".DomSelectTable").show();
+            }else{
+                $(".DomSelectTable").hide();
+            }
+        });
+    })
+</script>
+</html>

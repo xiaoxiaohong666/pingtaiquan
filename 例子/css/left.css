@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-size:12px;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    color:#005AA0;
+}
+.clear{
+    clear:both;
+}
+
+/************************left的那个琴开始*********************************/
+.accordion dl{
+    width:99%;
+    display:block;
+    padding:10px;
+    color:#565664;
+}
+.accordion dt{
+    width:20px;
+    background:#f3f3f3;
+    font-size:25px;
+    border:1px solid #d3d3d3;
+    height:198px;
+    text-align: right;
+    padding:10px 10px 0 0;
+    font-weight:bold;
+    cursor: pointer;
+    display:inline-block;
+    float: left;
+    margin:0 3px 0 5px;
+    position:relative;
+}
+.accordion dd{
+    width:382px;
+    border:1px solid #565664;
+    height:208px;
+    line-height:44px;
+    font-size:1.1em;
+    font-weight:bold;
+    display:inline-block;
+    float:left;
+}
+.number{
+    position:absolute;
+    bottom:5px;
+    right:9px;
+}
+/************************left的那个琴结束*********************************/

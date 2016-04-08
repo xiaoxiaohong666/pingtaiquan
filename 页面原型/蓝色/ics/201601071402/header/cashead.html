@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="ics/css/header.css"/>
+    <script  src="ics/js/jquery-1.11.3.js"></script>
+
+</head>
+<body>
+<!--header开始-->
+<div class="header">
+    <div  class="headerTopRight">
+        <div class="wrap">
+            <ul>
+                <li>
+                    <h1 class="News">消息 <span class="NewsBar">1</span></h1>
+                    <div class="NewsDeta">
+
+                    </div>
+                </li>
+                <li>
+                    <h1 class="User"><i></i>用户名<b></b></h1>
+                    <div class="change" >
+                        <a class="changePwd" href=""> <i></i>修改密码</a>
+                        <a class="changeExit" href=""> <i></i>退出</a>
+                    </div>
+                </li>
+                <li><a class="SDK" href="">SDK下载</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        <a href=""><img src="ics/img/logo.jpg" class="logo" alt=""/></a>
+    </div>
+
+    <div class="headerNav" id="divid">
+        <ul class="nav">
+            <li>
+                <a href="#"><b></b>报表中心</a>
+                <ul>
+                    <li><a href="">我的网站</a></li>
+                    <li><a href="">你的网站</a></li>
+                    <li><a href="">他的网站</a></li>
+                    <li><a href="">是的网站</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>媒体管理</a>
+                <ul>
+                    <li><a href="#">我我我</a></li>
+                    <li><a href="#">你你你</a></li>
+                    <li><a href="#">他他他</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>客户管理</a>
+                <ul>
+                    <li><a href="#">他他他他</a></li>
+                    <li><a href="#">他他他他</a></li>
+                    <li><a href="#">他他他他</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>运维监控</a>
+                <ul>
+                    <li><a href="#">你你你你你</a></li>
+                    <li><a href="#">你你你你你</a></li>
+                    <li><a href="#">你你你你你</a></li>
+                    <li><a href="#">你你你你你</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>结算中心</a>
+                <ul>
+                    <li><a href="#">他他他他他</a></li>
+                    <li><a href="#">他他他他他</a></li>
+                    <li><a href="#">他他他他他</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>系统管理</a>
+                <ul>
+                    <li><a href="#">html</a></li>
+                    <li><a href="#">js</a></li>
+                    <li><a href="#">Jquery</a></li>
+                    <li><a href="#">html</a></li>
+                    <li><a href="#">js</a></li>
+                    <li><a href="#">Jquery</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>你想</a>
+                <ul>
+                    <li><a href="#">你想要的</a></li>
+                    <li><a href="#">你没有的</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>其他</a>
+                <ul>
+                    <li><a href="#">你想要的</a></li>
+                    <li><a href="#">你没有的</a></li>
+                </ul>
+            </li>
+        </ul>
+        <button  class="right" type="button" onclick="rfun()"></button>
+        <button  class="left" type="button" onclick="lfun()"></button>
+    </div>
+</div>
+<div class="headerNavBar"></div>
+<div class="ask">
+    <ul>
+        <li>
+            <a href=""  class="askword asked">销售咨询</a>
+        </li>
+        <li>
+            <a href="" class="askword asked">商务咨询</a>
+        </li>
+        <li>
+            <a href="" class="askword asked">运营咨询</a>
+        </li>
+        <li>
+            <a href="" class="askword customAsked">客服咨询</a>
+        </li>
+        <li>
+            <a href="" class="askword back">返回顶部</a>
+        </li>
+        <li>
+            <button type="button" class="closeAsk">关闭</button>
+        </li>
+    </ul>
+</div>
+<div class="left_middle" >
+    <h1 class="Title">移动导航</h1>
+    <ul>
+        <li><a href="">统计报表</a></li>
+        <li><a href="">统计报表</a></li>
+        <li><a href="">我要去三</a></li>
+        <li><a href="">我要去四</a></li>
+    </ul>
+    <button type="button" class="closeTitle">关闭</button>
+</div>
+</body>
+<script>
+    $(document).ready(function() {
+        $(".nav li").hover(function() {
+            $('ul', this).fadeIn("fast");
+            $(this).children().addClass("hover");
+            $("a b",this).slideDown("fast");
+        }, function() {
+            $('ul', this).fadeOut("fast");
+            $(this).children().removeClass("hover");
+            $("a b",this).slideUp("fast");
+        });
+    });
+    $(document).ready(function(){
+        $(".nav li a b").css("display","none");
+        $(".openUp").css("display","none");
+        $(".User").click(function(){
+            $(".openUp").show();
+        })
+    });
+
+    var  i=5;
+    var a = $("#divid > ul > li").length;
+    $("#divid > ul > li").each(function(index,demo){
+        if(index>i){
+            $(this).hide();
+        }else{
+            $(this).show();
+        }
+    });
+    function rfun(){
+        var a = $("#divid > ul > li").length;
+        var i=a-6;
+        $("#divid > ul > li").each(function(index,demo){
+            if(index>=i){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        });
+    }
+    function lfun(){
+        var a = $("#divid > ul > li").length;
+        $("#divid > ul > li").each(function(index,demo){
+            if(index>=0&&index<=5){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        });
+    }
+    $(document).ready(function(){
+        $(".hide").click(function(){
+            $(".right_middle p,.right_middle ul").show();
+        });
+        $(".show").click(function(){
+            $(".right_middle p,.right_middle ul").hide();
+        })
+    });
+    $(document).ready(function(){
+        $(".User").click(function(){
+            if($(".change").css("display")=="none"){
+                $(".change").slideDown();
+            }else{
+                $(".change").slideUp();
+            }
+        });
+        $(".News").click(function(){
+            if($(".NewsDeta").css("display")=="none"){
+                $(".NewsDeta").slideDown();
+            }else{
+                $(".NewsDeta").slideUp();
+            }
+        });
+    });
+    $(document).ready(function(){
+        $(".closeAsk").click(function(){
+            $(".ask").hide();
+        });
+    })
+</script>
+<script>
+    if ( document.documentMode < 11)
+    {
+        window.location="../html/model/error.html";
+    }
+</script>
+</html>

@@ -1,0 +1,191 @@
+
+*{
+    padding:0;
+    margin:0;
+    border:none;
+    list-style:none;
+    font-size:15px;
+}
+a{
+    text-decoration: none;
+}
+.clear{
+    clear:both;
+}
+/*logo开始*/
+.logo{
+  width:100%;
+    height:120px;
+    height:100px\9;
+    background:#fff;
+    border-top:6px solid #458bd0;
+    position:relative;
+
+}
+@media screen and (min-width:200px) and (max-width:1000px){
+  .logo{
+      height:100px;
+      height:90px\9;
+   }
+  .logo a{
+      top:4%;
+  }
+  .main{
+      height:300px;
+  }
+  .logn .input input{
+      margin:10px 30px;
+    
+  }
+  .mian .bg{
+    background:url(../../img/login/bg_02.png) center 0 no-repeat;
+    min-width:200px;
+    background-size:contain;
+}
+}
+.logo a{
+    display:block;
+    position:absolute;
+    left:10%;
+    top:20%;
+}
+/*logo结束*/
+.main{
+   position:relative;
+    height:680px;
+    height:617px\9;
+
+}
+.mian .bg{
+    z-index:1;
+    background:url(../../img/login/bg_02.png) center 0 no-repeat;
+    width:100%;
+    height:100%;
+    background-size:contain;
+}
+/*表单框开始*/
+.logn{
+    width:420px;
+    position:absolute;
+    top:11%;
+    right:25%;
+    z-index:2;
+    background:#fff;
+}
+.logn span{
+    display:block;
+    width:380px;
+    height:7px;
+    margin-left:20px;
+    background:url(../../img/login/rp_04.gif) repeat;
+}
+.logn .input input{
+    width:300px;
+    height:45px;
+    border-radius: 5px;
+    border:1px solid #ddd;
+    margin:16px 38px;
+    line-height:45px;
+    color:#bababa;
+    padding-left:38px;
+
+}
+.logn .input .user{
+    background:url(../../img/login/user.png) no-repeat;
+    padding:20px;
+    position:absolute;
+    z-index:50;
+    top:38px;
+    left:50px;
+    display:block;
+}
+.logn .input label{
+    background:url(../../img/login/psd.png) no-repeat;
+    padding:20px;
+    position:absolute;
+    z-index:50;
+    top:115px;
+    left:50px;
+    display:block;
+}
+.logn .input .U,.logn .input .P,.logn .input .Y{
+    position:absolute;
+    font-size:12px;
+    top:80px;
+    left:38px;
+    color:red;
+    display:none;
+}
+.logn .input .P{
+    top:159px;
+}
+.logn .input .Y{
+    top:236px;
+}
+.logn .input .yan_Z{
+    width:100px;
+    height:45px;
+    line-height:45px;
+    margin-right:0;
+}
+.logn .input img{
+    display:inline-block;
+    vertical-align:middle;
+    width:100px;
+}
+button{
+    border:none;
+}
+/*表单匡结束*/
+/*表单框下开始*/
+.logn .x_x {
+    width:350px;
+    margin-left:40px;
+    color:#808080;
+}
+.logn .x_x ul li{
+    width:350px;
+    padding:10px 0px;
+
+}
+.logn .x_x ul li label{
+    padding-left:8px;
+}
+
+.logn .x_x b{
+    padding-right:16px;
+    background:url(../../img/login/logn_03.gif) no-repeat;
+}
+.logn .x_x a{
+    color:#7699c3;
+    margin-left:162px;
+}
+.logn .x_x .z_c{
+    margin-left:176px;
+}
+/*表单框下结束*/
+/*footer开始*/
+.footer{
+   width:100%;
+    color:#7baadc;
+    background:#e3f1fa;
+    height:78px;
+    line-height:38px;
+    font-size:12px;
+    font-weight:bold;
+    padding-top:10px;
+    text-align:center;
+    position:fixed;
+    position:fixed\9;
+    bottom:0;
+    bottom:0\9;
+    border-top:4px solid #458bd0;
+
+}
+.footer span a{
+    color:#7baadc;
+    font-size:12px;
+    font-weight:bold;
+}
+/*footer结束*/
+
