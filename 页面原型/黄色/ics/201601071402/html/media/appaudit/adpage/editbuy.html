@@ -18,20 +18,21 @@
         $(document).ready(function() {
             var cmenus=[
                 {'id':'100','name':'报表中心','herf':'#',
-                    'children':[{'id':'101','name':'媒体报表','herf':'#'},
-                        {'id':'102','name':'客户报表','herf':'#'},
-                        {'id':'103','name':'内部报表','herf':'#'}]},
+                    'children':[{'id':'101','name':'媒体报表','href':'../../../index.html'},
+                        {'id':'102','name':'客户报表','href':'../../appexternal/customereport.html'},
+                        {'id':'103','name':'内部报表','href':'#'}]},
                 {"id":"200","name":"媒体管理","href":"#",
-                    "children":[{"id":"201","name":"应用审核","href":"#"},
-                        {"id":"202","name":"ad采购报价","href":"#"},
-                        {"id":"203","name":"ad销售报价","href":"#"},
-                        {"id":"204","name":"ad对接留档","href":"#"},
-                        {"id":"205","name":"应用管理","href":"#"},
-                        {"id":"206","name":"广告位管理","href":"#"}]},
+                    "children":[{"id":"201","name":"应用审核","href":"../page.html"},
+                        {"id":"202","name":"ad采购报价","href":"../buyprice.html"},
+                        {"id":"203","name":"ad销售报价","href":"../sellprice.html"},
+                        {"id":"204","name":"ad对接留档","href":"../butt.html"},
+                        {"id":"205","name":"应用管理","href":"../../appexternal/page.html"},
+                        {"id":"206","name":"广告位管理","href":"../adpage.html"}]},
                 {"id":"300","name":"客户管理","href":"#",
-                    "children":[{"id":"301","name":"内部订单","href":"#"},
-                        {"id":"302","name":"客户订单","href":"#"},
-                        {"id":"303","name":"广告测试","href":"#"}]},
+                    "children":[{"id":"301","name":"内部普通订单","href":"../../appinterior/internalorder.html"},
+                        {"id":"302","name":"内部余量订单","href":"../../appinterior/remnantorder.html"},
+                        {"id":"303","name":"客户订单","href":"../../appinterior/customerorder.html"},
+                        {"id":"304","name":"广告测试","href":"../../appinterior/adstest.html"}]},
 //                {"id":"400","name":"运维监控","href":"#",
 //                    "children":[{"id":"401","name":"超级监控","href":"#"},
 //                        {"id":"402","name":"策略监控","href":"#"},
@@ -49,23 +50,23 @@
 //                        {"id":"602","name":"媒体用户","href":"#"},
 //                        {"id":"603","name":"客户管理","href":"#"}]},
                 {"id":"700","name":"平台用户","href":"#",
-                    "children":[{"id":"601","name":"付款账户信息","href":"#"},
-                        {"id":"602","name":"收款账户信息","href":"#"},
-                        {"id":"603","name":"付款管理","href":"#"},
-                        {"id":"605","name":"收款管理","href":"#"}]},
+                    "children":[{"id":"601","name":"内部员工","href":"../../userplatform/userplatform.html"},
+                        {"id":"602","name":"媒体用户","href":"../../userplatform/usermedia.html"},
+                        {"id":"603","name":"客户管理","href":"../../userplatform/userclient.html"}
+                    ]},
                 {"id":"600","name":"信息管理","href":"#",
-                    "children":[{"id":"601","name":"留言板","href":"#"},
-                        {"id":"602","name":"信息公告","href":"#"},
-                        {"id":"603","name":"新手帮助","href":"#"},
-                        {"id":"605","name":"服务条款","href":"#"},
-                        {"id":"605","name":"SDK附件","href":"#"}
+                    "children":[{"id":"801","name":"留言板","href":"#"},
+                        {"id":"802","name":"信息公告","href":"#"},
+                        {"id":"803","name":"新手帮助","href":"#"},
+                        {"id":"805","name":"服务条款","href":"#"},
+                        {"id":"805","name":"SDK附件","href":"../../infomanage/sdkadjunct.html"}
                     ]},
                 {"id":"600","name":"基础信息","href":"#",
-                    "children":[{"id":"601","name":"系统参数","href":"#"},
-                        {"id":"602","name":"投放地区","href":"#"},
-                        {"id":"603","name":"数据字典","href":"#"},
-                        {"id":"605","name":"内部职务","href":"#"},
-                        {"id":"605","name":"媒体分类","href":"#"}
+                    "children":[{"id":"901","name":"系统参数","href":"../../baseinfo/ststmargue.html"},
+                        {"id":"902","name":"投放地区","href":"../../baseinfo/putarea.html"},
+                        {"id":"903","name":"数据字典","href":"#"},
+                        {"id":"905","name":"内部职务","href":"#"},
+                        {"id":"905","name":"媒体分类","href":"#"}
                     ]},
                 {"id":"1000","name":"系统管理","href":"#",
                     "children":[{"id":"1001","name":"功能菜单","href":"#"},
@@ -86,7 +87,7 @@
 
                 var childrenval = "";
                 for( var j=0;j<cmenus[i].children.length;j++){
-                    childrenval+="<li>"+"<a href='#'>"+cmenus[i].children[j].name+"</a>"+"</li>";
+                    childrenval+="<li>"+"<a href='"+cmenus[i].children[j].href+"'>"+cmenus[i].children[j].name+"</a>"+"</li>";
                 }
                 htmlval = htmlval+"<ul>" +childrenval+"</ul>"+"</li>";
 

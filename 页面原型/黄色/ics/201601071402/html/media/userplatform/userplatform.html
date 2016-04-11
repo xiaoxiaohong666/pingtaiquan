@@ -19,21 +19,22 @@
         $(document).ready(function() {
 
             var cmenus=[
-                {'id':'100','name':'报表中心','herf':'#',
-                    'children':[{'id':'101','name':'媒体报表','herf':'#'},
-                        {'id':'102','name':'客户报表','herf':'#'},
-                        {'id':'103','name':'内部报表','herf':'#'}]},
+                {'id':'100','name':'报表中心','href':'#',
+                    'children':[{'id':'101','name':'媒体报表','href':'../../index.html'},
+                        {'id':'102','name':'客户报表','href':'../appexternal/customereport.html'},
+                        {'id':'103','name':'内部报表','href':'#'}]},
                 {"id":"200","name":"媒体管理","href":"#",
-                    "children":[{"id":"201","name":"应用审核","href":"#"},
-                        {"id":"202","name":"ad采购报价","href":"#"},
-                        {"id":"203","name":"ad销售报价","href":"#"},
-                        {"id":"204","name":"ad对接留档","href":"#"},
-                        {"id":"205","name":"应用管理","href":"#"},
-                        {"id":"206","name":"广告位管理","href":"#"}]},
+                    "children":[{"id":"201","name":"应用审核","href":"../appaudit/page.html"},
+                        {"id":"202","name":"ad采购报价","href":"../appaudit/buyprice.html"},
+                        {"id":"203","name":"ad销售报价","href":"../appaudit/sellprice.html"},
+                        {"id":"204","name":"ad对接留档","href":"../appaudit/butt.html"},
+                        {"id":"205","name":"应用管理","href":"../appexternal/page.html"},
+                        {"id":"206","name":"广告位管理","href":"../appaudit/adpage.html"}]},
                 {"id":"300","name":"客户管理","href":"#",
-                    "children":[{"id":"301","name":"内部订单","href":"#"},
-                        {"id":"302","name":"客户订单","href":"#"},
-                        {"id":"303","name":"广告测试","href":"#"}]},
+                    "children":[{"id":"301","name":"内部普通订单","href":"../appinterior/internalorder.html"},
+                        {"id":"302","name":"内部余量订单","href":"../appinterior/remnantorder.html"},
+                        {"id":"303","name":"客户订单","href":"../appinterior/customerorder.html"},
+                        {"id":"304","name":"广告测试","href":"../appinterior/adstest.html"}]},
 //                {"id":"400","name":"运维监控","href":"#",
 //                    "children":[{"id":"401","name":"超级监控","href":"#"},
 //                        {"id":"402","name":"策略监控","href":"#"},
@@ -51,33 +52,31 @@
 //                        {"id":"602","name":"媒体用户","href":"#"},
 //                        {"id":"603","name":"客户管理","href":"#"}]},
                 {"id":"700","name":"平台用户","href":"#",
-                    "children":[{"id":"601","name":"付款账户信息","href":"#"},
-                        {"id":"602","name":"收款账户信息","href":"#"},
-                        {"id":"603","name":"付款管理","href":"#"},
-                        {"id":"605","name":"收款管理","href":"#"}]},
-                {"id":"600","name":"信息管理","href":"#",
-                    "children":[{"id":"601","name":"留言板","href":"#"},
-                        {"id":"602","name":"信息公告","href":"#"},
-                        {"id":"603","name":"新手帮助","href":"#"},
-                        {"id":"605","name":"服务条款","href":"#"},
-                        {"id":"605","name":"SDK附件","href":"#"}
+                    "children":[{"id":"601","name":"内部员工","href":"userplatform.html"},
+                        {"id":"602","name":"媒体用户","href":"usermedia.html"},
+                        {"id":"603","name":"客户管理","href":"userclient.html"}
                     ]},
-                {"id":"600","name":"基础信息","href":"#",
-                    "children":[{"id":"601","name":"系统参数","href":"#"},
-                        {"id":"602","name":"投放地区","href":"#"},
-                        {"id":"603","name":"数据字典","href":"#"},
-                        {"id":"605","name":"内部职务","href":"#"},
-                        {"id":"605","name":"媒体分类","href":"#"}
+                {"id":"800","name":"信息管理","href":"#",
+                    "children":[{"id":"801","name":"留言板","href":"#"},
+                        {"id":"802","name":"信息公告","href":"#"},
+                        {"id":"803","name":"新手帮助","href":"#"},
+                        {"id":"805","name":"服务条款","href":"#"},
+                        {"id":"805","name":"SDK附件","href":"../infomanage/sdkadjunct.html"}
                     ]},
-                {"id":"1000","name":"系统管理","href":"#",
-                    "children":[{"id":"1001","name":"功能菜单","href":"#"},
-                        {"id":"1002","name":"人员组织","href":"#"},
-                        {"id":"1003","name":"菜单权限","href":"#"},
-                        {"id":"1005","name":"数据权限","href":"#"}]},
-                {"id":"1002","name":"系统日志","href":"#"},
-                {"id":"1003","name":"操作日志","href":"#"}
-
-
+                {"id":"900","name":"基础信息","href":"#",
+                    "children":[{"id":"901","name":"系统参数","href":"../baseinfo/ststmargue.html"},
+                        {"id":"902","name":"投放地区","href":"../baseinfo/putarea.html"},
+                        {"id":"903","name":"数据字典","href":"#"},
+                        {"id":"905","name":"内部职务","href":"#"},
+                        {"id":"905","name":"媒体分类","href":"#"}
+                    ]}
+//                {"id":"1000","name":"系统管理","href":"#",
+//                    "children":[{"id":"1001","name":"功能菜单","href":"#"},
+//                        {"id":"1002","name":"人员组织","href":"#"},
+//                        {"id":"1003","name":"菜单权限","href":"#"},
+//                        {"id":"1005","name":"数据权限","href":"#"}]},
+//                        {"id":"1002","name":"系统日志","href":"#"},
+//                        {"id":"1003","name":"操作日志","href":"#"}
             ];
             var nav=$(".nav" );
 
@@ -88,7 +87,7 @@
 
                 var childrenval = "";
                 for( var j=0;j<cmenus[i].children.length;j++){
-                    childrenval+="<li>"+"<a href='#'>"+cmenus[i].children[j].name+"</a>"+"</li>";
+                    childrenval+="<li>"+"<a href='"+cmenus[i].children[j].href+"'>"+cmenus[i].children[j].name+"</a>"+"</li>";
                 }
                 htmlval = htmlval+"<ul>" +childrenval+"</ul>"+"</li>";
 
@@ -97,16 +96,16 @@
             jQuery("#allcheck").click(function(){
                 jQuery("input[name=id]").prop("checked",jQuery("#allcheck").prop("checked"));
             });
-            var jsondata = [{id: 1, code:"input", name: "haven.zou@vivaki.com", garden: "邹焕然",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:""},
-                {id: 2, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:""},
-                {id: 3, code:"input", name: "haven.zou@vivaki.com", garden: "王宁",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:""},
-                {id: 4, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:""},
-                {id: 5, code:"input", name: "haven.zou@vivaki.com", garden: "韩可心",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:""},
-                {id: 6, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:" "},
-                {id: 7, code:"input", name: "haven.zou@vivaki.com", garden: "韩可心",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:" "},
-                {id: 8, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:" "},
-                {id: 9, code:"input", name: "haven.zou@vivaki.com", garden: "韩可心",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:" "},
-                {id: 10, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", appkey: "已启用", state:"2016-02-01 02:02:02",business:"18336529845",handle:" "}
+            var jsondata = [{id: 1, code:"input", name: "haven.zou@vivaki.com", garden: "邹焕然",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:""},
+                {id: 2, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", state:"已启用", start_time:"2016-02-12 09:34:34", business:"18336529845",handle:""},
+                {id: 3, code:"input", name: "haven.zou@vivaki.com", garden: "王宁",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:""},
+                {id: 4, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:""},
+                {id: 5, code:"input", name: "haven.zou@vivaki.com", garden: "韩可心",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:""},
+                {id: 6, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:" "},
+                {id: 7, code:"input", name: "haven.zou@vivaki.com", garden: "韩可心",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:" "},
+                {id: 8, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:" "},
+                {id: 9, code:"input", name: "haven.zou@vivaki.com", garden: "韩可心",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:" "},
+                {id: 10, code:"input", name: "haven.zou@vivaki.com", garden: "汤程程",adstyle:"", state:"已启用",start_time:"2016-02-12 09:34:34", business:"18336529845",handle:" "}
             ];
             var table = $('#tablekey');
             //  alert(jsondata.length);
@@ -119,10 +118,10 @@
                         "<td align='center'>" + jsondata[i].name + "</td>" +
                         "<td align='center'>" + jsondata[i].garden + "</td>" +
                         "<td align='center'>" + jsondata[i].adstyle + "</td>" +
-                        "<td align='center'>" + jsondata[i].appkey + "</td>" +
                         "<td align='center'  id='sta'>" +jsondata[i].state+ "</td>" +
+                        "<td align='center'>" + jsondata[i].start_time + "</td>" +
                         "<td align='center'>" + jsondata[i].business + "</td>" +
-                        "<td align='center'><a href='platformedit.html'>编辑</a><span>||</span><a href=''>禁用</a><span>||</span><a href='#'>重置密码</a><span>||</span><a href='#' onclick='hit()'>查看</a></td>" +
+                        "<td align='center'><a href='platformedit.html'>编辑</a><span>||</span><a class='ice_a'>禁用</a><span>||</span><a href='#'>重置密码</a><span>||</span><a href='#' onclick='hit()'>查看</a></td>" +
                         "</tr>");
             }
 
@@ -489,20 +488,20 @@
 //            });
 //        });
         //冻结的按钮
-        $(".iceButton").click(function(){
+        $(".ice_a").click(function(){
             var checklength = $("input[name='id']:checked").length;
             if(checklength==0){
-                swal("OMG得选一条数据", "冻结操作失败了!", "error");
+                swal("OMG得选一条数据", "禁用操作失败了!", "error");
                 return ;
             }
 
             swal({
-                title: "您确定要冻结吗？",
-                text: "您确定要冻结这条数据？",
+                title: "您确定要禁用吗？",
+                text: "您确定要禁用这条数据？",
                 type: "warning",
                 showCancelButton: true,
                 closeOnConfirm: false,
-                confirmButtonText: "是的，我要冻结",
+                confirmButtonText: "是的，我要禁用",
                 confirmButtonColor: "#ec6c62"
             }, function() {
 //                $.ajax({
@@ -516,9 +515,9 @@
 
                 $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
                     var   n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
-                    $("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("冻结");
+                    $("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("禁用");
                     // $("#tablekey").find("tr:eq("+n+")").remove();
-                    swal("操作成功","已成功冻结数据","success");
+                    swal("操作成功","已成功禁用数据","success");
                     $("input[name='id']:checked").removeAttr("checked");
 
                 });
