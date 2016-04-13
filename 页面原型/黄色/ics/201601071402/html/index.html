@@ -75,7 +75,45 @@
 //                        {"id":"1003","name":"操作日志","href":"#"}
             ];
             var nav=$(".nav" );
+            var showNumStart = 1;
+            var showNumEnd = 6;
+            var menuNum = cmenus.length;
+            alert(menuNum);
+            $("#divid >.nav > li").each(function(index,demo){
+                if(index>showNumEnd-1){
+                    $(this).hide();
+                }else{
+                    $(this).show();
+                }
 
+            });
+
+
+            function rfun(){
+                if(showNumEnd==6)return;
+                showNumEnd = showNumEnd + 1;
+                showNumStart = showNumStart + 1;
+                $("#divid> ul > li").each(function(index,demo){
+                    if(index>showNumEnd-1||showNumStart-1>index){
+                        $(this).hide();
+                    }else{
+                        $(this).show();
+                    }
+                });
+            }
+            //向左移动
+            function lfun(){
+                if(showNumStart==1)return;
+                showNumEnd = showNumEnd - 1;
+                showNumStart = showNumStart - 1;
+                $("#divid > ul > li").each(function(index,demo){
+                    if(index>showNumEnd-1||showNumStart-1>index){
+                        $(this).hide();
+                    }else{
+                        $(this).show();
+                    }
+                });
+            }
             for(var i=0;i<cmenus.length;i++){
 
                 var htmlval='';
@@ -222,46 +260,7 @@
             $(".nav li a b").css("display","none");
         });
 
-        //一级菜单显示顺序(1-6)
 
-           var showNumStart = 1;
-           var showNumEnd = 6;
-           var menuNum = $("#divid > .nav > li").length;
-//           $("#divid >.nav > li").each(function(index,demo){
-//               if(index>showNumEnd-1){
-//                   $(this).hide();
-//               }else{
-//                   $(this).show();
-//               }
-//
-//           });
-
-
-        function rfun(){
-            if(showNumEnd==6)return;
-            showNumEnd = showNumEnd + 1;
-            showNumStart = showNumStart + 1;
-            $("#divid> ul > li").each(function(index,demo){
-                if(index>showNumEnd-1||showNumStart-1>index){
-                    $(this).hide();
-                }else{
-                    $(this).show();
-                }
-            });
-        }
-        //向左移动
-        function lfun(){
-            if(showNumStart==1)return;
-            showNumEnd = showNumEnd - 1;
-            showNumStart = showNumStart - 1;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>showNumEnd-1||showNumStart-1>index){
-                    $(this).hide();
-                }else{
-                    $(this).show();
-                }
-            });
-        }
 
         $(document).ready(function(){
             $(".hide").click(function(){
