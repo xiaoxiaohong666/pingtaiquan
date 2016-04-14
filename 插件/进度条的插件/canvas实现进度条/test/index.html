@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Circular Progress test</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script src="../circular-progress.js"></script>
+    <script>
+//    (function () {
+//      var n, id, progress;
+//
+//      progress = new CircularProgress({
+//        radius: 20
+//      });
+//
+//      document.body.appendChild(progress.el);
+//
+//      n = 0;
+//      id = setInterval(function () {
+//        if (n == 100) clearInterval(id);
+//        progress.update(n++);
+//      }, 100);
+//    })();
+
+//    (function () {
+//      var n, id, progress;
+//
+//      progress = new CircularProgress({
+//        radius: 40,
+//        lineWidth: 2,
+//        strokeStyle: 'black',
+//        initial: {
+//          lineWidth: 4,
+//          strokeStyle: 'gray'
+//        }
+//      });
+//
+//      document.body.appendChild(progress.el);
+//
+//      n = 0;
+//      id = setInterval(function () {
+//        if (n == 100) clearInterval(id);
+//        progress.update(n++);
+//      }, 70);
+//    })();
+
+    (function () {
+      var n, id, progress;
+
+      progress = new CircularProgress({
+        radius:  100,
+        strokeStyle: '#97dffa',
+        lineCap: 'square',
+        lineJoin: 'round',
+        lineWidth:6,
+        shadowBlur: 3,
+        shadowColor: 'black',
+        text: {
+          font: 'bold 50px arial',
+          shadowBlur:  0
+        },
+        initial: {
+          strokeStyle: '#dcf1f9',
+          lineCap: 'square',
+          lineJoin: 'round',
+          lineWidth: 6,
+          shadowBlur:  3,
+          shadowColor: '#adaeaf'
+        }
+      });
+
+      document.body.appendChild(progress.el);
+
+      n = 0;
+      id = setInterval(function () {
+        if (n == 100) clearInterval(id);
+        progress.update(n++);
+      },50);
+    })();
+
+    </script>
+  </body>
+</html>
