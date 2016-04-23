@@ -1,0 +1,47 @@
+ad_black		黑名单表
+ad_white		白名单表
+
+app			媒体应用基础信息表
+-- 广告位信息表
+ad_slot			广告位基础信息表
+ad_slot_formats		广告位后缀名表
+ad_slot_buy		广告位购买信息表
+ad_slot_sell		广告位出售信息表
+ad_slot_tech		广告位技术对接表
+
+---用户平台用户信息表
+c_user			平台用户基础信息表
+c_client		平台客户（广告主）信息表
+c_supplier		平台媒体（流量出售方）信息表
+c_personnel		平台内部员工信息表
+c_accountinfo		平台用户银行卡信息表
+
+
+-- 字典数据表
+d_dict 			平台数据字典说明表
+d_dictionary		平台基础数据字典表
+d_formats		平台样式后缀字典表
+d_jobposit		平台员工岗位字典表
+d_parameter		平台特殊参数存储表
+d_putarea		平台地区纬度字典表
+d_slotstyle		平台广告样式字典表
+d_state			平台数据状态字典表
+d_astrict		平台策略高级选项表
+
+-- 订单相关数据表
+or_indent		订单基础表
+or_strategy		策略基础表
+or_strategy_adslot	策略-广告位信息对应表（id=objectid）
+or_strategy_material	策略-素材信息表
+or_strategy_apptype	策略-投放系统信息对应表（疑）
+or_strategy_putarea	策略-投放地区信息对应表
+or_strategy_system	策略-投放平台信息对应表
+or_arrange 		策略-排期信息表
+
+--策略附属信息表
+or_strategy_astrict     策略高级选项启控制
+or_frequency 		频次控制
+or_area 		地域控制
+or_Velocity 		速度控制 
+or_DayPart 		时段控制
+OR_NGT 			人群控制
