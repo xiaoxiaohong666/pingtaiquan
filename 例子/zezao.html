@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="css/zezao.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <title>功能主页面</title>
+</head>
+<body>
+<button onclick='hit()'>点击</button>
+                <div id="fullbg"></div>
+                <div id="dialog" style="position:absolute">
+                    <h3 class="banner" style="cursor:move">应用信息</h3>
+                    <div style="margin:10px;">
+                        <table border="1" class="TableView" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #ddd; ">
+                            <tr>
+                                <th colspan="4" align="left" style="padding:5px; background:#ddd;font-size:15px;">应用信息</th>
+                            </tr>
+                            <tr>
+                                <td width="15%" align="right" style="font-weight:bold">应用名称：</td>
+                                <td width="35%" align="center">ios经典拼图</td>
+                                <td width="15%" align="right" style="font-weight:bold">所属媒体:</td>
+                                <td width="35%" align="center">虚拟媒体</td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="font-weight:bold">应用分类：</td>
+                                <td align="center">其他</td>
+                                <td align="right" style="font-weight:bold">应用包名:</td>
+                                <td align="center"></td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="font-weight:bold">下载地址：</td>
+                                <td align="center"></td>
+                                <td align="right" style="font-weight:bold">应用平台:</td>
+                                <td align="center">IOS</td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="font-weight:bold">是否付费：</td>
+                                <td align="center">否</td>
+                                <td align="right" style="font-weight:bold">AppKey:</td>
+                                <td align="center">30f6d467-2bba-473c-b610-42acc384f29a</td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="font-weight:bold">创建时间：</td>
+                                <td align="center">2016-03-31 02:23:34</td>
+                                <td align="right" style="font-weight:bold">审核状态：</td>
+                                <td align="center">是</td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="font-weight:bold">审核人：</td>
+                                <td align="center">董娜</td>
+                                <td align="right" style="font-weight:bold">审核时间：</td>
+                                <td align="center">2016-02-02 02:02:02</td>
+                            </tr>
+                            <tr>
+                                <td align="right" style="font-weight:bold">应用描述：</td>
+                                <td align="center" colspan="3"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <span class="close_layer" onclick="closeBg()">X</span>
+                </div>
+                <!-- 遮罩层的内容结束-->
+
+
+</body>
+<!--遮罩层的js开始-->
+<script>
+    //显示灰色 jQuery 遮罩层
+    function hit( ){
+        var bheight = Math.max( document.documentElement.clientHeight) + "px";
+        $("#fullbg").css({
+            height:bheight,
+            display:"block"
+        });
+        $("#dialog").show();
+    }
+    //关闭灰色 jQuery 遮罩
+    function closeBg() {
+        $("#fullbg,#dialog").hide();
+    }
+    $(".a").click(function(){
+        $("#b").show();
+    });
+    $(document).ready(function(){
+        $('.banner').mousedown(
+                function (event) {
+                    var isMove = true;
+                    var abs_x = event.pageX - $('#dialog').offset().left;
+                    var abs_y = event.pageY - $('#dialog').offset().top;
+                    $(document).mousemove(function (event) {
+                                if (isMove) {
+                                    var obj = $('#dialog');
+                                    obj.css({'left':event.pageX - abs_x, 'top':event.pageY - abs_y});
+                                }
+                            }
+                    ).mouseup(
+                            function () {
+                                isMove = false;
+                            }
+                    );
+                }
+        );
+    });
+
+</script>
+<!--遮罩层的js结束-->
+</html>
