@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .bubbly {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            background: #00aabb;
+            border-radius: .4em;
+            width: 260px;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            font-size: 200%;
+        }
+        .bubbly:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            border: 34px solid transparent;
+            border-top-color:#00aabb;
+            border-bottom:none;
+            border-left: 0;
+            margin: 0 0 -34px -17px;
+        }
+
+        .notching{
+            position: absolute;
+            top:30%;
+            left: 30%;
+            transform:translate(-50%,-50%);
+            width: 160px;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            font-size: 200%;
+        }
+        .notching{
+            background:
+            linear-gradient(135deg, transparent 15px, yellow)
+            top left,
+            linear-gradient(-135deg, transparent 15px, green)
+            top right,
+            linear-gradient(-45deg, transparent 15px, blue)
+            bottom right,
+            linear-gradient(45deg, transparent 15px, red)
+            bottom left;
+            background-size: 60% 60%;
+            background-repeat: no-repeat;
+        }
+
+        .corner{
+            position: absolute;
+            top:70%;left: 70%;
+            transform:translate(-50%,-50%);
+            width: 120px;line-height:120px;
+            padding:40px;
+            text-align: center;
+            color: white;
+            font-size: 200%;
+            background:linear-gradient(-150deg,transparent 1.5em, yellowgreen  0);
+            border-radius:.5em;
+        }
+        .corner:before{
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            background:
+            linear-gradient(to left bottom,transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4)) 100% 0 no-repeat;
+            width: 1.73em; height: 3em;
+            transform: translateY(-1.3em) rotate(-30deg);
+            transform-origin: bottom right;
+            border-bottom-left-radius: inherit;
+            box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15);
+        }
+        .css3{position:absolute;left:0;top:0; width:120px;height:20px;border:1px solid red;-webkit-transition:all 1s cubic-bezier(0,1,0,1);-moz-transition:all 1s ease}
+        .css3:hover{
+            width:300px;
+            height:300px;
+        }
+        html { font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/ }
+        body { font-size: 1.4rem;/*1.4 × 10px = 14px */ }
+        h1 { font-size: 2.4rem;/*2.4 × 10px = 24px*/ }
+        p {font-size:14px; font-size:1.4rem;}/*IE8及之前版本的IE浏览器使用14像素*/
+        div{
+            font-size:1.2rem;
+        }
+        .ren{
+            width:50rem;
+            height:50rem;
+            border:1px solid red;
+        }
+        /*.dd{*/
+            /*width:10rem;*/
+            /*height:10rem;*/
+            /*border:1px solid red;*/
+            /*-webkit-transform: rotate(10deg);*/
+          /*}*/
+        /*.dd:hover{*/
+            /*-webkit-transform: rotate(15deg);*/
+        /*}*/
+        .dd{
+            position:absolute;
+            left:0;
+            width:10rem;
+            height:10rem;
+            border:1px solid yellowgreen;
+            transform: translate3D(0, 0, 4rem);
+        }
+        .dd:hover{
+            transform: translate3D(0, 0, -4rem);
+        }
+        .ani{
+            width: 10rem;
+            height:10rem;
+            border-radius:5rem;
+            border:1px solid #000;
+            animation:myfirst 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes myfirst{
+            0%{
+                background:blue;
+            }
+            25%{
+                background:red;
+            }50%{
+            background:yellow;
+                         }
+            75%{
+                background:green;
+            }100%{
+            background:#000;
+                         }
+        }
+    </style>
+</head>
+<body>
+ <div class="bubbly">
+          我就是对话框
+ </div>
+<div class="notching">我就是那个好几遍形</div>
+<div class="corner">漂亮2222222 你</div>
+<div class="css3">我是transition</div>
+<h1>我是h1</h1>
+<p>我是p</p>
+<div class="ren">我是用rem作为单位来实现的</div>
+ <div style="clear:both;"></div>
+<div class="dd"> 我有3d旋转的功能</div>
+<div class="ani">我是animation动画哦</div>
+</body>
+</html>
+<script>
+
+</script>

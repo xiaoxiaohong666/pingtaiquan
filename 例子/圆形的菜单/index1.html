@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title></title>
+	<script src="js/jquery-1.11.3.js"></script>
+<style>
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body{
+	font-size:14px;
+	color:#000;
+}
+.menuOut {
+	width:100px;
+	height:100px;
+	margin:0 0 250px 0;
+	position:relative;
+	z-index:100;
+}
+.menuOut ul {
+	position:absolute;
+	left:0;
+	top:0;
+	width:0;
+	height:0;
+}
+/*.menuOut ul li {*/
+	/*border-radius:0 0 300px 0;*/
+	/*width:0;*/
+	/*background:red;*/
+	/*height:0;*/
+/*}*/
+.menuOut ul li a {
+	color:#000;
+	text-decoration:none;
+	font:bold 13px/30px arial, sans-serif;
+	text-align:center;
+	box-shadow:-5px 5px 5px rgba(0,0,0,0.4);
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	transform-origin:0 0;
+}
+.menuOut ul.p1 li {
+	position:absolute;
+	left:0;
+	top:0;
+}
+.menuOut ul.p2 {
+	z-index:-1;
+}
+.menuOut ul.p3 {
+	z-index:-1;
+}
+.menuOut li.s1 > a {
+	position:absolute;
+	display:block;
+	width:100px;
+	height:100px;
+	background:#539df4;
+	border-radius:0 0 100px 0;
+	color:#fff;
+	box-shadow: 0 0 10px #000;
+}
+.menuOut li.s2 > a {
+	position:absolute;
+	border:1px solid #ddd;
+	display:block;
+	width:100px;
+	padding-left:100px;
+	height:200px;
+	background:#7fbafe;
+	border-radius:0 0 200px 0;
+}
+.menuOut ul.p3 li a {
+	position:absolute;
+	border:1px solid #ddd;
+	display:block;
+	width:100px;
+	padding-left:200px;
+	height:300px;
+	background:#a0ceff;
+	border-radius:0 0 300px 0;
+}
+.menuOut ul ul {
+-webkit-transform-origin:0 0;
+-moz-transform-origin:0 0;
+-ms-transform-origin:0 0;
+-o-transform-origin:0 0;
+transform-origin:0 0;
+-webkit-transform:rotate(90deg);
+-moz-transform:rotateZ(90deg);
+-ms-transform:rotate(90deg);
+-o-transform:rotate(90deg);
+transform:rotate(90deg);
+-webkit-transition:1s;
+-moz-transition:1s;
+-ms-transition:1s;
+-o-transition:1s;
+transition:1s;
+}
+/*.menuOut li.s2:nth-of-type(8) > a {*/
+	/*background:#7fbafe;border:1px solid #ddd;*/
+/*-webkit-transform:rotate(78.75deg);*/
+/*-moz-transform:rotateZ(78.75deg);*/
+/*-ms-transform:rotate(78.75deg);*/
+/*-o-transform:rotate(78.75deg);*/
+/*transform:rotate(78.75deg);*/
+/*}*/
+/*.menuOut li.s2:nth-of-type(7) > a {background:#7fbafe;border:1px solid #ddd;*/
+/*-webkit-transform:rotate(67.5deg);*/
+/*-moz-transform:rotateZ(67.5deg);*/
+/*-ms-transform:rotate(67.5deg);*/
+/*-o-transform:rotate(67.5deg);*/
+/*transform:rotate(67.5deg);*/
+/*}*/
+/*.menuOut li.s2:nth-of-type(6) > a {background:#7fbafe;border:1px solid #ddd;*/
+/*-webkit-transform:rotate(56.25deg);*/
+/*-moz-transform:rotateZ(56.25deg);*/
+/*-ms-transform:rotate(56.25deg);*/
+/*-o-transform:rotate(56.25deg);*/
+/*transform:rotate(56.25deg);*/
+/*}*/
+/*.menuOut li.s2:nth-of-type(5) > a {background:#7fbafe;border:1px solid #ddd;*/
+/*-webkit-transform:rotate(45deg);*/
+/*-moz-transform:rotateZ(45deg);*/
+/*-ms-transform:rotate(45deg);*/
+/*-o-transform:rotate(45deg);*/
+/*transform:rotate(45deg);*/
+/*}*/
+/*.menuOut li.s2:nth-of-type(4) > a {background:#7fbafe;border:1px solid #ddd;*/
+	 /*-webkit-transform:rotate(33.75deg);*/
+	 /*-moz-transform:rotateZ(33.75deg);*/
+	 /*-ms-transform:rotate(33.75deg);*/
+	 /*-o-transform:rotate(33.75deg);*/
+	 /*transform:rotate(33.75deg);*/
+ /*}*/
+/*.menuOut li.s2:nth-of-type(3) > a {background:#7fbafe;border:1px solid #ddd;*/
+	/*-webkit-transform:rotate(22.5deg);*/
+	/*-moz-transform:rotateZ(22.5deg);*/
+	/*-ms-transform:rotate(22.5deg);*/
+	/*-o-transform:rotate(22.5deg);*/
+	/*transform:rotate(22.5deg);*/
+/*}*/
+/*.menuOut li.s2:nth-of-type(2) > a {background:#7fbafe;border:1px solid #ddd;*/
+	/*-webkit-transform:rotate(11.25deg);*/
+	/*-moz-transform:rotateZ(11.25deg);*/
+	/*-ms-transform:rotate(11.25deg);*/
+	/*-o-transform:rotate(11.25deg);*/
+	/*transform:rotate(11.25deg);*/
+/*}*/
+
+.menuOut .a6 li:nth-of-type(6) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(75deg);
+-moz-transform:rotateZ(75deg);
+-ms-transform:rotate(75deg);
+-o-transform:rotate(75deg);
+transform:rotate(75deg);
+}
+.menuOut .a6 li:nth-of-type(5) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(60deg);
+-moz-transform:rotateZ(60deg);
+-ms-transform:rotate(60deg);
+-o-transform:rotate(60deg);
+transform:rotate(60deg);
+}
+.menuOut .a6 li:nth-of-type(4) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotateZ(45deg);
+-ms-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+.menuOut .a6 li:nth-of-type(3) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(30deg);
+-moz-transform:rotateZ(30deg);
+-ms-transform:rotate(30deg);
+-o-transform:rotate(30deg);
+transform:rotate(30deg);
+}
+.menuOut .a6 li:nth-of-type(2) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(15deg);
+-moz-transform:rotateZ(15deg);
+-ms-transform:rotate(15deg);
+-o-transform:rotate(15deg);
+transform:rotate(15deg);
+}
+
+.menuOut .a5 li:nth-of-type(5) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(72deg);
+-moz-transform:rotateZ(72deg);
+-ms-transform:rotate(72deg);
+-o-transform:rotate(72deg);
+transform:rotate(72deg);
+}
+.menuOut .a5 li:nth-of-type(4) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(54deg);
+-moz-transform:rotateZ(54deg);
+-ms-transform:rotate(54deg);
+-o-transform:rotate(54deg);
+transform:rotate(54deg);
+}
+.menuOut .a5 li:nth-of-type(3) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(36deg);
+-moz-transform:rotateZ(36deg);
+-ms-transform:rotate(36deg);
+-o-transform:rotate(36deg);
+transform:rotate(36deg);
+}
+.menuOut .a5 li:nth-of-type(2) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(18deg);
+-moz-transform:rotateZ(18deg);
+-ms-transform:rotate(18deg);
+-o-transform:rotate(18deg);
+transform:rotate(18deg);
+}
+.menuOut .a4 li:nth-of-type(4) > a {background:#a0ceff;border:1px solid #ddd;
+	-webkit-transform:rotate(67.5deg);
+	-moz-transform:rotateZ(67.5deg);
+	-ms-transform:rotate(67.5deg);
+	-o-transform:rotate(67.5deg);
+	transform:rotate(67.5deg);
+}
+.menuOut .a4 li:nth-of-type(3) > a {background:#a0ceff;border:1px solid #ddd;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotateZ(45deg);
+	-ms-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.menuOut .a4 li:nth-of-type(2) > a {background:#a0ceff;border:1px solid #ddd;
+	-webkit-transform:rotate(22.5deg);
+	-moz-transform:rotateZ(22.5deg);
+	-ms-transform:rotate(22.5deg);
+	-o-transform:rotate(22.5deg);
+	transform:rotate(22.5deg);
+}
+.menuOut .a3 li:nth-of-type(3) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(60deg);
+-moz-transform:rotateZ(60deg);
+-ms-transform:rotate(60deg);
+-o-transform:rotate(60deg);
+transform:rotate(60deg);
+}
+.menuOut .a3 li:nth-of-type(2) > a {background:#a0ceff;border:1px solid #ddd;
+-webkit-transform:rotate(30deg);
+-moz-transform:rotateZ(30deg);
+-ms-transform:rotate(30deg);
+-o-transform:rotate(30deg);
+transform:rotate(30deg);
+}
+
+.menuOut li.s1:hover ul.p2 {
+-webkit-transform:rotate(0deg);
+-moz-transform:rotateZ(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+transform:rotate(0deg);
+}
+.menuOut li.s2:hover ul.p3 {
+-webkit-transform:rotate(0deg);
+-moz-transform:rotateZ(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+transform:rotate(0deg);
+}
+.menuOut ul li:hover > a {background:#a2cdff; color:#fff;}
+.menuOut li.s2:hover > a {background:#a2cdff; color:#fff;}
+.menuOut .a6 li:hover > a {background:#a2cdff; color:#fff;}
+.menuOut .a5 li:hover > a {background:#a2cdff; color:#fff;}
+.menuOut .a3 li:hover > a {background:#a2cdff; color:#fff;}
+.menuWindow {
+	width:110px;
+	height:110px;
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:100;
+	-webkit-transition:0s 1s;
+	-moz-transition:0s 1s;
+	-ms-transition:0s 1s;
+	-o-transition:0s 1s;
+	transition:0s 1s;
+}
+.menuOut:hover .menuWindow {
+	width:310px;
+	height:310px;
+	-webkit-transition:0s 0s;
+	-moz-transition:0s 0s;
+	-ms-transition:0s 0s;
+	-o-transition:0s 0s;
+	transition:0s 0s;
+}
+.menuOut span {
+	display:block;
+	-webkit-transform:rotate(5deg);
+	-moz-transform:rotateZ(5deg);
+	-ms-transform:rotate(5deg);
+	-o-transform:rotate(5deg);
+	transform:rotate(5deg);
+}
+</style>
+</head>
+<body>
+<div class="menuOut">
+	<div class="menuWindow">
+		<ul class="p1">
+			<li class="s1">
+				<a href="#" class="nav"><p style="padding-top:20px;padding-right:10px;font-size:20px;">菜单</p></a>
+				<ul class="p2">
+					<li class="s2"><a href="#" class="nav1"><span>报表中心</span></a>
+						<ul class="p3">
+							<li><a href="#">打印</a></li>
+							<li><a href="#">编辑</a></li>
+							<li><a href="#">保管</a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>报表中心</span></a>
+						<ul class="p3 ">
+							<li><a href="#">打印</a></li>
+							<li><a href="#">编辑</a></li>
+							<li><a href="#">保管</a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>报表中心</span></a>
+						<ul class="p3 ">
+							<li><a href="#">打印</a></li>
+							<li><a href="#">编辑</a></li>
+							<li><a href="#">保管</a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>媒体管理</span></a>
+						<ul class="p3 ">
+							<li><a href="#">支持</a></li>
+							<li><a href="#">销售</a></li>
+							<li><a href="#">购买</a></li>
+							<li><a href="#">摄影师</a></li>
+							<li><a href="#">零售商</a></li>
+							<li><a href="#">常规</a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>订单管理</span></a>
+						<ul class="p3">
+							<li><a href="#">南区</a></li>
+							<li><a href="#">北区</a></li>
+							<li><a href="#">中心区</a></li>
+							<li><a href="#">中心区</a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#"><span>运营中心</span></a>
+						<ul class="p3 ">
+							<li><a href="#">邮箱</a></li>
+							<li><a href="#">邮递</a></li>
+							<li><a href="#">电话</a></li>
+						</ul>
+					</li>
+					<li class="s2 b6"><a href="#" class="nav1"><span>平台用户</span></a>
+						<ul class="p3">
+							<li><a href="#">数码单反机身</a></li>
+							<li><a href="#">镜头</a></li>
+							<li><a href="#">闪光枪</a></li>
+							<li><a href="#">三角架</a></li>
+							<li><a href="#">过滤器</a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>信息管理</span></a>
+						<ul class="p3 ">
+							<li><a href="#">邮箱</a></li>
+							<li><a href="#">邮递</a></li>
+							<li><a href="#">电话</a></li>
+							<li><a href="#">邮箱</a></li>
+							<li><a href="#">邮递</a></li>
+							<li><a href="#">电话</a></li>
+						</ul>
+					</li>
+					<li class="s2" ><a href="#" class="nav1"><span>基础信息</span></a>
+						<ul class="p3 ">
+							<li><a href="#">邮箱</a></li>
+							<li><a href="#">邮递</a></li>
+							<li><a href="#">电话</a></li>
+						</ul>
+					</li>
+					<li class="s2" ><a href="#" class="nav1"><span>系统管理</span></a>
+						<ul class="p3 ">
+							<li><a href="#">邮箱</a></li>
+							<li><a href="#">邮递</a></li>
+							<li><a href="#">电话</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+<script>
+	$(document).ready(function(){
+		$(".nav").hover(function(){
+			var long=$(".p2").children().length;
+			var jiaodu=90/long;
+			//console.log(jiaodu);
+			//console.log(long);
+			var arr=[];
+			for(var i=1; i<long;i++){
+				var leijia=i*jiaodu;
+				b=leijia+'deg';
+				arr.push(b);
+			}
+			//console.log(arr);
+			$.each(arr,function(index,ddd){
+			});
+			$('.menuOut li').find('.s2:nth-of-type(1n+2) > a').each(function(index,detail){
+//				console.log(detail);
+				var wode='rotate'+"("+arr[index]+')';
+//				console.log(wode);
+				$(detail).css({
+					'background': '#7fbafe',
+					'border': '1px solid #ddd',
+					'-webkit-transform':wode,
+					'-moz-transform': wode,
+					'-ms-transform': wode,
+					'-o-transform': wode,
+					'transform': wode
+				});
+			});
+		},function(){
+			$(".sub_box",this).slideUp("fast");
+		});
+		$("ul.p3").each(function(i,dom){
+		var long1=$(this).find("li").length;
+			var aaa="a"+long1;
+			$(dom).addClass(aaa);
+
+		});
+
+
+	});
+</script>
+</html>
