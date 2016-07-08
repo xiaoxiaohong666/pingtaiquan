@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+html{
+    font-size:16px;
+}
+.nav{
+    width:100%;
+    height:20px;
+    background:#a7a7a7;
+}
+.banner>img{
+    width:100%;
+}
+.wordbig{
+    margin-bottom:50px;
+}
+.wordtitle{
+    font-size:2.4rem;
+    font-weight:700;
+    word-spacing:8px;
+    letter-spacing:2px;
+    margin:30px 0 20px 15px;
+}
+.worddetail{
+    font-size:1.8rem;
+    font-weight:700;
+    letter-spacing: 1px;
+    margin:15px;
+}
+.test{
+    width:32rem;
+    margin:0 auto;
+}
+.testdetail{
+    margin-bottom:40px;
+    position:relative;
+}
+.testinput{
+    min-width:31.8rem;
+    height:2.5rem;
+}
+.testselect{
+    width:32rem;
+    height:2.5rem;
+}
+.testlabel{
+    font-size:1.5rem;
+    position:absolute;
+    top:-2.1rem;
+}
+.testcheckbox{
+    width:2rem;
+    height:2rem;
+    vertical-align: middle;
+}
+.checkboxwrod{
+    font-size:1.2rem;
+}
+.ts{
+    position:relative;
+    color:red;
+    display:none;
+}
+.tscheckbox{
+    position:absolute;
+    left:0;
+    bottom:-20px;
+}
+.testsubmit{
+    width:10rem;
+    height:4.4rem;
+    background:#2c85db;
+    font-size:1.2rem;
+    border:none;
+    color:#fff;
+    font-weight:700;
+    margin-left:5rem;
+}
+.foot{
+    width:100%;
+    box-sizing:border-box;
+    background:#aaa;
+}
+.foot ul li{
+    font-size:1.2rem;
+    width:50%;
+    float:left;
+    padding-bottom:2rem;
+}
