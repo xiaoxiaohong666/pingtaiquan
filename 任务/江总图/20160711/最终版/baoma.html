@@ -2,11 +2,13 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" href="baoma.css"/>
     <title></title>
     <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/dic.js"></script>
     <script>
-
+        
         function subfun(){
             var key = true;
             var lastname = $("#lastname").val();
@@ -95,6 +97,29 @@
             })
         });
 
+        function funBMWline(o){
+            var id = o.value;
+            var lists = bodyTypeBySeries[id];
+            $("#BMWmodel").empty();
+            $("#BMWmodel").append('<option value="">请选择</option>');
+
+            $.each(lists,function(key,val){
+                $("#BMWmodel").append('<option value="'+val.value+'">'+val.text+'</option>');
+            });
+        }
+
+        function funBMWmodel(o){
+
+            var id = o.value;
+            var lists = modelByBodyType[id];
+            $("#BMWtype").empty();
+            $("#BMWtype").append('<option value="">请选择</option>');
+
+            $.each(lists,function(key,val){
+                $("#BMWtype").append('<option value="'+val.value+'">'+val.text+'</option>');
+            });
+
+        }
     </script>
 </head>
 <body>
@@ -134,44 +159,37 @@
             </p>
             <p class="testdetail">
                 <label class="testlabel">您感兴趣的BMW车系 <b>*</b></label>
-                <select name=""  class="testselect" id="BMWline">
+                <select name=""  class="testselect" id="BMWline" onchange="funBMWline(this)">
                     <option value="">请选择</option>
-                    <option value="1">BMW 1系</option>
-                    <option value="2">BMW 2系</option>
-                    <option value="3">BMW 3系</option>
-                    <option value="4">BMW 4系</option>
-                    <option value="5">BMW 5系</option>
-                    <option value="6">BMW 6系</option>
-                    <option value="7">BMW 7系</option>
-                    <option value="8">BMW X1</option>
-                    <option value="9">BMW X3</option>
-                    <option value="10">BMW X4</option>
-                    <option value="11">BMW X5</option>
-                    <option value="12">BMW X6</option>
-                    <option value="13">BMW Z4</option>
-                    <option value="14">BMW M</option>
-                    <option value="15">BMW i</option>
+                    <option value="1151001">BMW 1系</option>
+                    <option value="1151020">BMW 2系</option>
+                    <option value="1151002">BMW 3系</option>
+                    <option value="1151018">BMW 4系</option>
+                    <option value="1151003">BMW 5系</option>
+                    <option value="1151004">BMW 6系</option>
+                    <option value="1151005">BMW 7系</option>
+                    <option value="1151016">BMW X1</option>
+                    <option value="1151006">BMW X3</option>
+                    <option value="1151021">BMW X4</option>
+                    <option value="1151007">BMW X5</option>
+                    <option value="1151008">BMW X6</option>
+                    <option value="1151009">BMW Z4</option>
+                    <option value="1151013">BMW M</option>
+                    <option value="1151019">BMW i</option>
                 </select>
                 <span class="ts">请选择感兴趣的车系</span>
             </p>
             <p class="testdetail">
                 <label class="testlabel">您感兴趣的BMW车型 <b>*</b></label>
-                <select name=""  class="testselect" id="BMWmodel">
+                <select name=""  class="testselect" id="BMWmodel" onchange="funBMWmodel(this)">
                     <option value="">请选择</option>
-                    <option value="1">新BMW 1系 运动型两厢轿车</option>
                 </select>
                 <span  class="ts">请选择您的感兴趣的车型</span>
             </p>
             <p class="testdetail">
                 <label class="testlabel">您感兴趣的BMW型号 <b>*</b></label>
-                <select name=""  class="testselect" id="BMWtype">
+                <select name=""  class="testselect" id="BMWtype" >
                     <option value="">请选择</option>
-                    <option value="1">M135i</option>
-                    <option value="2">118i 领先型</option>
-                    <option value="3">118i 都市设计套装</option>
-                    <option value="4">120i领先型</option>
-                    <option value="5">120i 运动设计套装</option>
-                    <option value="6">125i M运动型</option>
                 </select>
                 <span  class="ts">请选择您感兴趣的车型</span>
             </p>
