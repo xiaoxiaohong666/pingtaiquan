@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title></title>
+	<script src="js/jquery-1.11.3.js"></script>
+<style>
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body{
+	font-size:14px;
+	color:#000;
+}
+.menuOut {
+	width:100px;
+	position:relative;
+	z-index:100;
+}
+.menuOut ul {
+	position:absolute;
+	left:0;
+	top:0;
+	width:0;
+	height:0;
+}
+.menuOut ul li {
+	border-radius:0 0 300px 0;
+	width:0;
+	height:0;
+}
+.menuOut ul li a {
+	color:#000;
+	text-decoration:none;
+	font:bold 13px/30px arial, sans-serif;
+	text-align:left;
+	/*box-shadow:-5px 5px 5px rgba(0,0,0,0.4);*/
+	-webkit-transform-origin:0 0;
+	-moz-transform-origin:0 0;
+	-ms-transform-origin:0 0;
+	-o-transform-origin:0 0;
+	transform-origin:0 0;
+}
+.menuOut ul.p1 li {
+	position:absolute;
+	left:0;
+	top:0;
+}
+.menuOut ul.p2 {
+	z-index:-1;
+}
+.menuOut ul.p3 {
+	z-index:-1;
+}
+.menuOut li.s1 > a {
+	position:absolute;
+	display:block;
+	width:100px;
+	height:100px;
+	background:#539df4;
+	border-radius:0 0 100px 0;
+	color:#fff;
+	box-shadow: 0 0 10px #000;
+}
+.menuOut li.s2 > a {
+	position:absolute;
+	border:1px solid #ddd;
+	display:block;
+	width:200px;
+	padding-top:100px;
+	height:100px;
+	background:#7fbafe;
+	border-radius:0 0 200px 0;
+}
+.menuOut ul.p3 li a {
+	position:absolute;
+	border:1px solid #ddd;
+	display:block;
+	width:300px;
+	padding-top:200px;
+	height:100px;
+	background:#7fbafe;
+	border-radius:0 0 300px 0;
+}
+.menuOut ul ul {
+-webkit-transform-origin:0 0;
+-moz-transform-origin:0 0;
+-ms-transform-origin:0 0;
+-o-transform-origin:0 0;
+transform-origin:0 0;
+-webkit-transform:rotate(-90deg);
+-moz-transform:rotateZ(-90deg);
+-ms-transform:rotate(-90deg);
+-o-transform:rotate(-90deg);
+transform:rotate(-90deg);
+-webkit-transition:1s;
+-moz-transition:1s;
+-ms-transition:1s;
+-o-transition:1s;
+transition:1s;
+}
+.menuOut li.s1:hover ul.p2 {
+-webkit-transform:rotate(0deg);
+-moz-transform:rotateZ(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+transform:rotate(0deg);
+}
+.menuOut li.s2:hover ul.p3 {
+-webkit-transform:rotate(0deg);
+-moz-transform:rotateZ(0deg);
+-ms-transform:rotate(0deg);
+-o-transform:rotate(0deg);
+transform:rotate(0deg);
+}
+.menuOut ul li:hover > a {background:#a2cdff; color:#fff;}
+.menuOut li.s2:hover > a {background:#a2cdff; color:#fff;}
+.menuOut .a6 li:hover > a {background:#a2cdff; color:#fff;}
+.menuOut .a5 li:hover > a {background:#a2cdff; color:#fff;}
+.menuOut .a3 li:hover > a {background:#a2cdff; color:#fff;}
+.menuWindow {
+	width:110px;
+	height:110px;
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:100;
+	-webkit-transition:0s 1s;
+	-moz-transition:0s 1s;
+	-ms-transition:0s 1s;
+	-o-transition:0s 1s;
+	transition:0s 1s;
+}
+.menuOut:hover .menuWindow {
+	width:310px;
+	height:310px;
+	-webkit-transition:0s 0s;
+	-moz-transition:0s 0s;
+	-ms-transition:0s 0s;
+	-o-transition:0s 0s;
+	transition:0s 0s;
+}
+.menuOut span {
+	display:inline-block;
+	transform-origin:0 90%;
+	-webkit-transform-origin:0 90%;
+	-moz-transform-origin:0 90%;
+	-ms-transform-origin:0 90%;
+	-o-transform-origin:0 90%;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotateZ(90deg);
+	-ms-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+</style>
+</head>
+<body>
+<div class="menuOut">
+	<div class="menuWindow">
+		<ul class="p1">
+			<li class="s1">
+				<a href="#" class="nav"><p style="padding-top:20px;padding-left:15px;font-size:20px;">菜单</p></a>
+				<ul class="p2">
+					<li class="s2"><a href="#" class="nav1"><span>报表中心</span></a>
+						<ul class="p3">
+							<li><a href="#"><span>打印</span></a></li>
+							<li><a href="#"><span>	编辑</span></a></li>
+							<li><a href="#"><span>	保管</span></a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>报表中心</span></a>
+						<ul class="p3 ">
+							<li><a href="#"><span>打印	</span></a></li>
+							<li><a href="#"><span>编辑	</span></a></li>
+							<li><a href="#"><span>	保管</span></a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>报表中心</span></a>
+						<ul class="p3 ">
+							<li><a href="#"><span>打印	</span></a></li>
+							<li><a href="#"><span>	编辑</span></a></li>
+							<li><a href="#"><span>	保管</span></a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>媒体管理</span></a>
+						<ul class="p3 ">
+							<li><a href="#"><span>	支持</span></a></li>
+							<li><a href="#"><span>	销售</span></a></li>
+							<li><a href="#"><span>	购买</span></a></li>
+							<li><a href="#"><span>	摄影师</span></a></li>
+							<li><a href="#"><span>	零售商</span></a></li>
+							<li><a href="#"><span>	常规</span></a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>订单管理</span></a>
+						<ul class="p3">
+							<li><a href="#"><span>	南区</span></a></li>
+							<li><a href="#"><span>	北区</span></a></li>
+							<li><a href="#"><span>	中心区</span></a></li>
+							<li><a href="#"><span>	中心区</span></a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#"><span>运营中心</span></a>
+						<ul class="p3 ">
+							<li><a href="#"><span>邮箱	</span></a></li>
+							<li><a href="#"><span>	邮递</span></a></li>
+							<li><a href="#"><span>	电话</span></a></li>
+							<li><a href="#"><span>	邮箱</span></a></li>
+							<li><a href="#"><span>	邮递</span></a></li>
+							<li><a href="#"><span>	电话</span></a></li>
+							<li><a href="#"><span>邮箱	</span></a></li>
+							<li><a href="#"><span>	邮递</span></a></li>
+							<li><a href="#"><span>	电话</span></a></li>
+							<li><a href="#"><span>	邮箱</span></a></li>
+							<li><a href="#"><span>邮递	</span></a></li>
+							<li><a href="#"><span>	电话</span></a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>平台用户</span></a>
+						<ul class="p3">
+							<li><a href="#"><span>	数码单反机</span></a></li>
+							<li><a href="#"><span>	镜头</span></a></li>
+							<li><a href="#"><span>	闪光枪</span></a></li>
+							<li><a href="#"><span>	三角架</span></a></li>
+							<li><a href="#"><span>过滤器	</span></a></li>
+						</ul>
+					</li>
+					<li class="s2"><a href="#" class="nav1"><span>信息管理</span></a>
+						<ul class="p3 ">
+							<li><a href="#"><span>邮箱	</span></a></li>
+							<li><a href="#"><span>邮递	</span></a></li>
+							<li><a href="#"><span>电话	</span></a></li>
+							<li><a href="#"><span>	邮箱</span></a></li>
+							<li><a href="#"><span>	邮递</span></a></li>
+							<li><a href="#"><span>	电话</span></a></li>
+						</ul>
+					</li>
+					<li class="s2" ><a href="#" class="nav1"><span>基础信息</span></a>
+						<ul class="p3 ">
+							<li><a href="#"><span>邮箱	</span></a></li>
+							<li><a href="#"><span>邮递	</span></a></li>
+							<li><a href="#"><span>	电话</span></a></li>
+						</ul>
+					</li>
+					<li class="s2" ><a href="#" class="nav1"><span>系统管理</span></a>
+						<ul class="p3 ">
+							<li><a href="#"><span>	邮箱</span></a></li>
+							<li><a href="#"><span>邮递	</span></a></li>
+							<li><a href="#"><span>	电话</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+<script>
+	$(document).ready(function(){
+		$(".nav").hover(function(){
+			var long=$(".p2").children().length;
+			var jiaodu=90/long;
+			//console.log(jiaodu);
+			//console.log(long);
+			var arr=[];
+			for(var i=1; i<long;i++){
+				var leijia=i*jiaodu;
+				b="-"+leijia+'deg';
+				arr.push(b);
+			}
+			//console.log(arr);
+			$.each(arr,function(index,ddd){
+			});
+			$('.menuOut li').find('.s2:nth-of-type(1n+2) > a').each(function(index,detail){
+//				console.log(detail);
+				var wode='rotate'+"("+arr[index]+')';
+//				console.log(wode);
+				$(detail).css({
+					'background': '#7fbafe',
+					'border': '1px solid #ddd',
+					'-webkit-transform':wode,
+					'-moz-transform': wode,
+					'-ms-transform': wode,
+					'-o-transform': wode,
+					'transform': wode
+				});
+			});
+		},function(){
+			$(".sub_box",this).slideUp("fast");
+		});
+
+		$("ul.p3").each(function(i,dom){
+		var long1=$(this).find("li").length;
+			var jiaodu1=90/long1;
+			var arr1=[];
+			for(var i=1; i<long1;i++){
+				var leijia1=i*jiaodu1;
+				b1="-"+leijia1+'deg';
+				arr1.push(b1);
+			}
+			$(this).find('li:nth-of-type(1n+2)> a').each(function(index,detail){
+				//console.log(detail);
+				//console.log(index);
+				var wode1='rotate'+"("+arr1[index]+')';
+				console.log(wode1);
+				$(detail).css({
+					'background': '#7fbafe',
+					'border': '1px solid #ddd',
+					'-webkit-transform':wode1,
+					'-moz-transform': wode1,
+					'-ms-transform': wode1,
+					'-o-transform': wode1,
+					'transform': wode1
+				});
+			});
+		});
+	});
+</script>
+</html>
