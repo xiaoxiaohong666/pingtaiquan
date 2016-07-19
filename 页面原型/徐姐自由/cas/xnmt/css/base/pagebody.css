@@ -417,7 +417,6 @@ a{
     background:#fff;
 }
 .DomSelectTable tr td{
-    width:230px;
     height:35px;
     font-size:14px;
     font-weight:500;
@@ -458,6 +457,12 @@ a{
 }
 .SearchButton,.sub{
     border:none;
+    background:#2769af;
+    color:#fff;
+    width:114px;
+    height:30px;
+    font-size:15px;
+    border-radius:5px;
 }
 
 /*..................................................²éÑ¯ÇøµÄend................................................................*/

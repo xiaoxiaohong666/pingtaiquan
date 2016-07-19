@@ -2,105 +2,40 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <link rel="stylesheet" href="../../../header/ics/css/header.css"/>
-    <link rel="stylesheet" href="../../../footer/ics/footer.css"/>
-    <link rel="stylesheet" href="../../../css/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
-    <link rel="stylesheet" href="../../../css/base/kkpager_blue.css"/>
-    <link rel="stylesheet" href="../../../css/base/easyui.css"/>
-    <link rel="stylesheet" href="../../../css/base/sweetalert.css"/>
-    <script src="../../../js/jquery-1.11.3.js"></script>
-    <script src="../../../js/html5shiv.min.js"></script>
-    <script src="../../../js/respond.min.js"></script>
-    <script src="../../../js/kkpager.min.js"></script>
-    <script src="../../../js/jquery.easyui.min.js"></script>
-    <script src="../../../js/sweetalert.min.js"></script>
-    <script src="../../../My97DatePicker/WdatePicker.js"></script>
-    <!--<style>-->
-        <!--.woshihong{-->
-            <!--color:red;-->
-        <!--}-->
-        <!--.woshilan{-->
-            <!--color:blue;-->
-        <!--}-->
-        <!--.woshihuang>div{-->
-            <!--color:yellow;-->
-        <!--}-->
-    <!--</style>-->
+    <link rel="stylesheet" href="../header/cas/css/header.css"/>
+    <link rel="stylesheet" href="../footer/ics/footer.css"/>
+    <link rel="stylesheet" href="../css/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <link rel="stylesheet" href="../css/base/kkpager_blue.css"/>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/respond.min.js"></script>
+    <script src="../js/html5shiv.min.js"></script>
+    <script src="../js/kkpager.min.js"></script>
+    <script src=" ../My97DatePicker/WdatePicker.js"></script>
+    <title>功能主页面</title>
     <style>
-        .fontcolorred td{
+        .FontColorRed td{
             color:red;
         }
     </style>
     <script>
         $(document).ready(function(){
             var cmenus=[
-                {'id':'100','name':'报表中心','herf':'#',
-                    'children':[{'id':'101','name':'媒体报表','href':'../../index.html'},
-                        {'id':'102','name':'客户报表','href':'customereport.html'},
-                        {'id':'103','name':'内部报表','href':'#'},
-                        {"id":'104',"name":'客户日数据报表',"href":'reportrecday.html'}
-                    ]},
-                {"id":"200","name":"媒体管理","href":"#",
-                    "children":[{"id":"201","name":"应用审核","href":"../appaudit/page.html"},
-                        {"id":"202","name":"ad采购报价","href":"../appaudit/buyprice.html"},
-                        {"id":"203","name":"ad销售报价","href":"../appaudit/sellprice.html"},
-                        {"id":"204","name":"ad对接留档","href":"../appaudit/butt.html"},
-                        {"id":"205","name":"应用管理","href":"page.html"},
-                        {"id":"206","name":"广告位管理","href":"../appaudit/adpage.html"}]},
-                {"id":"300","name":"客户管理","href":"#",
-                    "children":[{"id":"301","name":"内部普通订单","href":"../appinterior/internalorder.html"},
-                        {"id":"302","name":"内部余量订单","href":"../appinterior/remnantorder.html"},
-                        {"id":"303","name":"客户订单","href":"../appinterior/customerorder.html"},
-                        {"id":"304","name":"广告测试","href":"../appinterior/adstest.html"}]},
-//                {"id":"400","name":"运维监控","href":"#",
-//                    "children":[{"id":"401","name":"超级监控","href":"#"},
-//                        {"id":"402","name":"策略监控","href":"#"},
-//                        {"id":"403","name":"日监控"}]},
-//                {"id":"500","name":"结算中心","href":"#",
-//                    "children":[{"id":"501","name":"日结算数据","href":"#"},
-//                        {"id":"502","name":"媒体结算","href":"#"},
-//                        {"id":"503","name":"客户结算"}]},
-//                {"id":"600","name":"财务管理","href":"#",
-//                    "children":[{"id":"601","name":"内部员工","href":"#"},
-//                        {"id":"602","name":"媒体用户","href":"#"},
-//                        {"id":"603","name":"客户管理","href":"#"},
-//                        {"id":"602","name":"媒体用户","href":"#"},
-//                        {"id":"603","name":"客户管理","href":"#"},
-//                        {"id":"602","name":"媒体用户","href":"#"},
-//                        {"id":"603","name":"客户管理","href":"#"}]},
-                {"id":"700","name":"平台用户","href":"#",
-                    "children":[{"id":"601","name":"内部员工","href":"../userplatform/userplatform.html"},
-                        {"id":"602","name":"媒体用户","href":"../userplatform/usermedia.html"},
-                        {"id":"603","name":"客户管理","href":"../userplatform/userclient.html"}
-                    ]},
-                {"id":"600","name":"信息管理","href":"#",
-                    "children":[{"id":"801","name":"留言板","href":"#"},
-                        {"id":"802","name":"信息公告","href":"#"},
-                        {"id":"803","name":"新手帮助","href":"#"},
-                        {"id":"805","name":"服务条款","href":"#"},
-                        {"id":"805","name":"SDK附件","href":"../infomanage/sdkadjunct.html"}
-                    ]},
-                {"id":"600","name":"基础信息","href":"#",
-                    "children":[{"id":"901","name":"系统参数","href":"../baseinfo/ststmargue.html"},
-                        {"id":"902","name":"投放地区","href":"../baseinfo/putarea.html"},
-                        {"id":"903","name":"数据字典","href":"#"},
-                        {"id":"905","name":"内部职务","href":"#"},
-                        {"id":"905","name":"媒体分类","href":"#"}
-                    ]},
-                {"id":"1000","name":"系统管理","href":"#",
-                    "children":[{"id":"1001","name":"功能菜单","href":"#"},
-                        {"id":"1002","name":"人员组织","href":"#"},
-                        {"id":"1003","name":"菜单权限","href":"#"},
-                        {"id":"1005","name":"数据权限","href":"#"}]},
-                {"id":"1002","name":"系统日志","href":"#"},
-                {"id":"1003","name":"操作日志","href":"#"}
-
+                {'id':'100','name':'报表中心','href':'#',
+                    'children':[{'id':'101','name':'统计报表','href':'index.html'},
+                        {'id':'102','name':'客户日数据报表','href':'reportrecday.html'}
+                      ]},
+                {"id":"200","name":"应用管理","href":"#",
+                    "children":[{"id":"201","name":"应用管理","href":"media/appexternal/page.html"},
+                        {"id":"202","name":"广告位管理","href":"media/adslotexternal/page.html"}
+                        ]},
+                {"id":"300","name":"个人信息","href":"#",
+                    "children":[{"id":"301","name":"基础信息","href":"manage/user/page.html"},
+                        {"id":"303","name":"收款账户","href":"manage/user/view.html"}]}
 
             ];
             var nav=$(".nav" );
 
-            for(var i=0;i<6;i++){
+            for(var i=0;i<cmenus.length;i++){
 
                 var htmlval='';
                 htmlval =  "<li>"+ "<a href=''>"+cmenus[i].name+"</a>";
@@ -113,55 +48,43 @@
 
                 nav.append(htmlval);
             }
-
-            var jsondata = [{id: 1, code:"2016-02-12",request:"3",exposure:"74",click:"141"},
-                {id: 2, code:"2016-02-12",request:"4",exposure:"343",click:"442"},
-                {id: 3, code:"2016-02-12",request:"6",exposure:"34",click:"434"},
-                {id: 4, code:"2016-02-12",request:"8",exposure:"34",click:"242"},
-                {id: 5, code:"2016-02-12",request:"7",exposure:"45",click:"232"},
-                {id: 6, code:"2016-02-12",request:"8",exposure:"65",click:"23 "},
-                {id: 7, code:"2016-02-12",request:"4",exposure:"56",click:" 32"},
-                {id: 8, code:"2016-02-12",request:"55",exposure:"76",click:" 323"},
-                {id: 9, code:"2016-02-12",request:"5",exposure:"65",click:"232 "},
-                {id: 10, code:"2016-02-12",request:"7",exposure:"65",click:" 232"}
-
+            var jsondata = [{id: 1, code:"2016-02-12",request:"3",expose:"74",click:"141" },
+                {id: 2, code:"2016-02-12",request:"3",expose:"74",click:"141" },
+                {id: 3, code:"2016-02-12",request:"3",expose:"74",click:"141" },
+                {id: 4, code:"2016-02-12",request:"3",expose:"74",click:"141" },
+                {id: 5, code:"2016-02-12",request:"3",expose:"74",click:"141" },
+                {id: 6, code:"2016-02-12",request:"3",expose:"74",click:"141" }
             ];
             var table = $('.TablePage');
             //  alert(jsondata.length);
-            var sumclick = 0;
             var sumrequest = 0;
-            var sumexposure = 0;
+            var sumexpose = 0;
+            var sumclick = 0;
             for (var i = 0; i < jsondata.length; i++) {
-
-              sumclick += Number(jsondata[i].click);
-                sumrequest += Number(jsondata[i].request);
-                sumexposure += Number(jsondata[i].exposure);
-//                alert(jsondata[i].click);
+                //alert(i);
+                sumrequest += parseInt(jsondata[i].request);
+                sumexpose +=parseInt(jsondata[i].expose);
+                sumclick +=parseInt(jsondata[i].click);
                 table.append("<tr>" +
                         "<td align='center'>" + jsondata[i].id + "</td>" +
                         "<td align='center'>"+jsondata[i].code+"</td>" +
                         "<td align='center'>" + jsondata[i].request + "</td>" +
-                        "<td align='center'>" + jsondata[i].exposure+ "</td>" +
+                        "<td align='center'>" + jsondata[i].expose + "</td>" +
                         "<td align='center'>" + jsondata[i].click + "</td>" +
                         "</tr>");
             }
             var jsondata = Number(jsondata.length);
             jsondata +=1;
-         //   alert(jsondata);
-            table.append("<tr class='fontcolorred'>" +
+            //   alert(jsondata);
+            table.append("<tr class='FontColorRed'>" +
                     "<td align='center'>" + jsondata + "</td>" +
                     "<td align='center'>"+"小计"+"</td>" +
                     "<td align='center'>" + sumrequest + "</td>" +
-                    "<td align='center'>" +  sumexposure+ "</td>" +
+                    "<td align='center'>" +  sumexpose+ "</td>" +
                     "<td align='center'>" + sumclick + "</td>" +
                     "</tr>");
-//            alert(sumclick);
-//            alert(sumrequest);
-//            alert(sumexposure);
-
-        });
+        })
     </script>
-    <title>功能主页面</title>
 </head>
 <body>
 <div class="DomUpBody">
@@ -179,33 +102,28 @@
             <div class="wrap">
                 <ul>
                     <li class="NEWS">
-                        <a href="news.html" class="News">消息 <span class="NewsBar">(1)</span></a>
+                        <a href="" class="News">消息 <span class="NewsBar">(1)</span></a>
                     </li>
-                    <li>
-                        <h1 class="User"><i></i>管理员<b></b></h1>
-                        <div class="change" >
+                    <li class="USER">
+                        <h1 class="User"><i></i>虚拟媒体<b></b></h1>
+                        <div class="change">
                             <a class="changePwd" href=""> <i></i>修改密码</a>
                             <a class="changeExit" href=""> <i></i>退出</a>
                         </div>
                     </li>
-                    <li><a href="" class="SDK">说明文档</a></li>
-                    <li><a class="SDK" href="sdk.html">SDK下载</a></li>
+                    <li><a href=""  class="SDK">SDK下载<i></i></a></li>
                 </ul>
-
             </div>
         </div>
         <div class="wrap">
-            <a href=""><img src="../../../img/logo.png" class="logo" alt=""/></a>
+            <a href=""><img src="../img/logo.png" alt="" class="logo"/></a>
         </div>
-        <div  class="headerNav" id="divid">
-            <button  class="left" type="button" onclick="lfun()"></button>
+
+        <div class="headerNav" id="divid">
             <ul class="nav">
 
             </ul>
-
-            <button  class="right" type="button" onclick="rfun()"></button>
         </div>
-
     </div>
     <div class="headerNavBar"></div>
     <div class="ask">
@@ -240,65 +158,21 @@
         </ul>
         <button type="button" class="closeTitle">关闭</button>
     </div>
-
     </body>
     <script>
         $(document).ready(function() {
-
             $(".nav li").hover(function() {
                 $('ul', this).fadeIn("fast");
-                // $("a b",this).slideDown("fast");
                 $(this).children().addClass("hover");
-                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7"});
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7","border-bottom":"1px solid #c8d8e7"});
             }, function() {
                 $('ul', this).fadeOut("fast");
-                // $("a b",this).slideUp("fast");
                 $(this).children().removeClass("hover");
-                $(".headerNavBar").css({"border-top":"1px solid transparent"});
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7","border-bottom":"1px solid transparent"});
             });
         });
         $(document).ready(function(){
             $(".nav li a b").css("display","none");
-        });
-        //          var  i=5;
-        //          var a = $("#divid > ul > li").length;
-        //          $("#divid > ul > li").each(function(index,demo){
-        //              if(index>i){
-        //                  $(this).hide();
-        //              }else{
-        //                  $(this).show();
-        //              }
-        //          });
-        function rfun(){
-            var a = $("#divid > ul > li").length;
-            var i=a-6;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=i){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
-        function lfun(){
-            var a = $("#divid > ul > li").length;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=0&&index<=5){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
-        $(document).ready(function(){
-            $(".hide").click(function(){
-                $(".right_middle p,.right_middle ul").show();
-            });
-            $(".show").click(function(){
-                $(".right_middle p,.right_middle ul").hide();
-            })
         });
         $(document).ready(function(){
             $(".User").click(function(){
@@ -306,6 +180,13 @@
                     $(".change").slideDown();
                 }else{
                     $(".change").slideUp();
+                }
+            });
+            $(".News").click(function(){
+                if($(".NewsDeta").css("display")=="none"){
+                    $(".NewsDeta").slideDown();
+                }else{
+                    $(".NewsDeta").slideUp();
                 }
             });
         });
@@ -342,21 +223,12 @@
                 <table class="DomSelectTable">
                     <tr>
                         <th align="center">日期</th>
-                        <td align="left" width="20%">
+                        <td>
                             <input type="text" class="Wdate" onfocus="WdatePicker()"/> — <input type="text" class="Wdate" onfocus="WdatePicker()"/>
                         </td>
                     </tr>
                     <tr>
-                        <th align="center">客户</th>
-                        <td>
-                            <select name="" class="SearchSelect">
-                                <option value="">请选择</option>
-                                <option value="">项目1</option>
-                                <option value="">项目2</option>
-                                <option value="">项目3</option>
-                            </select>
-                        </td>
-                        <th align="center">订单</th>
+                        <th align="center" >订单</th>
                         <td>
                             <select name="" class="SearchSelect">
                                 <option value="">请选择</option>
@@ -374,7 +246,6 @@
                                 <option value="">项目3</option>
                             </select>
                         </td>
-
                     </tr>
                     <tr>
                         <th align="center">城市</th>
@@ -400,7 +271,7 @@
                 </table>
             </div>
         </div><!--查询条件区-->
-        <div class="DomMatter" style="border:1px solid #e4ebf1;box-shadow:0 0 10px #e4ebf1;margin-bottom:10px;">
+        <div class="DomMatter" style="border:1px solid #e4ebf1;box-shadow:0 0 10px #e4ebf1;margin-bottom:10px;background:#fff;">
             <div style="padding:6px;">当前没有查询条件</div>
         </div>
         <div class="DomMatter"><!--内容区-->
@@ -453,7 +324,6 @@
         <a href="">京ICP备05032905号</a>
     </div>
 </div>
-
 </body>
 </html>
 <!-- 页面尾部结束-->
@@ -535,4 +405,17 @@
     })
 
 </script>
+<script>
+    $(document).ready(function(){
+        $(".TablePage tr:even,.TableView tr:even,.TableEdit tr:even").css("background","#f9f9f9");
+        $(".TablePage tr,.TableView tr,.TableEdit tr").hover(function(){
+            $('td,td a',this).css("color","#3384d5");
+            $('.little',this).css("background","red");
+        },function(){
+            $('.little',this).css("background","green");
+            $('td,td a',this).css("color","#000");
+        })
+    })
+</script>
+<!--隔行变色结束-->
 </html>

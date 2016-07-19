@@ -18,8 +18,9 @@
     <script>
         $(document).ready(function() {
             var cmenus=[
-                {'id':'100','name':'报表中心','herf':'#',
-                    'children':[{'id':'101','name':'统计报表','href':'../../index.html'}
+                {'id':'100','name':'报表中心','href':'#',
+                    'children':[{'id':'101','name':'统计报表','href':'../../index.html'},
+                        {'id':'102','name':'客户日数据报表','href':'../../reportrecday.html'}
                     ]},
                 {"id":"200","name":"订单管理","href":"#",
                     "children":[{"id":"201","name":"普通订单","href":"page.html"},
@@ -190,52 +191,102 @@
         });
     </script>
     </html>
-
-
     <div class="DomBody" > <!--内容区样式全部放在pagebody.css-->
         <div class="DomBread">
             <!--bread_nav面包屑开始-->
             <div class="DomBread_nav">
-                <i></i> <a href="" class="first">订单管理</a>
+                <i></i> <a href="" class="first">个人信息</a>
                 <a>> </a>
-                <a href="">普通订单</a>
+                <a href="">信息完善</a>
             </div>
             <!--bread_nav面包屑结束-->
         </div> <!--面包屑（功能引栏）-->
-        <!--页面头部的几个按钮-->
-        <div class="DomButton">
-            <div class="wrap">
-                <button type="button" class="updateButton"><i></i>新增策略</button>
-                <button type="button" class="reviseButton"><i></i>编辑策略</button>
-                <button type="button" class="delButton"><i></i>删除策略</button>
-                <button type="button" class="reviseButton">返回订单</button>
-            </div>
-        </div>
-        <div class="clear"></div>
         <div class="DomMatter"><!--内容区-->
-            <div class="DomPageMatter" style="background:#fff;">
-                <div class="clear"></div>
-                <table id="tablekey"  class="TablePage"  bordercolor="#ddd" cellspacing="0" cellpadding="0" >
-                    <thead>
+            <div id="a" class="DomEditMatter">
+                <table class="TableEdit"  cellspacing="0" cellpadding="0" width="100%">
+                    <thead><tr><th colspan="8" align="left">个人信息完善</th></tr></thead>
                     <tr>
-                        <th width="3%">序号</th>
-                        <th width="4%"><input class="checked" id="allcheck" type="checkbox"/></th>
-                        <th width="16%">策略名称</th>
-                        <th width="10%">创建时间</th>
-                        <th width="10%">订购方式</th>
-                        <th width="12%">投放总量</th>
-                        <th width="15%">总预算（元）</th>
-                        <th width="12%">状态</th>
-                        <th>操作</th>
+                        <td width="15%" align="right">登录账户：</td>
+                        <td width="25%">
+                            <input type="text" class="pageText" value="xnkh@mcas.com.cn"/>
+                        </td>
+                        <td width="10%" align="right">公司名称：</td>
+                        <td width="40%">
+                            <input type="text" class="pageText" value="虚拟客户"/>
+                        </td>
                     </tr>
-                    </thead>
+                    <tr>
+                        <td align="right">用户类型：</td>
+                        <td>
+                            <input type="radio" name="adv" class="pageRadio" checked/>公司
+                            <input type="radio" name="adv" value="" class="pageRadio"/>个人
+                        </td>
+                        <td align="right">组织机构代码：</td>
+                        <td><input type="text" class="pageText" value="100010001000"/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">行业类别：</td>
+                        <td>
+                            <select name="" id="" class="pageSelect">
+                                <option>  ----请选择--- </option>
+                                <option value="">001-3C服务类</option>
+                                <option value="">002-IT服务类</option>
+                            </select>
+                        </td>
+                        <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td align="right">手机号：</td>
+                        <td>
+                            <input type="text" class="pageText" value="12345678900"/>
+                        </td>
+                        <td align="right">联系QQ：</td>
+                        <td>
+                            <input type="text" class="pageText" value="987123000"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">联系人：</td>
+                        <td>
+                            <input type="text" class="pageText" value="火星"/>
+                        </td>
+                        <td align="right">联系人手机号：</td>
+                        <td><input type="text" class="pageText" value="12345678900"/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">联系地址：</td>
+                        <td><input type="text" class="pageText" value="火星"/></td>
+                        <td align="right">邮政编码：</td>
+                        <td><input type="text" class="pageText" value="075700"/></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">营业执照：</td>
+                        <td><input type="file" class="pageText"/></td>
+                        <td colspan="2" align="center"><img src="../../../img/abd.jpg" alt=""/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">税务登记：</td>
+                        <td><input type="file" class="pageText"/></td>
+                        <td colspan="2" align="center"><img src="../../../img/abd.jpg" alt=""/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">组织机构证书照：</td>
+                        <td><input type="file" class="pageText"/></td>
+                        <td colspan="2" align="center"><img src="../../../img/abd.jpg" alt=""/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">广告位描述：</td>
+                        <td colspan="3">
+                            <textarea class="pageTextarea" style="width:800px; height:150px;">
+
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="4"><button class="buttonA" >提交</button></td>
+                    </tr>
                 </table>
-                <div class="wrap">
-
-                    <div id="kkpager">
-                    </div>
-
-                </div>
             </div>
         </div>
     </div>
@@ -299,7 +350,6 @@
                 swal("OMG得选一条数据", "冻结操作失败了!", "error");
                 return ;
             }
-
             swal({
                 title: "您确定要冻结吗？",
                 text: "您确定要冻结这条数据？",
