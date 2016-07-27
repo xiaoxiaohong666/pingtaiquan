@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+    <meta charset="GBK">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <link rel="stylesheet" href="../header/ics/css/header.css"/>
     <link rel="stylesheet" href="../footer/ics/footer.css"/>
-    <link rel="stylesheet" href="../css/base/pagebody.css"/> <!-- å­˜æ”¾ä¸»ä½“éƒ¨åˆ†çš„cssæ ·å¼ -->
+    <link rel="stylesheet" href="../css/base/pagebody.css"/> <!-- ´æ·ÅÖ÷Ìå²¿·ÖµÄcssÑùÊ½ -->
     <link rel="stylesheet" href="../css/base/kkpager_blue.css"/>
     <script src="../js/jquery-1.11.3.js"></script>
     <script src="../js/html5shiv.min.js"></script>
@@ -15,66 +15,69 @@
     <script>
         $(document).ready(function(){
             var cmenus=[
-                {'id':'100','name':'æŠ¥è¡¨ä¸­å¿ƒ','href':'#',
-                    'children':[{'id':'101','name':'åª’ä½“æŠ¥è¡¨','href':'index.html'},
-                        {'id':'102','name':'å®¢æˆ·æŠ¥è¡¨','href':'media/appexternal/customereport.html'},
-                        {'id':'103','name':'å†…éƒ¨æŠ¥è¡¨','href':'#'},
-                        {"id":'104',"name":'å®¢æˆ·æ—¥æ•°æ®æŠ¥è¡¨','href':'media/appexternal/reportrecday.html'}
+                {'id':'100','name':'±¨±íÖĞĞÄ','href':'#',
+                    'children':[{'id':'101','name':'Ã½Ìå±¨±í','href':'index.html'},
+                        {'id':'102','name':'¿Í»§±¨±í','href':'media/appexternal/customereport.html'},
+                        {'id':'103','name':'ÄÚ²¿±¨±í','href':'#'},
+                        {"id":'104',"name":'¿Í»§ÈÕÊı¾İ','href':'media/appexternal/reportrecday.html'},
+                        {"id":'104',"name":'Ã½ÌåÈÕÊı¾İ','href':'media/appexternal/reportresday.html'},
+                        {"id":'104',"name":'¿Í»§ÊµÊ±Êı¾İ','href':'media/appexternal/CustomersRealtimeReports.html'},
+                        {"id":'104',"name":'Ã½ÌåÊµÊ±Êı¾İ','href':'media/appexternal/reportrecday.html'}
                     ]},
-                {"id":"200","name":"åª’ä½“ç®¡ç†","href":"#",
-                    "children":[{"id":"201","name":"åº”ç”¨å®¡æ ¸","href":"media/appaudit/page.html"},
-                        {"id":"202","name":"adé‡‡è´­æŠ¥ä»·","href":"media/appaudit/buyprice.html"},
-                        {"id":"203","name":"adé”€å”®æŠ¥ä»·","href":"media/appaudit/sellprice.html"},
-                        {"id":"204","name":"adå¯¹æ¥ç•™æ¡£","href":"media/appaudit/butt.html"},
-                        {"id":"205","name":"åº”ç”¨ç®¡ç†","href":"media/appexternal/page.html"},
-                        {"id":"206","name":"å¹¿å‘Šä½ç®¡ç†","href":"media/appaudit/adpage.html"}]},
-                {"id":"300","name":"å®¢æˆ·ç®¡ç†","href":"#",
-                    "children":[{"id":"301","name":"å†…éƒ¨æ™®é€šè®¢å•","href":"media/appinterior/internalorder.html"},
-                        {"id":"302","name":"å†…éƒ¨ä½™é‡è®¢å•","href":"media/appinterior/remnantorder.html"},
-                        {"id":"303","name":"å®¢æˆ·è®¢å•","href":"media/appinterior/customerorder.html"},
-                        {"id":"304","name":"å¹¿å‘Šæµ‹è¯•","href":"media/appinterior/adstest.html"}]},
-//                {"id":"400","name":"è¿ç»´ç›‘æ§","href":"#",
-//                    "children":[{"id":"401","name":"è¶…çº§ç›‘æ§","href":"#"},
-//                        {"id":"402","name":"ç­–ç•¥ç›‘æ§","href":"#"},
-//                        {"id":"403","name":"æ—¥ç›‘æ§"}]},
-//                {"id":"500","name":"ç»“ç®—ä¸­å¿ƒ","href":"#",
-//                    "children":[{"id":"501","name":"æ—¥ç»“ç®—æ•°æ®","href":"#"},
-//                        {"id":"502","name":"åª’ä½“ç»“ç®—","href":"#"},
-//                        {"id":"503","name":"å®¢æˆ·ç»“ç®—"}]},
-//                {"id":"600","name":"è´¢åŠ¡ç®¡ç†","href":"#",
-//                    "children":[{"id":"601","name":"å†…éƒ¨å‘˜å·¥","href":"#"},
-//                        {"id":"602","name":"åª’ä½“ç”¨æˆ·","href":"#"},
-//                        {"id":"603","name":"å®¢æˆ·ç®¡ç†","href":"#"},
-//                        {"id":"602","name":"åª’ä½“ç”¨æˆ·","href":"#"},
-//                        {"id":"603","name":"å®¢æˆ·ç®¡ç†","href":"#"},
-//                        {"id":"602","name":"åª’ä½“ç”¨æˆ·","href":"#"},
-//                        {"id":"603","name":"å®¢æˆ·ç®¡ç†","href":"#"}]},
-                {"id":"700","name":"å¹³å°ç”¨æˆ·","href":"#",
-                    "children":[{"id":"601","name":"å†…éƒ¨å‘˜å·¥","href":"media/userplatform/userplatform.html"},
-                        {"id":"602","name":"åª’ä½“ç”¨æˆ·","href":"media/userplatform/usermedia.html"},
-                        {"id":"603","name":"å®¢æˆ·ç®¡ç†","href":"media/userplatform/userclient.html"}
+                {"id":"200","name":"Ã½Ìå¹ÜÀí","href":"#",
+                    "children":[{"id":"201","name":"Ó¦ÓÃÉóºË","href":"media/appaudit/page.html"},
+                        {"id":"202","name":"ad²É¹º±¨¼Û","href":"media/appaudit/buyprice.html"},
+                        {"id":"203","name":"adÏúÊÛ±¨¼Û","href":"media/appaudit/sellprice.html"},
+                        {"id":"204","name":"ad¶Ô½ÓÁôµµ","href":"media/appaudit/butt.html"},
+                        {"id":"205","name":"Ó¦ÓÃ¹ÜÀí","href":"media/appexternal/page.html"},
+                        {"id":"206","name":"¹ã¸æÎ»¹ÜÀí","href":"media/appaudit/adpage.html"}]},
+                {"id":"300","name":"¿Í»§¹ÜÀí","href":"#",
+                    "children":[{"id":"301","name":"ÄÚ²¿ÆÕÍ¨¶©µ¥","href":"media/appinterior/internalorder.html"},
+                        {"id":"302","name":"ÄÚ²¿ÓàÁ¿¶©µ¥","href":"media/appinterior/remnantorder.html"},
+                        {"id":"303","name":"¿Í»§¶©µ¥","href":"media/appinterior/customerorder.html"},
+                        {"id":"304","name":"¹ã¸æ²âÊÔ","href":"media/appinterior/adstest.html"}]},
+//                {"id":"400","name":"ÔËÎ¬¼à¿Ø","href":"#",
+//                    "children":[{"id":"401","name":"³¬¼¶¼à¿Ø","href":"#"},
+//                        {"id":"402","name":"²ßÂÔ¼à¿Ø","href":"#"},
+//                        {"id":"403","name":"ÈÕ¼à¿Ø"}]},
+//                {"id":"500","name":"½áËãÖĞĞÄ","href":"#",
+//                    "children":[{"id":"501","name":"ÈÕ½áËãÊı¾İ","href":"#"},
+//                        {"id":"502","name":"Ã½Ìå½áËã","href":"#"},
+//                        {"id":"503","name":"¿Í»§½áËã"}]},
+//                {"id":"600","name":"²ÆÎñ¹ÜÀí","href":"#",
+//                    "children":[{"id":"601","name":"ÄÚ²¿Ô±¹¤","href":"#"},
+//                        {"id":"602","name":"Ã½ÌåÓÃ»§","href":"#"},
+//                        {"id":"603","name":"¿Í»§¹ÜÀí","href":"#"},
+//                        {"id":"602","name":"Ã½ÌåÓÃ»§","href":"#"},
+//                        {"id":"603","name":"¿Í»§¹ÜÀí","href":"#"},
+//                        {"id":"602","name":"Ã½ÌåÓÃ»§","href":"#"},
+//                        {"id":"603","name":"¿Í»§¹ÜÀí","href":"#"}]},
+                {"id":"700","name":"Æ½Ì¨ÓÃ»§","href":"#",
+                    "children":[{"id":"601","name":"ÄÚ²¿Ô±¹¤","href":"media/userplatform/userplatform.html"},
+                        {"id":"602","name":"Ã½ÌåÓÃ»§","href":"media/userplatform/usermedia.html"},
+                        {"id":"603","name":"¿Í»§¹ÜÀí","href":"media/userplatform/userclient.html"}
                          ]},
-                {"id":"800","name":"ä¿¡æ¯ç®¡ç†","href":"#",
-                    "children":[{"id":"801","name":"ç•™è¨€æ¿","href":"#"},
-                        {"id":"802","name":"ä¿¡æ¯å…¬å‘Š","href":"#"},
-                        {"id":"803","name":"æ–°æ‰‹å¸®åŠ©","href":"#"},
-                        {"id":"805","name":"æœåŠ¡æ¡æ¬¾","href":"#"},
-                        {"id":"805","name":"SDKé™„ä»¶","href":"media/infomanage/sdkadjunct.html"}
+                {"id":"800","name":"ĞÅÏ¢¹ÜÀí","href":"#",
+                    "children":[{"id":"801","name":"ÁôÑÔ°å","href":"#"},
+                        {"id":"802","name":"ĞÅÏ¢¹«¸æ","href":"#"},
+                        {"id":"803","name":"ĞÂÊÖ°ïÖú","href":"#"},
+                        {"id":"805","name":"·şÎñÌõ¿î","href":"#"},
+                        {"id":"805","name":"SDK¸½¼ş","href":"media/infomanage/sdkadjunct.html"}
                     ]},
-                {"id":"900","name":"åŸºç¡€ä¿¡æ¯","href":"#",
-                    "children":[{"id":"901","name":"ç³»ç»Ÿå‚æ•°","href":"media/baseinfo/ststmargue.html"},
-                        {"id":"902","name":"æŠ•æ”¾åœ°åŒº","href":"media/baseinfo/putarea.html"},
-                        {"id":"903","name":"æ•°æ®å­—å…¸","href":"#"},
-                        {"id":"905","name":"å†…éƒ¨èŒåŠ¡","href":"#"},
-                        {"id":"905","name":"åª’ä½“åˆ†ç±»","href":"#"}
+                {"id":"900","name":"»ù´¡ĞÅÏ¢","href":"#",
+                    "children":[{"id":"901","name":"ÏµÍ³²ÎÊı","href":"media/baseinfo/ststmargue.html"},
+                        {"id":"902","name":"Í¶·ÅµØÇø","href":"media/baseinfo/putarea.html"},
+                        {"id":"903","name":"Êı¾İ×Öµä","href":"#"},
+                        {"id":"905","name":"ÄÚ²¿Ö°Îñ","href":"#"},
+                        {"id":"905","name":"Ã½Ìå·ÖÀà","href":"#"}
                     ]}
-//                {"id":"1000","name":"ç³»ç»Ÿç®¡ç†","href":"#",
-//                    "children":[{"id":"1001","name":"åŠŸèƒ½èœå•","href":"#"},
-//                        {"id":"1002","name":"äººå‘˜ç»„ç»‡","href":"#"},
-//                        {"id":"1003","name":"èœå•æƒé™","href":"#"},
-//                        {"id":"1005","name":"æ•°æ®æƒé™","href":"#"}]},
-//                        {"id":"1002","name":"ç³»ç»Ÿæ—¥å¿—","href":"#"},
-//                        {"id":"1003","name":"æ“ä½œæ—¥å¿—","href":"#"}
+//                {"id":"1000","name":"ÏµÍ³¹ÜÀí","href":"#",
+//                    "children":[{"id":"1001","name":"¹¦ÄÜ²Ëµ¥","href":"#"},
+//                        {"id":"1002","name":"ÈËÔ±×éÖ¯","href":"#"},
+//                        {"id":"1003","name":"²Ëµ¥È¨ÏŞ","href":"#"},
+//                        {"id":"1005","name":"Êı¾İÈ¨ÏŞ","href":"#"}]},
+//                        {"id":"1002","name":"ÏµÍ³ÈÕÖ¾","href":"#"},
+//                        {"id":"1003","name":"²Ù×÷ÈÕÖ¾","href":"#"}
             ];
             var nav=$(".nav" );
 
@@ -92,16 +95,16 @@
                 nav.append(htmlval);
             }
 
-            var jsondata = [{id: 1, code:"2016-02-12", name: "æ­¦æ±‰å¸‚å¤šæ¯”ç‰¹ä¿¡æ¯ç§‘æŠ€æœ‰é™å…¬å¸", garden: "Andriod-å¤šç‰›ç™¾å˜æ–¹å—", appkey: "Andriod-å¤šç‰›ç™¾å˜æ–¹å—-Banner",state:"3",business:"74",handle:"141" ,up:"234",dian:"34",money:"234"},
-                {id: 2, code:"2016-02-12", name: "æ˜¥é›¨åŒ»ç”Ÿ", garden: "Andriod-å¤šç‰›ç™¾å˜æ–¹å—", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"4",business:"343",handle:"442" ,up:"234",dian:"34",money:"234"},
-                {id: 3, code:"2016-02-12", name: "æ­¦æ±‰å¸‚å¤šæ¯”ç‰¹ä¿¡æ¯ç§‘æŠ€æœ‰é™å…¬å¸", garden: "Andriod-å¤šç‰›ç™¾å˜æ–¹å—", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"6",business:"34",handle:"434" ,up:"234",dian:"34",money:"234"},
-                {id: 4, code:"2016-02-12", name: "æ˜¥é›¨åŒ»ç”Ÿ", garden: "Andriod-å¤šç‰›ç™¾å˜æ–¹å—", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"8",business:"34",handle:"242" ,up:"234",dian:"34",money:"234"},
-                {id: 5, code:"2016-02-12", name: "æ˜¥é›¨åŒ»ç”Ÿ", garden: "Andriod-å¤šç‰›ç™¾å˜æ–¹å—", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"7",business:"45",handle:"232" ,up:"234",dian:"34",money:"234"},
-                {id: 6, code:"2016-02-12", name: "æ­¦æ±‰å¸‚å¤šæ¯”ç‰¹ä¿¡æ¯ç§‘æŠ€æœ‰é™å…¬å¸", garden: "Andriod-å¤šç‰›ç™¾å˜æ–¹å—", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"8",business:"65",handle:"23 " ,up:"234",dian:"34",money:"234"},
-                {id: 7, code:"2016-02-12", name: "æ˜¥é›¨åŒ»ç”Ÿ", garden: "Android", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"4",business:"56",handle:" 32" ,up:"234",dian:"34",money:"234"},
-                {id: 8, code:"2016-02-12", name: "æ­¦æ±‰å¸‚å¤šæ¯”ç‰¹ä¿¡æ¯ç§‘æŠ€æœ‰é™å…¬å¸", garden: "Android", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"55",business:"76",handle:" 323" ,up:"234",dian:"34",money:"234"},
-                {id: 9, code:"2016-02-12", name: "æ˜¥é›¨åŒ»ç”Ÿ", garden: "Android", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"5",business:"65",handle:"232 " ,up:"234",dian:"34",money:"234"},
-                {id: 10, code:"2016-02-12", name: "æ˜¥é›¨åŒ»ç”Ÿ", garden: "Android", appkey: "IOS-æ˜¥é›¨åŒ»ç”Ÿ-Banner320*50",state:"7",business:"65",handle:" 232" ,up:"234",dian:"34",money:"234"}
+            var jsondata = [{id: 1, code:"2016-02-12", name: "ÎäººÊĞ¶à±ÈÌØĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", garden: "Andriod-¶àÅ£°Ù±ä·½¿é", appkey: "Andriod-¶àÅ£°Ù±ä·½¿é-Banner",state:"3",business:"74",handle:"141" ,up:"234",dian:"34",money:"234"},
+                {id: 2, code:"2016-02-12", name: "´ºÓêÒ½Éú", garden: "Andriod-¶àÅ£°Ù±ä·½¿é", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"4",business:"343",handle:"442" ,up:"234",dian:"34",money:"234"},
+                {id: 3, code:"2016-02-12", name: "ÎäººÊĞ¶à±ÈÌØĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", garden: "Andriod-¶àÅ£°Ù±ä·½¿é", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"6",business:"34",handle:"434" ,up:"234",dian:"34",money:"234"},
+                {id: 4, code:"2016-02-12", name: "´ºÓêÒ½Éú", garden: "Andriod-¶àÅ£°Ù±ä·½¿é", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"8",business:"34",handle:"242" ,up:"234",dian:"34",money:"234"},
+                {id: 5, code:"2016-02-12", name: "´ºÓêÒ½Éú", garden: "Andriod-¶àÅ£°Ù±ä·½¿é", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"7",business:"45",handle:"232" ,up:"234",dian:"34",money:"234"},
+                {id: 6, code:"2016-02-12", name: "ÎäººÊĞ¶à±ÈÌØĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", garden: "Andriod-¶àÅ£°Ù±ä·½¿é", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"8",business:"65",handle:"23 " ,up:"234",dian:"34",money:"234"},
+                {id: 7, code:"2016-02-12", name: "´ºÓêÒ½Éú", garden: "Android", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"4",business:"56",handle:" 32" ,up:"234",dian:"34",money:"234"},
+                {id: 8, code:"2016-02-12", name: "ÎäººÊĞ¶à±ÈÌØĞÅÏ¢¿Æ¼¼ÓĞÏŞ¹«Ë¾", garden: "Android", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"55",business:"76",handle:" 323" ,up:"234",dian:"34",money:"234"},
+                {id: 9, code:"2016-02-12", name: "´ºÓêÒ½Éú", garden: "Android", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"5",business:"65",handle:"232 " ,up:"234",dian:"34",money:"234"},
+                {id: 10, code:"2016-02-12", name: "´ºÓêÒ½Éú", garden: "Android", appkey: "IOS-´ºÓêÒ½Éú-Banner320*50",state:"7",business:"65",handle:" 232" ,up:"234",dian:"34",money:"234"}
             ];
             var table = $('.TablePage');
             //  alert(jsondata.length);
@@ -126,11 +129,12 @@
 
         });
     </script>
-    <title>åŠŸèƒ½ä¸»é¡µé¢</title>
+    <script></script>
+    <title>¹¦ÄÜÖ÷Ò³Ãæ</title>
 </head>
 <body>
 <div class="DomUpBody">
-    <!--é¡µé¢å¤´éƒ¨ cssçš„æ ·å¼æ”¾åœ¨header.css-->
+    <!--Ò³ÃæÍ·²¿ cssµÄÑùÊ½·ÅÔÚheader.css-->
     <!DOCTYPE html>
     <html>
     <head lang="en">
@@ -138,23 +142,23 @@
         <title></title>
     </head>
     <body>
-    <!--headerå¼€å§‹-->
+    <!--header¿ªÊ¼-->
     <div class="header">
         <div  class="headerTopRight">
             <div class="wrap">
                 <ul>
                     <li class="NEWS">
-                        <a href="news.html" class="News">æ¶ˆæ¯ <span class="NewsBar">(1)</span></a>
+                        <a href="news.html" class="News">ÏûÏ¢ <span class="NewsBar">(1)</span></a>
                     </li>
-                    <li>
-                        <h1 class="User"><i></i>ç®¡ç†å‘˜<b></b></h1>
+                    <li class="USER">
+                        <h1 class="User"><i></i>¹ÜÀíÔ±<b></b></h1>
                         <div class="change" >
-                            <a class="changePwd" href=""> <i></i>ä¿®æ”¹å¯†ç </a>
-                            <a class="changeExit" href=""> <i></i>é€€å‡º</a>
+                            <a class="changePwd" href=""> <i></i>ĞŞ¸ÄÃÜÂë</a>
+                            <a class="changeExit" href=""> <i></i>ÍË³ö</a>
                         </div>
                     </li>
-                    <li><a href="" class="SDK">è¯´æ˜æ–‡æ¡£</a></li>
-                    <li><a class="SDK" href="sdk.html">SDKä¸‹è½½</a></li>
+                    <li><a href="" class="SDK">ËµÃ÷ÎÄµµ</a></li>
+                    <li><a class="SDK" href="sdk.html">SDKÏÂÔØ</a></li>
                 </ul>
 
             </div>
@@ -176,34 +180,34 @@
     <div class="ask">
         <ul>
             <li>
-                <a href=""  class="askword asked">é”€å”®å’¨è¯¢</a>
+                <a href=""  class="askword asked">ÏúÊÛ×ÉÑ¯</a>
             </li>
             <li>
-                <a href="" class="askword asked">å•†åŠ¡å’¨è¯¢</a>
+                <a href="" class="askword asked">ÉÌÎñ×ÉÑ¯</a>
             </li>
             <li>
-                <a href="" class="askword asked">è¿è¥å’¨è¯¢</a>
+                <a href="" class="askword asked">ÔËÓª×ÉÑ¯</a>
             </li>
             <li>
-                <a href="" class="askword customAsked">å®¢æœå’¨è¯¢</a>
+                <a href="" class="askword customAsked">¿Í·ş×ÉÑ¯</a>
             </li>
             <li>
-                <a href="" class="askword back">è¿”å›é¡¶éƒ¨</a>
+                <a href="" class="askword back">·µ»Ø¶¥²¿</a>
             </li>
             <li>
-                <button type="button" class="closeAsk">å…³é—­</button>
+                <button type="button" class="closeAsk">¹Ø±Õ</button>
             </li>
         </ul>
     </div>
     <div class="left_middle" >
-        <h1 class="Title">ç§»åŠ¨å¯¼èˆª</h1>
+        <h1 class="Title">ÒÆ¶¯µ¼º½</h1>
         <ul>
-            <li><a href="">ç»Ÿè®¡æŠ¥è¡¨</a></li>
-            <li><a href="">ç»Ÿè®¡æŠ¥è¡¨</a></li>
-            <li><a href="">æˆ‘è¦å»ä¸‰</a></li>
-            <li><a href="">æˆ‘è¦å»å››</a></li>
+            <li><a href="">Í³¼Æ±¨±í</a></li>
+            <li><a href="">Í³¼Æ±¨±í</a></li>
+            <li><a href="">ÎÒÒªÈ¥Èı</a></li>
+            <li><a href="">ÎÒÒªÈ¥ËÄ</a></li>
         </ul>
-        <button type="button" class="closeTitle">å…³é—­</button>
+        <button type="button" class="closeTitle">¹Ø±Õ</button>
     </div>
 
     </body>
@@ -226,7 +230,7 @@
             $(".nav li a b").css("display","none");
         });
 
-        //ä¸€çº§èœå•æ˜¾ç¤ºé¡ºåº(1-6)
+        //Ò»¼¶²Ëµ¥ÏÔÊ¾Ë³Ğò(1-6)
 
            var showNumStart = 1;
            var showNumEnd = 6;
@@ -253,7 +257,7 @@
                 }
             });
         }
-        //å‘å·¦ç§»åŠ¨
+        //Ïò×óÒÆ¶¯
         function lfun(){
             if(showNumStart==1)return;
             showNumEnd = showNumEnd - 1;
@@ -294,73 +298,73 @@
         })
     </script>
     </html>
-    <div class="DomBody" > <!--å†…å®¹åŒºæ ·å¼å…¨éƒ¨æ”¾åœ¨pagebody.css-->
+    <div class="DomBody" > <!--ÄÚÈİÇøÑùÊ½È«²¿·ÅÔÚpagebody.css-->
         <div class="wrap">
-            <!--bread_navé¢åŒ…å±‘å¼€å§‹-->
+            <!--bread_navÃæ°üĞ¼¿ªÊ¼-->
             <div class="DomBread_nav">
-                <i></i> <a href="" class="first">æŠ¥è¡¨ä¸­å¿ƒ</a>
+                <i></i> <a href="" class="first">±¨±íÖĞĞÄ</a>
                 <a>> </a>
-                <a href="">åª’ä½“æŠ¥è¡¨</a>
+                <a href="">Ã½Ìå±¨±í</a>
             </div>
-            <!--bread_navé¢åŒ…å±‘ç»“æŸ-->
-        </div> <!--é¢åŒ…å±‘ï¼ˆåŠŸèƒ½å¼•æ ï¼‰-->
-        <!--æŒ‰é’®åŒº-->
+            <!--bread_navÃæ°üĞ¼½áÊø-->
+        </div> <!--Ãæ°üĞ¼£¨¹¦ÄÜÒıÀ¸£©-->
+        <!--°´Å¥Çø-->
         <!--<video src="../../img/xiaoshiping.mp4" controls></video>-->
-        <div class="DomSelect"> <!--æŸ¥è¯¢æ¡ä»¶åŒº-->
+        <div class="DomSelect"> <!--²éÑ¯Ìõ¼şÇø-->
             <div class="DomSelectLine">
                 <p class="wrap">
-                    <button type="button" class="first">æŸ¥è¯¢</button>
+                    <button type="button" class="first">²éÑ¯</button>
                     <button type="button" class="last"></button>
                 </p>
             </div>
             <div class="wrap">
                 <table class="DomSelectTable">
                     <tr>
-                        <td>é€‰æ‹©åª’ä½“ï¼š</td>
+                        <td>Ñ¡ÔñÃ½Ìå£º</td>
                         <td>
                             <input type="text" class="SearchText"/>
                         </td>
-                        <td>é€‰æ‹©åº”ç”¨</td>
+                        <td>Ñ¡ÔñÓ¦ÓÃ</td>
                         <td>
                             <select name="" class="SearchSelect">
-                                <option value="">è¯·é€‰æ‹©</option>
-                                <option value="">é¡¹ç›®1</option>
-                                <option value="">é¡¹ç›®2</option>
-                                <option value="">é¡¹ç›®3</option>
+                                <option value="">ÇëÑ¡Ôñ</option>
+                                <option value="">ÏîÄ¿1</option>
+                                <option value="">ÏîÄ¿2</option>
+                                <option value="">ÏîÄ¿3</option>
                             </select>
                         </td>
-                        <td>é€‰æ‹©å¹¿å‘Šä½</td>
+                        <td>Ñ¡Ôñ¹ã¸æÎ»</td>
                         <td>
                             <select name="" class="SearchSelect">
-                                <option value="">è¯·é€‰æ‹©</option>
-                                <option value="">é¡¹ç›®1</option>
-                                <option value="">é¡¹ç›®2</option>
-                                <option value="">é¡¹ç›®3</option>
+                                <option value="">ÇëÑ¡Ôñ</option>
+                                <option value="">ÏîÄ¿1</option>
+                                <option value="">ÏîÄ¿2</option>
+                                <option value="">ÏîÄ¿3</option>
                             </select>
                         </td>
-                        <td> é€‰æ‹©æ—¥æœŸï¼š</td>
+                        <td> Ñ¡ÔñÈÕÆÚ£º</td>
                         <td>
-                            <input type="text" class="Wdate" onFocus="WdatePicker({})"/>
+                            <input type="text" class="Wdate" name="bggintime" id="begintime" onFocus="WdatePicker({})"/>
                         </td>
                     </tr>
 
                 </table>
             </div>
-        </div><!--æŸ¥è¯¢æ¡ä»¶åŒº-->
-        <!--é¡µé¢çš„å››ä¸ªå—-->
+        </div><!--²éÑ¯Ìõ¼şÇø-->
+        <!--Ò³ÃæµÄËÄ¸ö¿é-->
         <div class="DomView">
             <div class="wrap">
                 <div class="exposeSun flyL">
                     <img src="../img/exposeSun.jpg" alt=""/>
-                    <span class="word">1,000ä¸‡</span>
+                    <span class="word">1,000Íò</span>
                 </div>
                 <div class="clickSun flyL">
                     <img src="../img/clickSun.jpg" alt=""/>
-                    <span class="word">2,000ä¸‡</span>
+                    <span class="word">2,000Íò</span>
                 </div>
                 <div class="total flyR">
                     <img src="../img/total.jpg" alt=""/>
-                    <span class="word">2,000ä¸‡</span>
+                    <span class="word">2,000Íò</span>
                 </div>
                 <div class="clickRate flyR">
                     <img src="../img/clickRate.jpg" alt=""/>
@@ -369,27 +373,27 @@
             </div>
         </div>
         <div class="clear"></div>
-        <div class="DomMatter"><!--å†…å®¹åŒº-->
+        <div class="DomMatter"><!--ÄÚÈİÇø-->
             <div class="DomPageMatter">
                 <div class="TableHeader">
-                    <h2 class="first">åª’ä½“ç»Ÿè®¡æŠ¥è¡¨</h2>
-                    <a href="" class="last">ä¸‹è½½åˆ—è¡¨</a>
+                    <h2 class="first">Ã½ÌåÍ³¼Æ±¨±í</h2>
+                    <a href="" class="last">ÏÂÔØÁĞ±í</a>
                 </div>
                 <div class="clear"></div>
                 <table  class="TablePage" border="1" bordercolor="#ddd" cellspacing="0" cellpadding="0" >
                     <thead>
                     <tr>
-                        <th width="3%">åºå·</th>
-                        <th width="8%">æ—¥æœŸ</th>
-                        <th width="15%">åª’ä½“</th>
-                        <th width="11%">åº”ç”¨</th>
-                        <th width="18%">å¹¿å‘Šä½</th>
-                        <th width="8%">æ›å…‰æ•°</th>
-                        <th width="8%">ç‚¹å‡»æ•°</th>
-                        <th width="8%">è¯·æ±‚æ•°</th>
-                        <th width="7%">å¡«å……ç‡</th>
-                        <th width="7%">ç‚¹å‡»ç‡</th>
-                        <th>æ”¶ç›Š(å…ƒ)</th>
+                        <th width="3%">ĞòºÅ</th>
+                        <th width="8%">ÈÕÆÚ</th>
+                        <th width="15%">Ã½Ìå</th>
+                        <th width="11%">Ó¦ÓÃ</th>
+                        <th width="18%">¹ã¸æÎ»</th>
+                        <th width="8%">ÆØ¹âÊı</th>
+                        <th width="8%">µã»÷Êı</th>
+                        <th width="8%">ÇëÇóÊı</th>
+                        <th width="7%">Ìî³äÂÊ</th>
+                        <th width="7%">µã»÷ÂÊ</th>
+                        <th>ÊÕÒæ(Ôª)</th>
                     </tr>
                     </thead>
                 </table>
@@ -403,7 +407,7 @@
         </div>
     </div>
 </div>
-<!--é¡µé¢å°¾éƒ¨ footer.css-->
+<!--Ò³ÃæÎ²²¿ footer.css-->
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -413,21 +417,21 @@
 <body>
 <div class="footer">
     <div class="link">
-        <a href="#">å…³äºæˆ‘ä»¬</a>
+        <a href="#">¹ØÓÚÎÒÃÇ</a>
         <a href="">|</a>
-        <a href="#">è”ç³»æˆ‘ä»¬</a>
+        <a href="#">ÁªÏµÎÒÃÇ</a>
         <a href="">|</a>
-        <a href="#">æœåŠ¡æ¡æ¬¾</a>
+        <a href="#">·şÎñÌõ¿î</a>
         <a href="">|</a>
-        <a href="#">éšç§æ”¿ç­–</a>
+        <a href="#">ÒşË½Õş²ß</a>
         <a href="">|</a>
-        <a href="#">å¸¸è§é—®é¢˜</a>
-        <a href="">äº¬ICPå¤‡05032905å·</a>
+        <a href="#">³£¼ûÎÊÌâ</a>
+        <a href="">¾©ICP±¸05032905ºÅ</a>
     </div>
 </div>
 </body>
 </html>
-<!-- é¡µé¢å°¾éƒ¨ç»“æŸ-->
+<!-- Ò³ÃæÎ²²¿½áÊø-->
 </body>
 
 <script>
@@ -453,47 +457,47 @@
             if(!pageNo){
                 pageNo = 1;
             }
-            //ç”Ÿæˆåˆ†é¡µ
-            //æœ‰äº›å‚æ•°æ˜¯å¯é€‰çš„ï¼Œæ¯”å¦‚langï¼Œè‹¥ä¸ä¼ æœ‰é»˜è®¤å€¼
+            //Éú³É·ÖÒ³
+            //ÓĞĞ©²ÎÊıÊÇ¿ÉÑ¡µÄ£¬±ÈÈçlang£¬Èô²»´«ÓĞÄ¬ÈÏÖµ
             kkpager.generPageHtml({
                 pno : pageNo,
-                //æ€»é¡µç 
+                //×ÜÒ³Âë
                 total : totalPage,
-                //æ€»æ•°æ®æ¡æ•°
+                //×ÜÊı¾İÌõÊı
                 totalRecords : totalRecords,
-                //é“¾æ¥å‰éƒ¨
+                //Á´½ÓÇ°²¿
                 hrefFormer : 'pager_test',
-                //é“¾æ¥å°¾éƒ¨
+                //Á´½ÓÎ²²¿
                 hrefLatter : '.html',
                 getLink : function(n){
                     return this.hrefFormer + this.hrefLatter + "?pno="+n;
                 }
                 /*
                  ,lang				: {
-                 firstPageText			: 'é¦–é¡µ',
-                 firstPageTipText		: 'é¦–é¡µ',
-                 lastPageText			: 'å°¾é¡µ',
-                 lastPageTipText			: 'å°¾é¡µ',
-                 prePageText				: 'ä¸Šä¸€é¡µ',
-                 prePageTipText			: 'ä¸Šä¸€é¡µ',
-                 nextPageText			: 'ä¸‹ä¸€é¡µ',
-                 nextPageTipText			: 'ä¸‹ä¸€é¡µ',
-                 totalPageBeforeText		: 'å…±',
-                 totalPageAfterText		: 'é¡µ',
-                 currPageBeforeText		: 'å½“å‰ç¬¬',
-                 currPageAfterText		: 'é¡µ',
+                 firstPageText			: 'Ê×Ò³',
+                 firstPageTipText		: 'Ê×Ò³',
+                 lastPageText			: 'Î²Ò³',
+                 lastPageTipText			: 'Î²Ò³',
+                 prePageText				: 'ÉÏÒ»Ò³',
+                 prePageTipText			: 'ÉÏÒ»Ò³',
+                 nextPageText			: 'ÏÂÒ»Ò³',
+                 nextPageTipText			: 'ÏÂÒ»Ò³',
+                 totalPageBeforeText		: '¹²',
+                 totalPageAfterText		: 'Ò³',
+                 currPageBeforeText		: 'µ±Ç°µÚ',
+                 currPageAfterText		: 'Ò³',
                  totalInfoSplitStr		: '/',
-                 totalRecordsBeforeText	: 'å…±',
-                 totalRecordsAfterText	: 'æ¡æ•°æ®',
-                 gopageBeforeText		: '&nbsp;è½¬åˆ°',
-                 gopageButtonOkText		: 'ç¡®å®š',
-                 gopageAfterText			: 'é¡µ',
-                 buttonTipBeforeText		: 'ç¬¬',
-                 buttonTipAfterText		: 'é¡µ'
+                 totalRecordsBeforeText	: '¹²',
+                 totalRecordsAfterText	: 'ÌõÊı¾İ',
+                 gopageBeforeText		: '&nbsp;×ªµ½',
+                 gopageButtonOkText		: 'È·¶¨',
+                 gopageAfterText			: 'Ò³',
+                 buttonTipBeforeText		: 'µÚ',
+                 buttonTipAfterText		: 'Ò³'
                  }*/
 
                 //,
-                //mode : 'click',//é»˜è®¤å€¼æ˜¯linkï¼Œå¯é€‰linkæˆ–è€…click
+                //mode : 'click',//Ä¬ÈÏÖµÊÇlink£¬¿ÉÑ¡link»òÕßclick
                 //click : function(n){
                 //	this.selectPage(n);
                 //  return false;
@@ -501,6 +505,5 @@
             });
         });
     })
-
 </script>
 </html>

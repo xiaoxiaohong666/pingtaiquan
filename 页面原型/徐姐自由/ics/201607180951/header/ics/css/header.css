@@ -91,6 +91,9 @@ a{
 .User{
     position:relative;
 }
+.USER{
+    position:relative;
+}
 .change{
     height:80px;
     border-bottom-left-radius:20px;

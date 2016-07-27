@@ -16,17 +16,6 @@
     <script src="../../../js/jquery.easyui.min.js"></script>
     <script src="../../../js/sweetalert.min.js"></script>
     <script src="../../../My97DatePicker/WdatePicker.js"></script>
-    <!--<style>-->
-        <!--.woshihong{-->
-            <!--color:red;-->
-        <!--}-->
-        <!--.woshilan{-->
-            <!--color:blue;-->
-        <!--}-->
-        <!--.woshihuang>div{-->
-            <!--color:yellow;-->
-        <!--}-->
-    <!--</style>-->
     <style>
         .fontcolorred td{
             color:red;
@@ -181,7 +170,7 @@
                     <li class="NEWS">
                         <a href="news.html" class="News">消息 <span class="NewsBar">(1)</span></a>
                     </li>
-                    <li>
+                    <li class="USER">
                         <h1 class="User"><i></i>管理员<b></b></h1>
                         <div class="change" >
                             <a class="changePwd" href=""> <i></i>修改密码</a>
@@ -341,13 +330,13 @@
             <div class="wrap">
                 <table class="DomSelectTable">
                     <tr>
-                        <th align="center">日期</th>
-                        <td align="left" width="20%">
-                            <input type="text" class="Wdate" onfocus="WdatePicker()"/> — <input type="text" class="Wdate" onfocus="WdatePicker()"/>
+                        <td align="center">日期</td>
+                        <td align="left" width="30%">
+                            <input type="text" class="Wdate SearchSelect" onfocus="WdatePicker()"/> — <input type="text" class="Wdate SearchSelect" onfocus="WdatePicker()"/>
                         </td>
                     </tr>
                     <tr>
-                        <th align="center">客户</th>
+                        <td align="center">客户</td>
                         <td>
                             <select name="" class="SearchSelect">
                                 <option value="">请选择</option>
@@ -356,7 +345,7 @@
                                 <option value="">项目3</option>
                             </select>
                         </td>
-                        <th align="center">订单</th>
+                        <td align="center">订单</td>
                         <td>
                             <select name="" class="SearchSelect">
                                 <option value="">请选择</option>
@@ -365,7 +354,7 @@
                                 <option value="">项目3</option>
                             </select>
                         </td>
-                        <th align="center">策略</th>
+                        <td align="center">策略</td>
                         <td>
                             <select name="" class="SearchSelect">
                                 <option value="">请选择</option>
@@ -377,11 +366,11 @@
 
                     </tr>
                     <tr>
-                        <th align="center">城市</th>
+                        <td align="center">城市</td>
                         <td><input type="checkbox"/><input type="text" class="pageText"/></td>
                     </tr>
                     <tr>
-                        <th align="center">广告位</th>
+                        <td align="center">广告位</td>
                         <td>
                             <input type="checkbox"/>
                             <select name="" id="" class="SearchSelect">
@@ -392,7 +381,7 @@
                         </td>
                     </tr>
                     <tr align="cneter">
-                        <td colspan="3" align="center">
+                        <td colspan="6" align="center">
                             <button class="SearchButton button Searchtable">查询</button>
                             <button class="SearchButton button">下载</button>
                         </td>

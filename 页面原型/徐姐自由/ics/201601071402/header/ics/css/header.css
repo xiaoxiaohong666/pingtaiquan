@@ -42,11 +42,12 @@ a{
     background: -ms-radial-gradient(#2769af 60%,#e6edf6); /* 标准的语法 */
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType =0, startColorstr = #2769af, endColorstr = #e6edf6);
 }
-.headerTopRight ul li{
-    position:relative;
-}
+
 .NEWS{
     float:left;
+}
+.USER{
+    position:absolute;
 }
 .headerTopRight ul li h1,.News {
     display:inline-block;
@@ -98,7 +99,7 @@ a{
     z-index:9999;
     top:30px;
     right:0;
-    display:none;
+    display:block;
 }
 .changePwd,.changeExit{
     display:block;
