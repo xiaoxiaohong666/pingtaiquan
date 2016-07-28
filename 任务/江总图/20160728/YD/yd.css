@@ -1,0 +1,99 @@
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#fff;
+}
+.YdWord{
+    color:#e47a1d;
+    width:100%;
+    margin-bottom:15px;
+    border-bottom:1px solid #e2e2e2;
+}
+.YdBigWidth,.YdSmallWidth{
+    padding-left:32px;
+    width:90%;
+    height:30px;
+    border:1px solid #e2e2e2;
+    border-radius:3px;
+}
+.YdSmallWidth{
+    width:50%;
+}
+.YdP{
+    position:relative;
+    margin-bottom:20px;
+}
+.warn,.WarnVerify{
+    color:red;
+    font-size:12px;
+    position:absolute;
+    bottom:-16px;
+    display:none;
+}
+.WarnVerify{
+    left:0;
+}
+.GetVerify,.GetNoteVerify{
+    position:absolute;
+    left:65%;
+    top:0;
+    width:100px;
+    height:30px;
+    background:#e47a1d;
+    color:#fff;
+}
+.GetVerify{
+    width:auto;
+}
+.ChooseNumber{
+    position:absolute;
+    top:-23px;
+    font-size:13px;
+    padding:5px;
+    font-weight: 300;
+}
+.AgreeNumber{
+    font-size:12px;
+}
+#YdAgree{
+    background:#e47a1d;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    width:100%;
+    height:30px;
+    margin-top:5px;
+}
+.UserNumber,.UserPassword,.UserVerify,.UserChoose{
+    position:absolute;
+    left:1px;
+    top:1px;
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(img/icon.png) no-repeat 0 0;
+}
+.UserPassword{
+   background-position:0 -52px ;
+}
+.UserVerify{
+    background-position:0 -105px;
+}
+.UserChoose{
+    background-position: 0 -157px;
+}

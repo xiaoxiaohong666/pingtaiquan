@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="yd.css"/>
+    <title></title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/dic.js"></script>
+    <script>
+        
+        function subfun() {
+            var key = true;
+            var YdUserName = $("#YdUserName").val();
+            if (YdUserName == null || YdUserName == '') {
+                key = false;
+                $("#YdUserName").next().show();
+            } else if (!YdUserName.match(/^([\u4e00-\u9fa5\.]{1,5})$/)) {
+                key = false;
+                $("#YdUserName").next().show();
+            }
+            else {
+                $("#YdUserName").next().hide();
+            }
+            var YdPhoneNumber = $("#YdPhoneNumber").val();
+            if (YdPhoneNumber == null || YdPhoneNumber == "") {
+                key = false;
+                $('#YdPhoneNumber').next().show();
+            } else if (!YdPhoneNumber.match(/^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/)) {
+                key = false;
+                $("#YdPhoneNumber").next().show();
+            }
+            else {
+                $("#YdPhoneNumber").next().hide();
+            }
+            var YdPassword = $("#YdPassword").val();
+            if(YdPassword == null || YdPassword == ""){
+                key = false;
+                $("#YdPassword").next().show();
+            }else if(!YdPassword.match(/^[a-zA-Z]\w{5,17}$/)){
+                key = false;
+                $("#YdPassword").next().show();
+            }
+            else {
+                $("#YdPassword").next().hide();
+            }
+            var YdPasswordCon = $("#YdPasswordCon").val();
+            if(YdPasswordCon == "" || YdPasswordCon ==　null || YdPasswordCon != YdPassword){
+                key = false;
+                $("#YdPasswordCon").next().show();
+            }else {
+                $("#YdPasswordCon").next().hide();
+            }
+            var YdVerify = $("#YdVerify").val();
+            if(YdVerify == ''||YdVerify==null){
+                key=false;
+                $("#YdVerify").next().show();
+            }else{
+                $("#YdVerify").next().hide();
+            }
+            var YdNoteVerify = $("#YdNoteVerify").val();
+            if(YdNoteVerify == '' || YdNoteVerify == null){
+                key = false;
+                $("#YdNoteVerify").next().show();
+            }else{
+                $("#YdNoteVerify").next().hide();
+            }
+            if(key) {
+                alert(key+"后续请自己处理！");return ;
+                document.getElementById("loginform").submit();
+            }
+
+            $(document).ready(function () {
+                $(".YdBigWidth,.YdSmallWidth").focus(function () {
+                    $(this).next().hide();
+                });
+            });
+
+        }
+    </script>
+</head>
+<body>
+   <div class="logo">
+       <img src="img/logo.png" alt="logo图"/>
+   </div>
+       <div class="FormOut" style="width:300px;margin:0 auto;">
+           <form action="" method="post" id="LoginForm">
+               <p>
+               <h1 class="YdWord">用户注册</h1>
+               </p>
+
+               <p class="YdP">
+                   <label for="" class="UserNumber"></label>
+                   <input type="text" class="YdBigWidth" id="YdUserName" placeholder="请输入用户名"/>
+                   <span for="" class="warn">输入用户名</span>
+               </p>
+
+               <p class="YdP">
+                   <label for="" class="UserNumber"></label>
+                   <input type="text" class="YdBigWidth" id="YdPhoneNumber" placeholder="请输入手机号码"/>
+                   <span for="" class="warn">输入手机号码</span>
+               </p>
+
+               <p class="YdP">
+                   <label for="" class="UserPassword"></label>
+                   <input type="text" class="YdBigWidth" id="YdPassword" placeholder="请输入密码"/>
+                   <span for="" class="warn">密码以字母开头的6-18位且只包含数字字母和下划线</span>
+               </p>
+
+               <p class="YdP">
+                   <label for="" class="UserPassword"></label>
+                   <input type="text" class="YdBigWidth" id="YdPasswordCon" placeholder="请确认密码"/>
+                   <span class="warn">请输入确认密码</span>
+               </p>
+
+               <p class="YdP">
+                   <label for="" class="UserVerify"></label>
+                   <a href="" class="GetVerify"><img src="img/YdVerify.png" alt=""/></a>
+                   <input type="text" class="YdSmallWidth" id="YdVerify" placeholder="请输入验证码"/>
+                   <span class="WarnVerify">请输入验证码</span>
+               </p>
+
+               <p class="YdP">
+                   <label for="" class="UserVerify"></label>
+                   <input type="submit" value="获取验证码" class="GetNoteVerify"/>
+                   <input type="text" class="YdSmallWidth" id="YdNoteVerify" placeholder="请输入短信验证码"/>
+                   <span class="WarnVerify">请输入短信验证码</span>
+               </p>
+
+               <p class="YdP1" style="margin-bottom:10px;position:relative;margin-top:40px;">
+                   <label for="" class="UserChoose"></label>
+                   <input type="text"  class="YdBigWidth" id="YdChoose" placeholder="推荐码"/>
+                   <span class="ChooseNumber">推荐码（选填）</span>
+               </p>
+
+           </form>
+
+           <p class="YdP">
+               <span class="AgreeNumber">点击"同意协议并注册"即表示您同意并愿意遵守本站 <a href="empty.html" style="color:red;">《用户协议》</a></span>
+               <input id="YdAgree" type="submit" onclick="subfun()" value="同意协议并注册"/>
+           </p>
+       </div>
+</body>
