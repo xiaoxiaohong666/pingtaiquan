@@ -1,13 +1,15 @@
 /*footer开始*/
 .footer {
     line-height: 20px;
-    text-align: center;
-    background:#2dbedb;
     position: relative;
     margin-top: -20px;/*等于footer的高度*/
     height: 20px;
     clear:both;
 
+}
+.link{
+    text-align: center;
+    background:#2dbedb;
 }
 .footer a{
     color:#fff;

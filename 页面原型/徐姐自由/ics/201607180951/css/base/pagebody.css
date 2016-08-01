@@ -50,6 +50,11 @@ a:hover{
     .nav ul{
         width:400px;
     }
+    .ComUse{
+        width:1080px;
+        margin:0 auto 10px auto;
+        border:1px solid #3175b8;
+    }
 }
 @media screen and (min-width:1600px) and (max-width:1920px) {
     .wrap{
@@ -76,12 +81,17 @@ a:hover{
         width:1510px;
         margin:0 auto;
     }
+    .ComUse{
+        width:1510px;
+        margin:0 auto 10px auto;
+        border:1px solid #3175b8;
+    }
 }
 /*媒体广告位管理页面的样式*/
 .DomUpBody {
-    min-height: 99.9%;
+    min-height: 100%;
     height: auto !important;
-    height: 99.9%;
+    height: 100%;
     background:#fff;
 }
 .DomBody {
@@ -1107,11 +1117,7 @@ a:hover{
     overflow:auto;
     position:relative;
 }
-.ComUse{
-    width:100%;
-    height:150px;
-    border:1px solid #3175b8;
-}
+
 .ComTitle{
     width:100%;
     height:40px;
@@ -1161,3 +1167,22 @@ a:hover{
     padding-top:25px;
 }
 /*******************************************第一个欢迎页结束***************************************/
+/*********************************修改密码开始**********************************/
+.changeOut{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:400px;
+    margin-top:-100px;
+    margin-left:-200px;
+    text-align: right;
+
+}
+.changeInput{
+    margin-bottom:20px;
+    width:300px;
+    height:30px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+/*********************************修改密码结束**********************************/

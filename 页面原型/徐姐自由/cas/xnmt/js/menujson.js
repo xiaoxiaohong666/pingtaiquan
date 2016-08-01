@@ -1,31 +1,44 @@
-$(document).ready(function(){
+function menujson(Num){
     var cmenus=[
-        {'id':'100','name':'±¨±íÖĞĞÄ','href':'#',
-            'children':[{'id':'101','name':'Í³¼Æ±¨±í','href':'index.html'},
-                {'id':'102','name':'Ã½ÌåÈÕÊı¾İ±¨±í','href':'reportrecday.html reportresday'}
+        {'id':'100','name':'æŠ¥è¡¨ä¸­å¿ƒ','href':'#',
+            'children':[{'id':'101','name':'ç»Ÿè®¡æŠ¥è¡¨','href':'manage/index.html'},
+                {'id':'102','name':'åª’ä½“æ—¥æ•°æ®æŠ¥è¡¨','href':'manage/reportresday.html'}
             ]},
-        {"id":"200","name":"Ó¦ÓÃ¹ÜÀí","href":"#",
-            "children":[{"id":"201","name":"Ó¦ÓÃ¹ÜÀí","href":"media/appexternal/page.html"},
-                {"id":"202","name":"¹ã¸æÎ»¹ÜÀí","href":"media/adslotexternal/page.html"}
+        {"id":"200","name":"åº”ç”¨ç®¡ç†","href":"#",
+            "children":[{"id":"201","name":"åº”ç”¨ç®¡ç†","href":"manage/media/appexternal/page.html"},
+                {"id":"202","name":"å¹¿å‘Šä½ç®¡ç†","href":"manage/media/adslotexternal/page.html"}
             ]},
-        {"id":"300","name":"¸öÈËĞÅÏ¢","href":"#",
-            "children":[{"id":"301","name":"»ù´¡ĞÅÏ¢","href":"manage/user/page.html"},
-                {"id":"303","name":"ÊÕ¿îÕË»§","href":"manage/user/view.html"}]}
+        {"id":"300","name":"ä¸ªäººä¿¡æ¯","href":"#",
+            "children":[{"id":"301","name":"åŸºç¡€ä¿¡æ¯","href":"manage/user/page.html"},
+                {"id":"303","name":"æ”¶æ¬¾è´¦æˆ·","href":"manage/user/view.html"}]}
 
     ];
     var nav=$(".nav" );
+    for(var i=0;i<cmenus.length;i++) {
 
-    for(var i=0;i<cmenus.length;i++){
-
-        var htmlval='';
-        htmlval =  "<li>"+ "<a href=''>"+cmenus[i].name+"</a>";
+        var htmlval = '';
+        htmlval = "<li>" + "<a href=''>" + cmenus[i].name + "</a>";
 
         var childrenval = "";
-        for( var j=0;j<cmenus[i].children.length;j++){
-            childrenval+="<li>"+"<a href='"+cmenus[i].children[j].href+"'>"+cmenus[i].children[j].name+"</a>"+"</li>";
+        for (var j = 0; j < cmenus[i].children.length; j++) {
+            //nuberæ˜¯htmlæ–‡ä»¶æ‰€åœ¨ç­‰çº§ =1
+            if (Num == 1) {
+                childrenval += "<li>" + "<a href='" + '../' + cmenus[i].children[j].href + "'>" + cmenus[i].children[j].name + "</a>" + "</li>";
+            }
+            //nuberæ˜¯htmlæ–‡ä»¶æ‰€åœ¨ç­‰çº§ =1 ../
+            if (Num == 2) {
+                childrenval += "<li>" + "<a href='" + '../../' + cmenus[i].children[j].href + "'>" + cmenus[i].children[j].name + "</a>" + "</li>";
+            }
+            //nuberæ˜¯htmlæ–‡ä»¶æ‰€åœ¨ç­‰çº§ =1 ../../
+            if (Num == 3) {
+                childrenval += "<li>" + "<a href='" + '../../../' + cmenus[i].children[j].href + "'>" + cmenus[i].children[j].name + "</a>" + "</li>";
+            }
+
         }
-        htmlval = htmlval+"<ul>" +childrenval+"</ul>"+"</li>";
+        htmlval = htmlval + "<ul>" + childrenval + "</ul>" + "</li>";
 
         nav.append(htmlval);
     }
-})
+
+}
+

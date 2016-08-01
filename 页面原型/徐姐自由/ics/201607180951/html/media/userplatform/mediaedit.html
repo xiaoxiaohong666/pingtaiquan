@@ -15,86 +15,10 @@
     <script src="../../../js/kkpager.min.js"></script>
     <script src="../../../js/jquery.easyui.min.js"></script>
     <script src="../../../js/sweetalert.min.js"></script>
+    <script src="../../../js/menujson.js"></script>
     <script>
         $(document).ready(function() {
-
-            var cmenus=[
-                {'id':'100','name':'报表中心','href':'#',
-                    'children':[{'id':'101','name':'媒体报表','href':'../../index.html'},
-                        {'id':'102','name':'客户报表','href':'../appexternal/customereport.html'},
-                        {'id':'103','name':'内部报表','href':'#'},
-                        {'id':'104','name':'客户日数据报表','href':'../appexternal/reportrecday.html'}
-                    ]},
-                {"id":"200","name":"媒体管理","href":"#",
-                    "children":[{"id":"201","name":"应用审核","href":"../appaudit/page.html"},
-                        {"id":"202","name":"ad采购报价","href":"../appaudit/buyprice.html"},
-                        {"id":"203","name":"ad销售报价","href":"../appaudit/sellprice.html"},
-                        {"id":"204","name":"ad对接留档","href":"../appaudit/butt.html"},
-                        {"id":"205","name":"应用管理","href":"../appexternal/page.html"},
-                        {"id":"206","name":"广告位管理","href":"../appaudit/adpage.html"}]},
-                {"id":"300","name":"客户管理","href":"#",
-                    "children":[{"id":"301","name":"内部普通订单","href":"../appinterior/internalorder.html"},
-                        {"id":"302","name":"内部余量订单","href":"../appinterior/remnantorder.html"},
-                        {"id":"303","name":"客户订单","href":"../appinterior/customerorder.html"},
-                        {"id":"304","name":"广告测试","href":"../appinterior/adstest.html"}]},
-//                {"id":"400","name":"运维监控","href":"#",
-//                    "children":[{"id":"401","name":"超级监控","href":"#"},
-//                        {"id":"402","name":"策略监控","href":"#"},
-//                        {"id":"403","name":"日监控"}]},
-//                {"id":"500","name":"结算中心","href":"#",
-//                    "children":[{"id":"501","name":"日结算数据","href":"#"},
-//                        {"id":"502","name":"媒体结算","href":"#"},
-//                        {"id":"503","name":"客户结算"}]},
-//                {"id":"600","name":"财务管理","href":"#",
-//                    "children":[{"id":"601","name":"内部员工","href":"#"},
-//                        {"id":"602","name":"媒体用户","href":"#"},
-//                        {"id":"603","name":"客户管理","href":"#"},
-//                        {"id":"602","name":"媒体用户","href":"#"},
-//                        {"id":"603","name":"客户管理","href":"#"},
-//                        {"id":"602","name":"媒体用户","href":"#"},
-//                        {"id":"603","name":"客户管理","href":"#"}]},
-                {"id":"700","name":"平台用户","href":"#",
-                    "children":[{"id":"601","name":"内部员工","href":"userplatform.html"},
-                        {"id":"602","name":"媒体用户","href":"usermedia.html"},
-                        {"id":"603","name":"客户管理","href":"userclient.html"}
-                    ]},
-                {"id":"800","name":"信息管理","href":"#",
-                    "children":[{"id":"801","name":"留言板","href":"#"},
-                        {"id":"802","name":"信息公告","href":"#"},
-                        {"id":"803","name":"新手帮助","href":"#"},
-                        {"id":"805","name":"服务条款","href":"#"},
-                        {"id":"805","name":"SDK附件","href":"../infomanage/sdkadjunct.html"}
-                    ]},
-                {"id":"900","name":"基础信息","href":"#",
-                    "children":[{"id":"901","name":"系统参数","href":"../baseinfo/ststmargue.html"},
-                        {"id":"902","name":"投放地区","href":"../baseinfo/putarea.html"},
-                        {"id":"903","name":"数据字典","href":"#"},
-                        {"id":"905","name":"内部职务","href":"#"},
-                        {"id":"905","name":"媒体分类","href":"#"}
-                    ]}
-//                {"id":"1000","name":"系统管理","href":"#",
-//                    "children":[{"id":"1001","name":"功能菜单","href":"#"},
-//                        {"id":"1002","name":"人员组织","href":"#"},
-//                        {"id":"1003","name":"菜单权限","href":"#"},
-//                        {"id":"1005","name":"数据权限","href":"#"}]},
-//                        {"id":"1002","name":"系统日志","href":"#"},
-//                        {"id":"1003","name":"操作日志","href":"#"}
-            ];
-            var nav=$(".nav" );
-
-            for(var i=0;i<6;i++){
-
-                var htmlval='';
-                htmlval =  "<li>"+ "<a href=''>"+cmenus[i].name+"</a>";
-
-                var childrenval = "";
-                for( var j=0;j<cmenus[i].children.length;j++){
-                    childrenval+="<li>"+"<a href='"+cmenus[i].children[j].href+"'>"+cmenus[i].children[j].name+"</a>"+"</li>";
-                }
-                htmlval = htmlval+"<ul>" +childrenval+"</ul>"+"</li>";
-
-                nav.append(htmlval);
-            }
+            menujson(2);
             jQuery("#allcheck").click(function(){
                 jQuery("input[name=id]").prop("checked",jQuery("#allcheck").prop("checked"));
             });
@@ -225,39 +149,7 @@
         });
         $(document).ready(function(){
             $(".nav li a b").css("display","none");
-        })
-        var  i=5;
-        var a = $("#divid > ul > li").length;
-        $("#divid > ul > li").each(function(index,demo){
-            if(index>i){
-                $(this).hide();
-            }else{
-                $(this).show();
-            }
         });
-        function rfun(){
-            var a = $("#divid > ul > li").length;
-            var i=a-6;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=i){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
-        function lfun(){
-            var a = $("#divid > ul > li").length;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=0&&index<=5){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
         $(document).ready(function(){
             $(".hide").click(function(){
                 $(".right_middle p,.right_middle ul").show();
@@ -291,7 +183,7 @@
         <div class="wrap">
             <!--bread_nav面包屑开始-->
             <div class="DomBread_nav">
-                <i></i> <a href="" class="first">平台用户</a>
+                <i></i> <a href="" >平台用户</a>
                 <a>> </a>
                 <a href="">内部员工管理</a>
                 <a>> </a>
@@ -617,4 +509,5 @@
         });
     });
 </script>
+<script src="../../../js/twoButton.js"></script>
 </html>
