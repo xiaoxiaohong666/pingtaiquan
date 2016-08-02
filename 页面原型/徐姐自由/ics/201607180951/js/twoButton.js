@@ -23,7 +23,7 @@ var showNumEnd = 6;
 
 //ÏòÓÒÒÆ¶¯
 function rfun(){
-    if(showNumEnd==menuNum)return;
+    if(showNumEnd==9)return;
     showNumEnd = showNumEnd + 1;
     showNumStart = showNumStart + 1;
     $("#divid > ul > li").each(function(index,demo){

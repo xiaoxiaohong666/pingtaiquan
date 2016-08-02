@@ -75,8 +75,8 @@
                     <li class="USER">
                         <h1 class="User"><i></i>管理员<b></b></h1>
                         <div class="change" >
-                            <a class="changePwd" href="../login/change.html"> <i></i>修改密码</a>
-                            <a class="changeExit" href=""> <i></i>退出</a>
+                            <a class="changePwd" onclick="shu(1)" href=""> <i></i>修改密码</a>
+                            <a class="changeExit" onclick="exit(1)" href=""> <i></i>退出</a>
                         </div>
                     </li>
                     <li><a href="" class="SDK">说明文档</a></li>
@@ -173,9 +173,10 @@
             });
             $(".closeTitle").click(function(){
                 $(".left_middle").hide();
-            })
+            });
         })
     </script>
+
     </html>
     <div class="DomBody" > <!--内容区样式全部放在pagebody.css-->
         <div class="wrap">

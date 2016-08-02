@@ -24,11 +24,11 @@ function menujson(Numb){
                 {"id":"400","name":"运维监控","href":"#",
                     "children":[{"id":"401","name":"超级监控","href":"#"},
                         {"id":"402","name":"策略监控","href":"#"},
-                        {"id":"403","name":"日监控"}]},
+                        {"id":"403","name":"日监控","href":'#'}]},
                 {"id":"500","name":"结算中心","href":"#",
                     "children":[{"id":"501","name":"日结算数据","href":"#"},
                         {"id":"502","name":"媒体结算","href":"#"},
-                        {"id":"503","name":"客户结算"}]},
+                        {"id":"503","name":"客户结算","href":'#'}]},
                 {"id":"600","name":"财务管理","href":"#",
                     "children":[{"id":"601","name":"内部员工","href":"#"},
                         {"id":"602","name":"媒体用户","href":"#"},
@@ -89,4 +89,22 @@ function menujson(Numb){
         nav.append(htmlval);
     }
 
+}
+function shu(a){
+    if(a==1){
+        $(".changePwd").attr("href","../login/change.html");
+    }if(a==2){
+        $('.changePwd').attr('href',"../../login/change.html");
+    }if(a==3){
+        $('.changePwd').attr('href',"../../../login/change.html");
+    }
+}
+function exit(a){
+    if(a==1){
+        $(".changeExit").attr('href','../login/login.html');
+    }if(a==2){
+        $(".changeExit").attr('href','../../login/login.html')
+    }if(a==3){
+        $(".changeExit").attr('href','../../../login/login.html')
+    }
 }
