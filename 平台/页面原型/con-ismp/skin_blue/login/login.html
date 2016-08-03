@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/blue/base/login.css"/>
+    <script src="../../js/jquery-1.11.3.js"></script>
+</head>
+<body>
+<div class="bg">
+    <img src="../../img/blue/login/cb_bg.jpg" alt=""/>
+</div>
+<div class="main">
+    <form action="" method="post" id="subForm">
+        <div class="main_out">
+            <a href="">
+                <img src="../../img/blue/login/cb_logo.png" alt="" class="logo"/>
+            </a>
+            <h1 class="main_word">专注互联网程序化购买</h1>
+            <p class="down">
+                <span id="ts" style="display: none;"></span>
+            </p>
+            <p class="right">
+                <label class="emailicon"></label>
+                <input id="username" name="username"  type="text" placeholder="用户名" class="email"/>
+
+            </p>
+
+            <p class="right">
+                <label class="passicon"></label>
+                <input id="password" type="password" name="password"  placeholder="密码" class="pass"/>
+            </p>
+
+            <p class="right">
+                <label class="passtesticon"></label>
+                <input id="imageCode" type="text" name="imageCode"  placeholder="验证码" class="passtest"/>
+                <img class="passtextword" title="点击更换"  src=""/>
+            </p>
+            <p class="right">
+                <label>记住用户名</label>
+                <input id="rmbuser" type="checkbox" class="rember_user"/>
+            </p>
+            <p class="right">
+                <input type="button" class="LG" value="登 录" id="subButton"/>
+            </p>
+            <p  class="right">
+                <a href="change.html"  class="fleft" ><i></i>忘记密码？</a>
+                <a href="register.html"  class="fright" >立即注册</a>
+            </p>
+        </div>
+    </form>
+</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $(".LG").click(function(){
+            window.location.href="welcome.html";
+        })
+    })
+
+</script>
+</html>

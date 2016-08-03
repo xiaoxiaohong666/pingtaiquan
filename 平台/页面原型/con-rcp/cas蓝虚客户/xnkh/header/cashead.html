@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="cas/css/header.css"/>
+    <script  src="cas/js/jquery-1.7.2.js"></script>
+</head>
+<body>
+<!--header开始-->
+<div class="header">
+    <div  class="headerTopRight">
+        <div class="wrap">
+            <ul>
+                <li>
+                    <h1 class="User"><i></i>用户名（啊啊啊啊啊）<b></b></h1>
+                </li>
+                <li><a href=""  class="SDK">SDK下载<i></i></a></li>
+            </ul>
+            <div class="change">
+                <a class="changePwd" href=""> <i></i>修改密码</a>
+                <a class="changeExit" href=""> <i></i>退出</a>
+                <button class="close" type="button">取消</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="wrap">
+        <a href=""><img src="cas/img/logo.jpg" class="logo" alt=""/></a>
+    </div>
+    <div class="headerNav" id="divid">
+        <ul class="nav">
+            <li>
+                <a href="#"><b></b>报表中心</a>
+                <ul>
+                    <li><a href="">我的网站</a></li>
+                    <li><a href="">你的网站</a></li>
+                    <li><a href="">他的网站</a></li>
+                    <li><a href="">是的网站</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>媒体管理</a>
+                <ul>
+                    <li><a href="#">我我我</a></li>
+                    <li><a href="#">你你你</a></li>
+                    <li><a href="#">他他他</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>广告主管理</a>
+                <ul>
+                    <li><a href="#">他他他他</a></li>
+                    <li><a href="#">他他他他</a></li>
+                    <li><a href="#">他他他他</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><b></b>信息管理</a>
+                <ul>
+                    <li><a href="#">你你你你你</a></li>
+                    <li><a href="#">你你你你你</a></li>
+                    <li><a href="#">你你你你你</a></li>
+                    <li><a href="#">你你你你你</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="headerNavBar"></div>
+<div class="ask">
+    <ul>
+        <li  class="asked">
+            <a href=""  class="askword">销售咨询</a>
+        </li>
+        <li  class="asked">
+            <a href="" class="askword">商务咨询</a>
+        </li>
+        <li  class="asked">
+            <a href="" class="askword">运营咨询</a>
+        </li>
+        <li  class="customAsked">
+            <a href="" class="askword">客服咨询</a>
+        </li>
+        <li  class="back">
+            <a href="" class="askword">返回顶部</a>
+        </li>
+        <li>
+            <button type="button" class="closeAsk">关闭</button>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    $(document).ready(function() {
+        $(".nav li").hover(function() {
+            $('ul', this).fadeIn("fast");
+            $(this).children().addClass("hover");
+            $("a b",this).slideDown("fast");
+        }, function() {
+            $('ul', this).fadeOut("fast");
+            $(this).children().removeClass("hover");
+            $("a b",this).slideUp("fast");
+        });
+    });
+    $(document).ready(function(){
+        $(".nav li a b").css("display","none");
+    });
+    $(document).ready(function(){
+        $(".User").click(function(){
+            $(".change").slideDown();
+        });
+        $(".close").click(function(){
+            $(".change").slideUp();
+        })
+    })
+    $(document).ready(function(){
+        $(".closeAsk").click(function(){
+            $(".ask").hide();
+        });
+    })
+</script>
+</html>
