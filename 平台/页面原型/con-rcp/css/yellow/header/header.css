@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #232323;
+    list-style: none;
+    font-size:12px;
+}
+a{
+    text-decoration:none;
+}
+.clear{
+    clear:both;
+}
+@media screen and (min-width:1280px) and (max-width:1600px) {
+    .wrap{
+        width:1080px;
+        margin:0 auto;
+    }
+}
+@media screen and (min-width:1600px) and (max-width:1920px) {
+    .wrap{
+        width:1510px;
+        margin:0 auto;
+    }
+}
+/*头部最上角开始*/
+.header{
+    height:100px;
+    /*background:-webkit-gradient(linear , left top,left bottom,from(#acacac),to(#919191));*/
+    /*background:-moz-linear-gradient(top,#acacac,#919191);*/
+    /*background:#9a9a9a\9;*/
+    background:#eee;
+}
+.headerTopRight ul li{
+    position:relative;
+}
+.headerTopRight {
+    height:30px;
+    background:#c76201;
+}
+.headerTopRight ul li h1,.News {
+    display:inline-block;
+    float:right;
+    height:30px;
+    line-height:30px;
+    font-size:12px;
+    padding-left:5px;
+    color:#fff;
+    cursor:pointer
+}
+.headerTopRight ul li .SDK{
+    float:right;
+    height:20px;
+    margin:5px 10px;
+    line-height:20px;
+    font-size:12px;
+    color:#fff;
+}
+.headerTopRight ul li h1 b{
+    background:url(../../../img/yellow/icon1.png) no-repeat -133px -80px;
+    padding-right:15px;
+    margin-left:10px;
+}
+.headerTopRight ul li .User i{
+    background:url(../../../img/yellow/icon1.png) no-repeat -75px 0;
+    padding-left:20px;
+    margin-right:5px;
+}
+.NEWS{
+    float:left;
+}
+.headerTopRight  .NewsBar{
+    color:#fff;
+    font-weight:700;
+}
+.headerTopRight ul li .News{
+    position:relative;
+    font-weight:700;
+}
+.headerTopRight ul li .News:hover{
+    color:#fff;
+}
+/*修改开始*/
+.User{
+    position:relative;
+}
+.change{
+    height:80px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:15px;
+    background:#ddd;
+    position:absolute;
+    z-index:9999;
+    top:30px;
+    right:0;
+    display:none;
+}
+.changePwd,.changeExit{
+    display:block;
+    padding-top:17px;
+    margin:0 10px;
+    font-weight:700;
+}
+.changePwd:hover,.changeExit:hover{
+    color:red;
+}
+.changePwd i{
+    background:url(../../../img/yellow/ask.png) no-repeat -94px -65px;
+    padding-left:25px;
+    padding-bottom:20px;
+}
+.changeExit i{
+    background:url(../../../img/yellow/ask.png) no-repeat -94px 0;
+    padding-left:25px;
+    padding-bottom:10px;
+}
+/*修改结束*/
+/*头部最上角结束*/
+.logo{
+    position:absolute;
+    top:45px;
+    border:none;
+}
+.headerNav{
+    margin:0 20%;
+}
+.nav{
+    margin-top:10px;
+    width:500px;
+    min-width:630px;
+}
+.nav li {
+    float: left;
+    display: block;
+    background: none;
+    position: relative;
+    z-index: 1;
+    text-align:center;
+}
+.nav li a {
+    display: block;
+    line-height: 40px;
+    color: #808080;
+    font-weight:700;
+    width:90px;
+    border:1px solid transparent;
+    padding: 0 20px;
+    margin-left:15px;
+    font-size:15px;
+    border-radius:5px;
+    position:relative;
+}
+.nav li a:hover, .nav li a.hover {
+    /*background:radial-gradient(#9f9f9f,#5a5a5a);*/
+    /*background:#5a5a5a\9;*/
+    background:#cd6500;
+    color:#fff;
+}
+.nav li a b{
+    position:absolute;
+    bottom:-30px;
+    left:55px;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:url(../../../img/yellow/icon1.png) no-repeat -133px 0;
+}
+.nav ul {
+    border-top:24px solid transparent;
+    width:770px;
+    position: absolute;
+    display:none;
+    background:transparent;
+}
+.nav ul li:hover {
+    border-top:none;
+    background:transparent;
+    color:#313038;
+}
+.nav ul a {
+    display: block;
+    height: 15px;
+    line-height: 15px;
+    padding:5px;
+    margin-left:2px;
+    color: #fff;
+    width:108px;
+    font-size:12px;
+    position:relative;
+    left:10%;
+    background:#f5ae47;
+}
+.headerNavBar{
+    height:40px;
+    /*background:-webkit-gradient(linear,left top,left bottom,from(#9b9ba5),to(#6b6e77));*/
+    /*background:-moz-linear-gradient(top,#9b9ba5,#6b6e77);*/
+    /*background:#92929e\9;*/
+    /*box-shadow:2px -2px 5px #767676;*/
+    /*border:1px solid #767676;*/
+    background:#f5ae47;
+}
+/*客户咨询开始*/
+.ask{
+    position:fixed;
+    right:0;
+    bottom:10%;
+    background:#f6a836;
+}
+.ask .askword{
+    color:#fff;
+    display:block;
+}
+.asked,.customAsked,.back{
+    height:25px;
+    background:url(../../../img/yellow/ask.png) no-repeat 2px 0;
+    padding-top:32px;
+    margin:10px;
+}
+.customAsked{
+    background-position:  3px -58px;
+}
+.back{
+    background-position: 3px -113px;
+}
+.closeAsk{
+    border:none;
+    width:100%;
+    cursor:pointer;
+    background:#e68900;
+}
+/*客户咨询结束*/
+/*滚动导航开始*/
+/*固定的导航开始*/
+.left_middle{
+    position:fixed;
+    left:0;
+    top:50%;
+    border:1px solid #e3e3e3;
+    color:#ababab;
+}
+.left_middle ul li a{
+    display:block;
+    line-height:42px;
+    padding:10px 10px;
+    color:#ababab;
+    background:#f9f2e0;
+    border-bottom:1px solid #e3e3e3;
+}
+.left_middle ul li a:hover{
+    background:#f8dd9b;
+    color:#fff;
+}
+.left_middle .Title{
+    text-align:center;
+    height:20px;
+    line-height:20px;
+    background:#f7a956;
+    color:#fff;
+}
+.closeTitle{
+    width:100%;
+    border:none;
+    background:#cc9206;
+    color:#fff;
+    cursor: pointer;
+}
+/*固定的导航结束*/
+/*俩按钮结束*/
+
+
