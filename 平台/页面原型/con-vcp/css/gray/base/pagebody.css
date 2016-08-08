@@ -403,6 +403,12 @@ a:hover{
 }
 .SearchButton,.sub{
     border:none;
+    background:#6a6a6a;
+    color:#fff;
+    width:114px;
+    height:30px;
+    font-size:15px;
+    border-radius:5px;
 }
 
 /*..................................................��ѯ����end................................................................*/

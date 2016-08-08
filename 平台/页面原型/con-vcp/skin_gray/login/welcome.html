@@ -12,10 +12,10 @@
     <script src="../../js/respond.min.js"></script>
     <script src="../../js/kkpager.min.js"></script>
     <script src="../../tool/My97DatePicker/WdatePicker.js"></script>
-    <script src="../../js/mens.js"></script>
+    <script src="../../js/menujson.js"></script>
     <script>
         $(document).ready(function(){
-            jsonmenus(1);
+            menujson(1);
         });
     </script>
     <script></script>
@@ -40,10 +40,10 @@
                         <a href="#" class="News">消息 <span class="NewsBar">(1)</span></a>
                     </li>
                     <li class="USER">
-                        <h1 class="User"><i></i>虚拟客户<b></b></h1>
+                        <h1 class="User"><i></i>虚拟媒体<b></b></h1>
                         <div class="change" >
-                            <a class="changePwd" href="change.html"> <i></i>修改密码</a>
-                            <a class="changeExit" href="login.html"> <i></i>退出</a>
+                            <a class="changePwd" onclick="shu(1)" href="change.html"> <i></i>修改密码</a>
+                            <a class="changeExit" onclick="exit(1)" href="login.html"> <i></i>退出</a>
                         </div>
                     </li>
                     <li><a href="" class="SDK">说明文档</a></li>
@@ -99,6 +99,7 @@
     </body>
     <script>
         $(document).ready(function() {
+
             $(".nav li").hover(function() {
                 $('ul', this).fadeIn("fast");
                 $(this).children().addClass("hover");
@@ -236,6 +237,5 @@
         });
     })
 </script>
-<script src="../../js/twoButton.js"></script>
 
 </html>
