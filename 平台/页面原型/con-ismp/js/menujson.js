@@ -1,9 +1,7 @@
 function menujson(Numb){
     var cmenus = [
         {'id':'100','name':'报表中心','href':'#',
-            'children':[{'id':'101','name':'媒体报表','href':'media/index.html'},
-                {'id':'102','name':'客户报表','href':'media/appexternal/customereport.html'},
-                {'id':'103','name':'内部报表','href':'#'},
+            'children':[
                 {"id":'104',"name":'客户日数据','href':'media/appexternal/reportrecday.html'},
                 {"id":'104',"name":'媒体日数据','href':'media/appexternal/reportresday.html'},
                 {"id":'104',"name":'客户实时数据','href':'media/appexternal/CustomersRealtimeReports.html'},

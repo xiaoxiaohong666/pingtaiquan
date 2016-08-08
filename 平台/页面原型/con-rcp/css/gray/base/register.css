@@ -1,0 +1,117 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+body{
+    font-family: Arial, Verdana, "microsoft yahei";
+}
+a{
+    text-decoration:none;
+}
+a{
+    color:#666;
+}
+.bg{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+}
+.bg > img {
+    height:100%;
+    min-height:720px;
+    width:100%;
+    border:0;
+}
+.wrap{
+    width:1200px;
+    margin:0 auto;
+}
+.lf{
+    float:left;
+}
+.rf{
+    float:right;
+}
+.cl{
+    clear:both;
+}
+.main{
+    position:absolute;
+    width:100%;
+    top:10%;
+}
+.register{
+    width:1200px;
+    border:1px solid #dad0c8;
+}
+.logoRight{
+    padding-top:10px;
+}
+.logoRight a{
+    font-size:30px;
+    color:#3175b8;
+}
+.registerDetail{
+    width:400px;
+    margin:0 auto;
+    text-align:right;
+}
+.email,.pas,.pasYes,.phone,.qq,.companyName,.passtest{
+    width:250px;
+    height:30px;
+    margin-left:5px;
+    line-height:30px;
+    border-radius:5px;
+    border:1px solid #ddd;
+    background:#eee;
+}
+.passtest{
+    width:125px;
+    margin-right:50px;
+}
+.center{
+    margin:20px 0;
+    padding-right:40px;
+    position:relative;
+}
+.eml,.pa,.pasY,.pho,.QQ,.comN,.pat{
+    position:absolute;
+    left:110px;
+    top:35px;
+    color:red;
+    display:none;
+}
+.center i{
+    color:red;
+    padding-right:3px;
+}
+.up{
+    width:15px;
+    height:15px;
+    vertical-align: middle;
+    margin-left:110px;
+    margin-top:3px;
+    margin-right:10px;
+}
+.Wpass{
+    margin-left:110px;
+}
+.registerButton{
+    width:255px;
+    height:30px;
+    background:#f39801;
+    border:1px solid #9b937c;
+    color:#fff;
+    border-radius:5px;
+}
+.registerWord{
+    font-size:40px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    margin:30px 40px 0 40px;
+}
