@@ -160,36 +160,39 @@ a:hover{
 
 /*媒体TablePage部分开始*/
 .DomMatter{
-    border:2px solid #e8e8e8;
+    /*border:2px solid #e8e8e8;*/
 }
-.DomPageMatter .TableHeader{
-    height:30px;
-    line-height:30px;
-    background:#979797;
+.DomPageMatter{
+    background:#fff;
+}
+.TableHeader{
+    border:1px solid #e4ebf1;
+    box-shadow:0 0 10px #e4ebf1;
+    height:50px;
+    border-bottom:0;
+    line-height:50px;
     font-family: Arial,Verdana,"microsoft yahei";
 }
-.DomPageMatter .first{
+.first{
     float:left;
-    font-size:13px;
-    height:20px;
-    line-height:20px;
-    color: #ffffff;;
+    font-size:18px;
+    height:50px;
+    line-height:50px;
+    color: #000;
     margin-left:10px;
-    margin-top:5px;
     border-radius:5px;
 }
 .DomPageMatter .last{
     float:right;
-    color:#fff;
     font-size:15px;
     margin-right:10px;
 }
- .TablePage{
-     width:100%;
-     text-align:center;
-     background:#fff;
-     font-family: Arial,Verdana,"microsoft yahei";
- }
+.TablePage{
+    width:100%;
+    text-align:center;
+    background:#fff;
+    font-family: Arial,Verdana,"microsoft yahei";
+}
 .TablePageEasy{
     text-align:center;
     font-family: Arial,Verdana,"microsoft yahei";
@@ -208,22 +211,27 @@ a:hover{
     font-size:16px;
     color:#000;
 }
- .TablePage tr td:first-child{
-     background:#f7f7f7;
- }
+.TablePage tr td:first-child{
+    width:50px;
+    background:#f7f7f7;
+}
+
 .TablePage  tr td{
+    width:230px;
     height:35px;
 }
- .TablePage tr:hover{
-     background:#e1ecfe;
- }
- .TablePage thead tr th{
-     text-align:center;
-     background:#f7f7f7;
-     height:45px;
-     font-size:16px;
-     color:#000;
- }
+.TablePage tr:hover{
+    /*background:#ffe48d;*/
+}
+.TablePage thead tr th{
+    text-align:center;
+    background:#f7f7f7;
+    border-bottom:2px solid #b1d2f3;
+    height:45px;
+    font-size:16px;
+    color:#000;
+}
+/*tablePage部分结束*/
 /*tablePage部分结束*/
 /* TableEdit部分开始*/
 .DomEditMatter{
@@ -403,6 +411,12 @@ a:hover{
 }
 .SearchButton,.sub{
     border:none;
+    background:#aaa;
+    color:#fff;
+    width:114px;
+    height:30px;
+    font-size:15px;
+    border-radius:5px;
 }
 
 /*..................................................查询区的end................................................................*/
@@ -717,7 +731,6 @@ a:hover{
     font-family: Arial,Verdana,"microsoft yahei";
 }
 .AdsTablePage  tr td{
-    width:230px;
     height:35px;
 }
 .AdsTablePage thead tr th{

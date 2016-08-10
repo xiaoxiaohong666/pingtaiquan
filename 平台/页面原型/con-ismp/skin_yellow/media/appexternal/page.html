@@ -14,10 +14,10 @@
     <script src="../../../js/kkpager.min.js"></script>
     <script src="../../../js/jquery.easyui.min.js"></script>
     <script src="../../../js/sweetalert.min.js"></script>
-    <script src="../../../js/cmenujson.js"></script>
+    <script src="../../../js/menujson.js"></script>
     <script>
         $(document).ready(function() {
-            menu(2);
+            menujson(2);
             jQuery("#allcheck").click(function(){
                 jQuery("input[name=id]").prop("checked",jQuery("#allcheck").prop("checked"));
             });
@@ -79,7 +79,7 @@
                             <a class="changeExit" onclick="exit(2)" href=""> <i></i>退出</a>
                         </div>
                     </li>
-                    <li><a class="SDK" onclick="sdk(2)" href="">SDK下载</a></li>
+                    <li><a class="SDK" onclick="sdk(2)" href=" ">SDK下载</a></li>
                 </ul>
 
             </div>
@@ -135,49 +135,19 @@
         $(document).ready(function() {
             $(".nav li").hover(function() {
                 $('ul', this).fadeIn("fast");
-                $("a b",this).slideDown("fast");
+                // $("a b",this).slideDown("fast");
                 $(this).children().addClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7"});
             }, function() {
                 $('ul', this).fadeOut("fast");
+                // $("a b",this).slideUp("fast");
                 $(this).children().removeClass("hover");
-                $("a b",this).slideUp("fast");
+                $(".headerNavBar").css({"border-top":"1px solid transparent"});
             });
         });
         $(document).ready(function(){
             $(".nav li a b").css("display","none");
-        })
-        var  i=5;
-        var a = $("#divid > ul > li").length;
-        $("#divid > ul > li").each(function(index,demo){
-            if(index>i){
-                $(this).hide();
-            }else{
-                $(this).show();
-            }
         });
-        function rfun(){
-            var a = $("#divid > ul > li").length;
-            var i=a-6;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=i){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
-        function lfun(){
-            var a = $("#divid > ul > li").length;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=0&&index<=5){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
         $(document).ready(function(){
             $(".hide").click(function(){
                 $(".right_middle p,.right_middle ul").show();
@@ -211,7 +181,7 @@
         <div class="wrap">
             <!--bread_nav面包屑开始-->
             <div class="DomBread_nav">
-                <i></i> <a href="" class="first">媒体管理</a>
+                <i></i> <a href="">媒体管理</a>
                 <a>> </a>
                 <a href="">应用管理</a>
                 <a>></a>

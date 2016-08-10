@@ -11,10 +11,42 @@
     <script src="../../../js/jquery-1.11.3.js"></script>
     <script src="../../../js/html5shiv.min.js"></script>
     <script src="../../../js/respond.min.js"></script>
-    <script src="../../../js/cmenujson.js"></script>
+    <script src="../../../js/menujson.js"></script>
     <script>
         $(document).ready(function(){
-            menu(2);
+            menujson(2);
+            var jsondata = [{id: 1, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "Andriod-多牛百变方块-Banner",state:"3",business:"74",handle:"141" ,up:"234",dian:"34",money:"234"},
+                {id: 2, code:"2016-02-12", name: "春雨医生", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"4",business:"343",handle:"442" ,up:"234",dian:"34",money:"234"},
+                {id: 3, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"6",business:"34",handle:"434" ,up:"234",dian:"34",money:"234"},
+                {id: 4, code:"2016-02-12", name: "春雨医生", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"8",business:"34",handle:"242" ,up:"234",dian:"34",money:"234"},
+                {id: 5, code:"2016-02-12", name: "春雨医生", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"7",business:"45",handle:"232" ,up:"234",dian:"34",money:"234"},
+                {id: 6, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"8",business:"65",handle:"23 " ,up:"234",dian:"34",money:"234"},
+                {id: 7, code:"2016-02-12", name: "春雨医生", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"4",business:"56",handle:" 32" ,up:"234",dian:"34",money:"234"},
+                {id: 8, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"55",business:"76",handle:" 323" ,up:"234",dian:"34",money:"234"},
+                {id: 9, code:"2016-02-12", name: "春雨医生", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"5",business:"65",handle:"232 " ,up:"234",dian:"34",money:"234"},
+                {id: 10, code:"2016-02-12", name: "春雨医生", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"7",business:"65",handle:" 232" ,up:"234",dian:"34",money:"234"}
+            ];
+            var table = $('.TablePage');
+            //  alert(jsondata.length);
+
+            for (var i = 0; i < jsondata.length; i++) {
+                //alert(i);
+                table.append("<tr>" +
+                        "<td align='center'>" + jsondata[i].id + "</td>" +
+                        "<td align='center'>"+jsondata[i].code+"</td>" +
+                        "<td align='center'>" + jsondata[i].name + "</td>" +
+                        "<td align='center'>" + jsondata[i].garden + "</td>" +
+                        "<td align='center'>" + jsondata[i].appkey + "</td>" +
+                        "<td align='center'>" + jsondata[i].state + "</td>" +
+                        "<td align='center'>" + jsondata[i].business + "</td>" +
+                        "<td align='center'>"+jsondata[i].handle+"</td>" +
+                        "<td align='center'>"+jsondata[i].up+"</td>" +
+                        "<td align='center'>"+jsondata[i].dian+"</td>" +
+                        "<td align='center'>"+jsondata[i].money+"</td>" +
+                        "</tr>");
+            }
+
+
         });
     </script>
     <title>功能主页面</title>
@@ -100,49 +132,19 @@
         $(document).ready(function() {
             $(".nav li").hover(function() {
                 $('ul', this).fadeIn("fast");
-                $("a b",this).slideDown("fast");
+                // $("a b",this).slideDown("fast");
                 $(this).children().addClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7"});
             }, function() {
                 $('ul', this).fadeOut("fast");
+                // $("a b",this).slideUp("fast");
                 $(this).children().removeClass("hover");
-                $("a b",this).slideUp("fast");
+                $(".headerNavBar").css({"border-top":"1px solid transparent"});
             });
         });
         $(document).ready(function(){
             $(".nav li a b").css("display","none");
-        })
-        var  i=5;
-        var a = $("#divid > ul > li").length;
-        $("#divid > ul > li").each(function(index,demo){
-            if(index>i){
-                $(this).hide();
-            }else{
-                $(this).show();
-            }
         });
-        function rfun(){
-            var a = $("#divid > ul > li").length;
-            var i=a-6;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=i){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
-        function lfun(){
-            var a = $("#divid > ul > li").length;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=0&&index<=5){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
         $(document).ready(function(){
             $(".hide").click(function(){
                 $(".right_middle p,.right_middle ul").show();
@@ -174,7 +176,7 @@
         <div class="wrap">
             <!--bread_nav面包屑开始-->
             <div class="DomBread_nav">
-                <i></i> <a href="" class="first">媒体管理</a>
+                <i></i> <a href="">媒体管理</a>
                 <a>> </a>
                 <a href="">应用管理</a>
                 <a>></a>
@@ -236,7 +238,7 @@
                             <td><textarea class="pageTextarea"></textarea></td>
                         </tr>
                         <tr align="center">
-                            <td colspan="2"><button class="buttonB"style="width:200px">提交</button></td>
+                            <td colspan="2"><button class="buttonB" style="width:200px">提交</button></td>
                         </tr>
                     </table>
                 </div>

@@ -2,10 +2,12 @@ function menujson(Numb){
     var cmenus = [
         {'id':'100','name':'报表中心','href':'#',
             'children':[
-                {"id":'104',"name":'客户日数据','href':'media/appexternal/reportrecday.html'},
-                {"id":'104',"name":'媒体日数据','href':'media/appexternal/reportresday.html'},
-                {"id":'104',"name":'客户实时数据','href':'media/appexternal/CustomersRealtimeReports.html'},
-                {"id":'104',"name":'媒体实时数据','href':'media/appexternal/MediaRealtimeReports.html'}
+                {"id":'101',"name":'客户日数据','href':'media/appexternal/reportrecday.html'},
+                {"id":'102',"name":'媒体日数据','href':'media/appexternal/reportresday.html'},
+                {"id":'103',"name":'客户实时数据','href':'media/appexternal/CustomersRealtimeReports.html'},
+                {"id":'104',"name":'媒体实时数据','href':'media/appexternal/MediaRealtimeReports.html'},
+                {"id":'105',"name":'流量日数据','href':'media/appexternal/MediaRealtimeReports.html'},
+                {"id":'106',"name":'流量实时数据','href':'media/appexternal/MediaRealtimeReports.html'}
             ]},
         {"id":"200","name":"媒体管理","href":"#",
             "children":[{"id":"201","name":"应用审核","href":"media/appaudit/page.html"},

@@ -60,5 +60,14 @@ function exit(a){
         $(".changeExit").attr('href','../../../login/login.html')
     }
 }
+function sdk(a){
+    if(a==1){
+        $(".SDK").attr('href','../manage/sdk.html');
+    }if(a==2){
+        $(".SDK").attr('href','../../manage/sdk.html')
+    }if(a==3){
+        $(".SDK").attr('href','../../../manage/sdk.html')
+    }
+}
 // 退出和修改密码结束
 

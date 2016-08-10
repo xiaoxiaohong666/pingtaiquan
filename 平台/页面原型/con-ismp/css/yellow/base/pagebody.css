@@ -407,6 +407,12 @@ a:hover{
 }
 .SearchButton,.sub{
     border:none;
+    background:#f4ae47;
+    color:#fff;
+    width:114px;
+    height:30px;
+    font-size:15px;
+    border-radius:5px;
 }
 
 /*..................................................²éÑ¯ÇøµÄend................................................................*/

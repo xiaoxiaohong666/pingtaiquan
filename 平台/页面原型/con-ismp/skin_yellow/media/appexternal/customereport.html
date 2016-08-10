@@ -14,10 +14,11 @@
     <script src="../../../js/kkpager.min.js"></script>
     <script src="../../../js/jquery.easyui.min.js"></script>
     <script src="../../../js/sweetalert.min.js"></script>
-    <script src="../../../js/cmenujson.js"></script>
+    <script src="../../../tool/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../../js/menujson.js"></script>
     <script>
         $(document).ready(function(){
-          menu(2);
+            menujson(2);
             var jsondata = [{id: 1, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "Andriod-多牛百变方块-Banner",state:"3",business:"74",handle:"141" ,up:"234",dian:"34",money:"234"},
                 {id: 2, code:"2016-02-12", name: "春雨医生", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"4",business:"343",handle:"442" ,up:"234",dian:"34",money:"234"},
                 {id: 3, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"6",business:"34",handle:"434" ,up:"234",dian:"34",money:"234"},
@@ -72,11 +73,11 @@
                     <li class="NEWS">
                         <a href="news.html" class="News">消息 <span class="NewsBar">(1)</span></a>
                     </li>
-                    <li>
+                    <li class="USER">
                         <h1 class="User"><i></i>管理员<b></b></h1>
                         <div class="change" >
                             <a class="changePwd" onclick="shu(2)" href=""> <i></i>修改密码</a>
-                            <a class="changeExit" onclick="exit(2)" href=""> <i></i>退出</a>
+                            <a class="changeExit" onclick="shu(2)" href=""> <i></i>退出</a>
                         </div>
                     </li>
                     <li><a href="" class="SDK">说明文档</a></li>
@@ -138,49 +139,19 @@
 
             $(".nav li").hover(function() {
                 $('ul', this).fadeIn("fast");
-                $("a b",this).slideDown("fast");
+                // $("a b",this).slideDown("fast");
                 $(this).children().addClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7"});
             }, function() {
                 $('ul', this).fadeOut("fast");
+                // $("a b",this).slideUp("fast");
                 $(this).children().removeClass("hover");
-                $("a b",this).slideUp("fast");
+                $(".headerNavBar").css({"border-top":"1px solid transparent"});
             });
         });
         $(document).ready(function(){
             $(".nav li a b").css("display","none");
         });
-        //          var  i=5;
-        //          var a = $("#divid > ul > li").length;
-        //          $("#divid > ul > li").each(function(index,demo){
-        //              if(index>i){
-        //                  $(this).hide();
-        //              }else{
-        //                  $(this).show();
-        //              }
-        //          });
-        function rfun(){
-            var a = $("#divid > ul > li").length;
-            var i=a-6;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=i){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
-        function lfun(){
-            var a = $("#divid > ul > li").length;
-            $("#divid > ul > li").each(function(index,demo){
-                if(index>=0&&index<=5){
-                    $(this).show();
-                }
-                else{
-                    $(this).hide();
-                }
-            });
-        }
         $(document).ready(function(){
             $(".hide").click(function(){
                 $(".right_middle p,.right_middle ul").show();
@@ -212,7 +183,7 @@
         <div class="wrap">
             <!--bread_nav面包屑开始-->
             <div class="DomBread_nav">
-                <i></i> <a href="" class="first">报表中心</a>
+                <i></i> <a href="">报表中心</a>
                 <a>> </a>
                 <a href="">广告主报表</a>
             </div>
@@ -259,7 +230,7 @@
                         </td>
                         <td> 选择日期：</td>
                         <td>
-                            <input type="text"/>
+                            <input type="text" class="Wdate" onFocus="WdatePicker({})"/>
                         </td>
                     </tr>
 
@@ -270,19 +241,19 @@
         <div class="DomView">
             <div class="wrap">
                 <div class="exposeSun flyL">
-                    <img src="../../../img/yellow/exposeSun.jpg" alt=""/>
+                    <img src="../../../img/blue/exposeSun.jpg" alt=""/>
                     <span class="word">1,000万</span>
                 </div>
                 <div class="clickSun flyL">
-                    <img src="../../../img/yellow/clickSun.jpg" alt=""/>
+                    <img src="../../../img/blue/clickSun.jpg" alt=""/>
                     <span class="word">2,000万</span>
                 </div>
                 <div class="total flyR">
-                    <img src="../../../img/yellow/total.jpg" alt=""/>
+                    <img src="../../../img/blue/total.jpg" alt=""/>
                     <span class="word">2,000万</span>
                 </div>
                 <div class="clickRate flyR">
-                    <img src="../../../img/yellow/clickRate.jpg" alt=""/>
+                    <img src="../../../img/blue/clickRate.jpg" alt=""/>
                     <span class="word">100%</span>
                 </div>
             </div>
@@ -420,6 +391,7 @@
             });
         });
     })
+
 </script>
 <script src="../../../js/twoButton.js"></script>
 </html>
