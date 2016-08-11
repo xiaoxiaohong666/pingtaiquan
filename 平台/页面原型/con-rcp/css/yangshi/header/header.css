@@ -161,7 +161,7 @@ a{
     /*border-top:24px solid transparent;*/
     position: absolute;
     display:none;
-    background:transparent;
+    background:#fff;
 }
 .nav ul li>a:hover {
     background:url(../../../img/yangshi/hover.png) no-repeat 10px 15px;
