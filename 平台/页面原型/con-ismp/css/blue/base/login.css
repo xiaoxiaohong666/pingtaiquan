@@ -45,7 +45,9 @@ a{
     width:100%;
     top:10%;
 }
-
+.LogoWord{
+    font-size:20px;
+}
 .main_out{
     position:absolute;
     top:0;
@@ -65,7 +67,7 @@ a{
     text-align:center;
 }
 .main_word{
-    font-size:30px;
+    font-size:60px;
     color:#3175b8;
 }
 .down{

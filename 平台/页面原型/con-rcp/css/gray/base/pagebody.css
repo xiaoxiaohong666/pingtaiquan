@@ -108,7 +108,7 @@ a:hover{
 .DomButton button{
     font-weight:500;
     font-family: Arial,Verdana,"microsoft yahei" ;
-    width:108px;
+    width:150px;
     height:35px;
     font-size:20px;
     margin-top:25px;
@@ -405,6 +405,12 @@ a:hover{
 }
 .SearchButton,.sub{
     border:none;
+    background:#4d4d4d;
+    color:#fff;
+    width:114px;
+    height:30px;
+    font-size:15px;
+    border-radius:5px;
 }
 
 /*..................................................��ѯ����end................................................................*/

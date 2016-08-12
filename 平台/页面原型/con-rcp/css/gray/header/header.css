@@ -50,6 +50,12 @@ a{
     color:#fff;
     cursor:pointer
 }
+.USER{
+    position:relative;
+}
+.NEWS{
+    float:left;
+}
 .headerTopRight ul li .SDK{
     float:right;
     height:20px;
@@ -90,7 +96,7 @@ a{
     position:absolute;
     z-index:9999;
     top:30px;
-    right:50px;
+    right:0px;
     display:none;
 }
 .changePwd,.changeExit{
