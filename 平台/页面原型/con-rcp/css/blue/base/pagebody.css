@@ -16,7 +16,7 @@ a{
 .rf{
     float:right;
 }
-@media screen and (min-width:1280px) and (max-width:1600px) {
+@media screen and (min-width:1180px) and (max-width:1600px) {
     .wrap{
         width:1080px;
         margin:0 auto;

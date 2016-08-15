@@ -19,11 +19,23 @@ a{
     .left{
         left:17% !important;
     }
+    .nav li a{
+        padding:0 5px;
+    }
+    .nav ul li a{
+        width:80px;
+    }
 }
 @media screen and (min-width:1600px) and (max-width:1920px) {
     .wrap{
         width:1510px;
         margin:0 auto;
+    }
+    .nav li a{
+        padding:0 15px;
+    }
+    .nav ul li a{
+        width:108px;
     }
 }
 /*头部最上角开始*/
@@ -145,7 +157,6 @@ a{
     font-weight:700;
     width:90px;
     border:1px solid transparent;
-    padding: 0 15px;
     font-size:15px;
     border-radius:5px;
     position:relative;
@@ -185,7 +196,6 @@ a{
     padding:6px;
     margin-left:2px;
     color: #fff;
-    width:108px;
     font-size:12px;
     position:relative;
     background:#f5ae47;
@@ -288,7 +298,6 @@ a{
     background:url(../../../img/yellow/icon1.png) no-repeat 0 -177px;
     padding-left:40px;
     padding-bottom:2px;
-    position:absolute;
     cursor: pointer;
 
 }
