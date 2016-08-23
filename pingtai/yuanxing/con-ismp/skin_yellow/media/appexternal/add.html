@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="../../../css/yellow/header/header.css"/>
+    <link rel="stylesheet" href="../../../css/yellow/footer/footer.css"/>
+    <link rel="stylesheet" href="../../../css/yellow/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <link rel="stylesheet" href="../../../css/yellow/base/kkpager_blue.css"/>
+    <link rel="stylesheet" href="../../../css/yellow/base/sweetalert.css"/>
+    <script src="../../../js/jquery-1.11.3.js"></script>
+    <script src="../../../js/html5shiv.min.js"></script>
+    <script src="../../../js/respond.min.js"></script>
+    <script src="../../../js/menujson.js"></script>
+    <script>
+        $(document).ready(function(){
+            menujson(2);
+            var jsondata = [{id: 1, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "Andriod-多牛百变方块-Banner",state:"3",business:"74",handle:"141" ,up:"234",dian:"34",money:"234"},
+                {id: 2, code:"2016-02-12", name: "春雨医生", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"4",business:"343",handle:"442" ,up:"234",dian:"34",money:"234"},
+                {id: 3, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"6",business:"34",handle:"434" ,up:"234",dian:"34",money:"234"},
+                {id: 4, code:"2016-02-12", name: "春雨医生", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"8",business:"34",handle:"242" ,up:"234",dian:"34",money:"234"},
+                {id: 5, code:"2016-02-12", name: "春雨医生", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"7",business:"45",handle:"232" ,up:"234",dian:"34",money:"234"},
+                {id: 6, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Andriod-多牛百变方块", appkey: "IOS-春雨医生-Banner320*50",state:"8",business:"65",handle:"23 " ,up:"234",dian:"34",money:"234"},
+                {id: 7, code:"2016-02-12", name: "春雨医生", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"4",business:"56",handle:" 32" ,up:"234",dian:"34",money:"234"},
+                {id: 8, code:"2016-02-12", name: "武汉市多比特信息科技有限公司", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"55",business:"76",handle:" 323" ,up:"234",dian:"34",money:"234"},
+                {id: 9, code:"2016-02-12", name: "春雨医生", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"5",business:"65",handle:"232 " ,up:"234",dian:"34",money:"234"},
+                {id: 10, code:"2016-02-12", name: "春雨医生", garden: "Android", appkey: "IOS-春雨医生-Banner320*50",state:"7",business:"65",handle:" 232" ,up:"234",dian:"34",money:"234"}
+            ];
+            var table = $('.TablePage');
+            //  alert(jsondata.length);
+
+            for (var i = 0; i < jsondata.length; i++) {
+                //alert(i);
+                table.append("<tr>" +
+                        "<td align='center'>" + jsondata[i].id + "</td>" +
+                        "<td align='center'>"+jsondata[i].code+"</td>" +
+                        "<td align='center'>" + jsondata[i].name + "</td>" +
+                        "<td align='center'>" + jsondata[i].garden + "</td>" +
+                        "<td align='center'>" + jsondata[i].appkey + "</td>" +
+                        "<td align='center'>" + jsondata[i].state + "</td>" +
+                        "<td align='center'>" + jsondata[i].business + "</td>" +
+                        "<td align='center'>"+jsondata[i].handle+"</td>" +
+                        "<td align='center'>"+jsondata[i].up+"</td>" +
+                        "<td align='center'>"+jsondata[i].dian+"</td>" +
+                        "<td align='center'>"+jsondata[i].money+"</td>" +
+                        "</tr>");
+            }
+
+
+        });
+    </script>
+    <title>功能主页面</title>
+</head>
+<body>
+<div class="DomUpBody">
+    <!--页面头部 css的样式放在header.css-->
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <!--header开始-->
+    <div class="header">
+        <div  class="headerTopRight">
+            <div class="wrap">
+                <ul>
+                    <li class="NEWS">
+                        <a href="" class="News">消息 <span class="NewsBar">(1)</span></a>
+                    </li>
+                    <li  class="USER">
+                        <h1 class="User"><i></i>管理员<b></b></h1>
+                        <div class="change" >
+                            <a class="changePwd" onclick="shu(2)" href=""> <i></i>修改密码</a>
+                            <a class="changeExit" onclick="exit(2)" href=""> <i></i>退出</a>
+                        </div>
+                    </li>
+                    <li><a class="SDK" onclick="sdk(2)" href="">SDK下载</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="wrap">
+            <a href=""><img src="../../../img/yellow/logo.png" class="logo" alt=""/></a>
+        </div>
+        <div  class="headerNav" id="divid">
+            <button  class="left" type="button" onclick="lfun()"></button>
+            <ul class="nav">
+
+            </ul>
+
+            <button  class="right" type="button" onclick="rfun()"></button>
+        </div>
+
+    </div>
+    <div class="headerNavBar"></div>
+    <div class="ask">
+        <ul>
+            <li>
+                <a href=""  class="askword asked">销售咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">商务咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">运营咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword customAsked">客服咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword back">返回顶部</a>
+            </li>
+            <li>
+                <button type="button" class="closeAsk">关闭</button>
+            </li>
+        </ul>
+    </div>
+    <div class="left_middle" >
+        <h1 class="Title">移动导航</h1>
+        <ul>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">我要去三</a></li>
+            <li><a href="">我要去四</a></li>
+        </ul>
+        <button type="button" class="closeTitle">关闭</button>
+    </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $(".nav li").hover(function() {
+                $('ul', this).fadeIn("fast");
+                // $("a b",this).slideDown("fast");
+                $(this).children().addClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7"});
+            }, function() {
+                $('ul', this).fadeOut("fast");
+                // $("a b",this).slideUp("fast");
+                $(this).children().removeClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid transparent"});
+            });
+        });
+        $(document).ready(function(){
+            $(".nav li a b").css("display","none");
+        });
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $(".right_middle p,.right_middle ul").show();
+            });
+            $(".show").click(function(){
+                $(".right_middle p,.right_middle ul").hide();
+            })
+        });
+        $(document).ready(function(){
+            $(".User").click(function(){
+                if($(".change").css("display")=="none"){
+                    $(".change").slideDown();
+                }else{
+                    $(".change").slideUp();
+                }
+            });
+        });
+        $(document).ready(function(){
+            $(".closeAsk").click(function(){
+                $(".ask").hide();
+            });
+            $(".closeTitle").click(function(){
+                $(".left_middle").hide();
+            })
+        })
+    </script>
+    </html>
+    <div class="DomBody" > <!--内容区样式全部放在pagebody.css-->
+        <div class="wrap">
+            <!--bread_nav面包屑开始-->
+            <div class="DomBread_nav">
+                <i></i> <a href="">媒体管理</a>
+                <a>> </a>
+                <a href="">应用管理</a>
+                <a>></a>
+                <a href="">编辑应用</a>
+            </div>
+            <!--bread_nav面包屑结束-->
+        </div> <!--面包屑（功能引栏）-->
+        <div class="DomMatter"><!--内容区-->
+            <div class="DomPageMatter">
+                <!-- 编辑的table -->
+                <div id="a" class="DomEditMatter">
+                    <table class="TableEdit" border="1" cellspacing="0" cellpadding="0" width="100%">
+                        <thead><tr><th colspan="8" align="left">基本信息</th></tr></thead>
+                        <tr>
+                            <td width="15%" align="right">媒体应用名称：</td>
+                            <td width="25%">
+                                <select name=""  class="pageSelect">
+                                    <option></option>
+                                    <option value="">Android</option>
+                                    <option value="">ios</option>
+                                    <option value="">tv</option>
+                                    <option>pc</option>
+                                </select>
+                                <input class="pageText" type="text"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">所属媒体：</td>
+                            <td>
+                                <select name=""  class="pageSelect">
+                                    <option>请选择用户</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">媒体应用分类：</td>
+                            <td>
+                                <select name=""  class="pageSelect">
+                                    <option>                            </option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">下载地址：</td>
+                            <td>
+                                <input type="text" class="pageText"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">应用级别：</td>
+                            <td>
+                                <select name=""  class="pageSelect">
+                                <option>内部员工可见</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">应用描述：</td>
+                            <td><textarea class="pageTextarea"></textarea></td>
+                        </tr>
+                        <tr align="center">
+                            <td colspan="2"><button class="buttonB" style="width:200px">提交</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面尾部 footer.css-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="footer">
+    <div class="link">
+        <a href="#">关于我们</a>
+        <a href="">|</a>
+        <a href="#">联系我们</a>
+        <a href="">|</a>
+        <a href="#">服务条款</a>
+        <a href="">|</a>
+        <a href="#">隐私政策</a>
+        <a href="">|</a>
+        <a href="#">常见问题</a>
+        <a href="">京ICP备05032905号</a>
+    </div>
+</div>
+</body>
+</html>
+<!-- 页面尾部结束-->
+</body>
+
+<script>
+    $(document).ready(function(){
+        $(".last").click(function(){
+            if($(".DomSelectTable").css("display")=="none"){
+                $(".DomSelectTable").show();
+            }else{
+                $(".DomSelectTable").hide();
+            }
+        });
+    })
+
+</script>
+<script src="../../../js/twoButton.js"></script>
+</html>

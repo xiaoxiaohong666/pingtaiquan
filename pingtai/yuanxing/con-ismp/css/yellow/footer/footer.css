@@ -1,0 +1,28 @@
+/*footer开始*/
+.footer {
+    line-height: 20px;
+    position: relative;
+    margin-top: -20px;/*等于footer的高度*/
+    height: 20px;
+    clear:both;
+
+}
+.link{
+    text-align: center;
+    background:#f8bb49;
+}
+.footer a{
+    color:#fff;
+    padding:0 5px;
+    text-decoration:none;
+    font-size:12px;
+
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*footer结束*/

@@ -1,0 +1,992 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-size:12px;
+}
+a{
+    text-decoration:none;
+}
+a:hover{
+    color:#005AA0;
+}
+.clear{
+    clear:both;
+}
+.lf{
+    float:left;
+}
+.rf{
+    float:right;
+}
+@media screen and (min-width:1280px) and (max-width:1600px){
+    .wrap{
+        width:1080px;
+        margin:0 auto;
+    }
+    .DomBread{
+        width:1080px;
+        margin:0 auto;
+    }
+    .DomSelectTable{
+        width:1080px;
+        margin:0 auto;
+    }
+    .DomMatter{
+        width:1080px;
+        margin:0 auto;
+    }
+    .logo{
+        width:80px;
+    }
+    .ComUse{
+        width:1080px;
+        margin:0 auto 10px auto;
+        border:1px solid #575554;
+        background:#fff;
+    }
+}
+@media screen and (min-width:1600px) and (max-width:1920px) {
+    .wrap{
+        width:1510px;
+        margin:0 auto;
+    }
+    .DomBread{
+        width:1510px;
+        margin:0 auto;
+    }
+    .DomSelectTable{
+        width:1510px;
+        margin:0 auto;
+    }
+    .DomMatter{
+        width:1510px;
+        margin:0 auto;
+    }
+    .ComUse{
+        width:1510px;
+        margin:0 auto 10px auto;
+        border:1px solid #575554;
+        background:#fff;
+    }
+}
+/*ý����λ����ҳ�����ʽ*/
+.DomUpBody {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    background:#e8e8e8;
+}
+.DomBody {
+    padding-bottom: 30px;/*�߶ȵ���footer�ĸ߶�*/
+}
+/*���м��ʼ*/
+.DomBread_nav{
+    margin:19px auto;
+    margin-top:0;
+    padding-top:19px;
+}
+.DomBread_nav a{
+    color:#515151;
+    font-size:14px;
+    font-weight: 200;
+}
+.DomBread_nav  i{
+    background:url(../../../img/gray/icon1.png) no-repeat 0 -130px;
+    padding-left:30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-right:5px;
+}
+/*���м����*/
+/*��ǰ�ߵİ�ť��ʽ*/
+.DomButton{
+    color:#666;
+    padding:30px auto;
+    height:90px;
+}
+.DomButton button{
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    width:150px;
+    height:35px;
+    font-size:20px;
+    margin-top:25px;
+}
+/*��ǰ�ߵ���ʽ����*/
+/*ҳ���ϵ�չʾ��ʼ*/
+.DomView{
+    height:170px;
+}
+.DomView .flyL{
+    width:23%;
+    float:left;
+    height:130px;
+    margin-top:20px;
+    background:#f9f9f9;
+}
+.DomView .flyR{
+    width:23%;
+    float:right;
+    height:130px;
+    margin-top:20px;
+    background:#f9f9f9;
+}
+.DomView .flyL .word,.DomView .flyR .word{
+    display:inline-block;
+    font-size:40px;
+    margin-bottom:20px;
+    float:right;
+    padding-top:40px;
+}
+.DomView .clickSun{
+    border-left:40px solid #e8e8e8;
+}
+.DomView .clickRate {
+    border-right:40px solid #e8e8e8;
+}
+.DomView .exposeSun .word{
+    color:#31a423;
+}
+.DomView .clickSun .word{
+    color:#e5883a;
+}
+.DomView .clickRate .word{
+    color:#db74a1;
+}
+.DomView .total .word{
+    color:#aa48c3;
+}
+/*ҳ���ϵ�չʾ�����*/
+
+/*ý��TablePage���ֿ�ʼ*/
+.DomMatter{
+    border:2px solid #e8e8e8;
+}
+.DomPageMatter .TableHeader{
+    height:30px;
+    line-height:30px;
+    background:#979797;
+    font-family: Arial,Verdana,"microsoft yahei";
+}
+.DomPageMatter .first{
+    float:left;
+    font-size:13px;
+    height:20px;
+    line-height:20px;
+    color: #ffffff;;
+    margin-left:10px;
+    margin-top:5px;
+    border-radius:5px;
+}
+.DomPageMatter .last{
+    float:right;
+    color:#fff;
+    font-size:15px;
+    margin-right:10px;
+}
+.TablePage{
+    text-align:center;
+    background:#fff;
+    font-family: Arial,Verdana,"microsoft yahei";
+}
+.TablePageEasy{
+    text-align:center;
+    font-family: Arial,Verdana,"microsoft yahei";
+}
+.TablePageEasy tr td{
+    width:230px;
+    height:35px;
+}
+.TablePageEasy tr:hover{
+    background:#e1ecfe;
+}
+.TablePageEasy thead tr th{
+    text-align:center;
+    background:#f7f7f7;
+    height:45px;
+    font-size:16px;
+    color:#000;
+}
+.TablePage tr td:first-child{
+    width:50px;
+    background:#f7f7f7;
+}
+.TablePage  tr td{
+    width:230px;
+    height:35px;
+}
+.TablePage tr:hover{
+    background:#e1ecfe;
+}
+.TablePage thead tr th{
+    text-align:center;
+    background:#f7f7f7;
+    height:45px;
+    font-size:16px;
+    color:#000;
+}
+/*tablePage���ֽ���*/
+/* TableEdit���ֿ�ʼ*/
+.DomEditMatter{
+    background:#fafbfd;
+}
+.DomEditMatter p{
+    width:1080px;
+    margin:10px  auto;
+    border-bottom:1px solid #8e8e8e;
+    font-size:16px;
+    color:#acaaab;
+}
+.TableEdit thead tr th{
+    font-size:20px;
+    background:#bdc1ca;
+    padding:6px;
+    font-family: Arial,Verdana,"microsoft yahei";
+    font-weight:400;
+}
+.TableEdit{
+    width:100%;
+    color:#515151;
+}
+.TableEdit tr td{
+    height:50px;
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+}
+/* TableEdit���ֽ���*/
+/*TableView���ֿ�ʼ*/
+.DomViewMatter{
+    background:#fafbfd;
+}
+.TableView{
+    width:100%;
+    color:#6a6a6a;
+}
+.TableView tr th{
+    font-size:18px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    background:#bdc1ca;
+}
+.TableView tr td{
+    padding:5px ;
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+}
+/*TableView���ֽ���*/
+
+/*.............................................�༭���ı���.....................................................*/
+/*TableEdit�е�select��input*/
+.pageTextarea{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    margin:20px 10px;
+    border-radius:5px;
+}
+.pageSelect{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    margin:20px 5px;
+    border-radius:5px;
+    color:#6a6a6a;
+}
+.pageRadio{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.pageCheckbox{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.pageText{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    line-height:30px;
+    margin:20px 10px;
+    border-radius:5px;
+}
+.pageButton,.sub{
+    border:none;
+}
+/*.............................................�༭����end.....................................................*/
+
+/*..................................................��ѯ��begin................................................................*/
+/*��������ʽ��ʼ*/
+.DomSelectLine{
+    background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#eeeeee));
+    background:-moz-linear-gradient(top,#fff,#eee);
+    background: linear-gradient(top, #fff, #eee);
+    background: -ms-linear-gradient(top, #fff, #eee);
+    background:#eee\9;
+    width:100%;
+    height:40px;
+}
+.DomSelectLine .first{
+    float:left;
+    height:25px;
+    background:url(../../../img/gray/icon1.png) no-repeat 0 -49px;
+    padding-left:25px;
+    border:none;
+    font-size:15px;
+    font-weight:700;
+    color:#2e2f33;
+}
+.DomSelectLine .last{
+    float:right;
+    background:url(../../../img/gray/icon1.png) no-repeat 0 -90px;
+    height:25px;
+    padding-left:25px;
+    border:none;
+}
+.DomSelectLine button{
+    margin:6px;
+    color:#1858b2;
+}
+/*��������ʽ����*/
+/*����table��ʽ*/
+.DomSelectTable{
+    background:#fff;
+}
+.DomSelectTable tr td{
+    width:230px;
+    height:50px;
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+}
+/*����table��ʽ���ı�����ʽ*/
+.SearchTextarea{
+    height:50px;
+    margin:20px 10px;
+}
+.SearchSelect{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:25px;
+    margin:20px 5px;
+    border-radius:5px;
+    color:#6a6a6a;
+}
+.SearchRadio{
+    height:25px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.SearchCheckbox{
+    height:25px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.SearchText{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:25px;
+    line-height:25px;
+    margin:20px 10px;
+    border-radius:5px;
+}
+.SearchButton,.sub{
+    border:none;
+    background:#4d4d4d;
+    color:#fff;
+    width:114px;
+    height:30px;
+    font-size:15px;
+    border-radius:5px;
+}
+
+/*..................................................��ѯ����end................................................................*/
+/***************************************************��ť����ʽstart****************************************************************************/
+/*���°�ť��ʼ*/
+.updateButton{
+    background:#6f6f77;
+    color:#fff;
+}
+.updateButton i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -203px;
+    padding-left:25px;
+    padding-top:6px;
+    padding-bottom:1px;
+    margin-right:10px;
+}
+.updateButton:hover{
+    background:#74747c;
+    color:#47474f;
+}
+.updateButton:hover i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0\9 -165px\9;
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -165px !important;
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -165px;
+}
+/*���°�ť����*/
+/*�༭��ť��ʼ*/
+.reviseButton{
+    background:#6f6f77;
+    color:#fff;
+}
+.reviseButton i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -458px;
+    padding-left:25px;
+    padding-top:6px;
+    margin-right:10px;
+}
+.reviseButton:hover{
+    background:#74747c;
+    color:#47474f;
+}
+.reviseButton:hover i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -414px;
+}
+/*�༭��ť����*/
+/*��ѯ��ť����ʽ��ʼ*/
+.fundButton{
+    background:#6f6f77;
+    color:#fff;
+}
+.fundButton i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -40px;
+    padding-left:25px;
+    padding-top:6px;
+    margin-right:10px;
+}
+.fundButton:hover{
+    background:#74747c;
+    color:#47474f;
+}
+.fundButton:hover i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 0;
+}
+/*��ѯ��ť����ʽ����*/
+/*ɾ����ť����ʽ��ʼ*/
+.delButton{
+    background:#74747c;
+    color:#fff;
+}
+.delButton i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -281px;
+    padding-left:25px;
+    padding-top:6px;
+    margin-right:10px;
+}
+.delButton:hover{
+    background: #6f6f77;
+    color:#47474f;
+}
+.delButton:hover i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -240px;
+}
+/*ɾ����ť����ʽ����*/
+/*���ᰴť����ʽ��ʼ*/
+.iceButton{
+    background:#74747c;
+    color:#fff;
+}
+.iceButton i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -366px;
+    padding-left:25px;
+    padding-top:6px;
+    margin-right:10px;
+}
+.iceButton:hover{
+    background: #6f6f77;
+    color:#47474f;
+}
+.iceButton:hover i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -326px;
+}
+/*���ᰴť����ʽ����*/
+/*�ⶳ��ť����ʽ��ʼ*/
+.iceoutButton{
+    background:#74747c;
+    color:#fff;
+}
+.iceoutButton i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -127px;
+    padding-left:25px;
+    padding-top:6px;
+    margin-right:10px;
+}
+.iceoutButton:hover{
+    background: #6f6f77;
+    color:#47474f;
+}
+.iceoutButton:hover i{
+    background:url(../../../img/gray/iconbtn.png) no-repeat 0 -81px;
+}
+/*�ⶳ��ť����ʽ����*/
+/****************************************************��ť����ʽ����*****************************************************************************************/
+
+
+
+/****************************************************table�еİ�ť��ʽ��ʼ*********************************************************************************************************/
+.buttonA{
+    background:#bdc1ca;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+}
+.buttonB{
+    background:#9b9b9b;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+}
+.buttonC{
+    background:#fafbfd;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+}
+.buttonD{
+    background:#ebebeb;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+}
+.buttonBase{
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+}
+
+/****************************************************table�еİ�ť����**********************************************************************************************************************/
+/**********************************commonButton��ʼֻ���ڲ�ѯ����***************************************************/
+.commonButton{
+    background:#6f6f77;
+    color:#fff;
+}
+.commonButton:hover{
+    background: #6f6f77;
+    color:#47474f;
+}
+/**************************commButton����************************************/
+/*******************************A��ǩ��ʽ begin*******************************************/
+.AlabelGreen{
+    color: green;
+    margin: 0 8px;
+}
+/*******************************A��ǩ��ʽ end*******************************************/
+
+
+/*****************************************SDK���ؿ�ʼ**********************************************/
+.PhoneSDK{
+    background:url(../../../img/gray/sdk.png) no-repeat 0 -144px;
+    padding-right:220px;
+    padding-bottom:456px;
+    margin:0 0  200px 200px;
+}
+.PhoneSDK:hover{
+    background:url(../../../img/gray/sdk.png) no-repeat -239px -144px;
+}
+.SDKheight{
+    height:500px;
+    background:#f3f3f3;
+}
+.SDKdown{
+    background:#f3f3f3;
+}
+.SDK1{
+    width:25%;
+    margin-top:100px;
+    margin-left:100px;
+    text-align:center;
+}
+.SDK2{
+    width:25%;
+    margin-top:100px;
+    text-align:center;
+}
+.SDKp{
+    width:35%;
+    margin-top:20px;
+}
+.SDKlimit{
+    width:185px;
+}
+.iphoneSDK,.androidSDK{
+    display:block;
+    margin-top:10px;
+    border:1px solid #ddd;
+    background:#fbfbfb;
+    height:40px;
+    line-height:40px;
+    border-radius:10px;
+}
+.iphoneSDK i{
+    background:url(../../../img/gray/sdk.png) no-repeat 0 -60px;
+    padding-left:50px;
+    padding-top:9px;
+    padding-bottom:10px;
+}
+.androidSDK i{
+    background:url(../../../img/gray/sdk.png) no-repeat 0 0;
+    padding-left:50px;
+    padding-top:9px;
+    padding-bottom:10px;
+}
+.MoreDown{
+    padding-left:40px;
+}
+.vers{
+    padding-left:160px;
+}
+.vers1{
+    display:block;
+    padding:10px 0;
+}
+/*****************************************SDK���ؽ���**********************************************/
+/****************************************�ĸ���ͬ��ɫ�����ÿ�ʼ********************************************************/
+.box_up_red,.box_up_green,.box_up_blue,.box_up_greens,.box_up_yellow{
+    text-align:center;
+    width:254px;
+    border:1px solid #f26d4f;
+    border-left:10px solid #f26d4f;
+    border-radius:10px;
+    margin:10px 10px;
+    float:left;
+}
+.box_up_green{
+    border:1px solid #a4cb70;
+    border-left:10px solid #a4cb70;
+}
+.box_up_blue{
+    border:1px solid #16a0e8;
+    border-left:10px solid #16a0e8;
+}
+.box_up_greens{
+    border:1px solid #05b009;
+    border-left:10px solid #05b009;
+}
+.box_up_yellow{
+    border:1px solid #f9df06;
+    border-left:10px solid #f9df06;
+}
+.box_out{
+    display:block;
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#bababa;
+    color:#fff;
+    line-height:20px;
+    /*float:right;*/
+    cursor:pointer;
+}
+.box_out:hover{
+    background:red;
+}
+.box_word_red,.box_word_green,.box_word_blue,.box_word_greens,.box_word_yellow{
+    color:#ffb600;
+    font-family:'΢���ź�';
+    font-size:30px;
+    padding:10px;
+}
+.box_button_red,.box_button_green,.box_button_blue,.box_button_greens,.box_button_yellow{
+    color:#fff;
+    background:#f26d4f;
+    font-size:15px;
+    padding:10px 15px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+.box_button_green{
+    background:#a4cb70;
+}
+.box_button_blue{
+    background:#16a0e8;
+}
+.box_button_greens{
+    background:#05b009;
+}
+.box_button_yellow{
+    background:#f9df06;
+}
+/****************************************�ĸ���ͬ��ɫ�����ý���********************************************************/
+/***************************************��������***********************************************************************/
+.box_out{
+    display:block;
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#f8434c;
+    color:#fff;
+    line-height:20px;
+    cursor:pointer;
+}
+#key thead th,.key thead th{
+    height:35px;
+}
+#key input{
+    vertical-align:middle;
+    margin-right:5px;
+}
+.key input{
+    vertical-align: middle;
+    margin-right:5px;
+}
+.tableButton,.upButton{
+    display:inline-block;
+    padding:8px 0;
+    margin:3px 5px;
+    width:25px;
+    border:1px solid #aaa;
+    background:#fff;
+}
+.upButton{
+    width:45px;
+    background:green;
+    color:#fff;
+}
+
+.blue{
+    background-color:green;
+    color:#fff;
+}
+.red{
+    background:#fa542d;
+    color:#fff;
+}
+.Wdate{
+    width:100px;
+}
+/***************************************��������***********************************************************************/
+
+/*********************************************div����ʽ��ʼ***************************************************/
+.token{
+    box-sizing:border-box;
+    margin:-1px 5px  5px 0;
+    vertical-align:top;
+    cursor:default;
+    padding:0 7px;
+    height:24px;
+    line-height:24px;
+    font-size:13px;
+    background:none;
+    border:1px solid transparent;
+    border-bottom: 1px  dotted #0cb969;
+    display:inline-block;
+}
+.token:hover{
+    background:#f2f2f2;
+    border-radius:5px;
+    border-color:#e08484;
+}
+.token_label{
+    display:inline-block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    font-size:13px;
+    color:#4b4949;
+    font-weight:200;
+    white-space: nowrap;
+}
+.token_close{
+    margin-left:5px;
+    font-size:20px;
+    font-family:"微软雅黑";
+    display:inline-block;
+    float:right;
+    font-weight:700;
+    color:#f9455a;
+    text-shadow: 0 1px 0 #fff;
+    line-height:20px;
+    cursor: pointer;
+    position:relative;
+    z-index:5;
+}
+
+.token_close:hover{
+    color:#7a0311;
+}
+.token_click{
+    width:100px;
+    height:25px;
+    border:none;
+    font-size:15px;
+    background:#f7f77f;
+    color:#34340d;
+    border-radius:5px;
+    box-shadow:2px 2px 2px #191903;
+}
+.token_input{
+    position:relative;
+    z-index:2;
+    width:288px;
+    min-width:90px;
+    border:2px solid #ddd;
+    line-height:24px;
+    font-size:13px;
+    border-radius:5px;
+    background:none;
+    box-shadow:1px 1px 1px #191903;
+}
+.token_table{
+    width:100%;
+}
+/*********************************************div����ʽ����***************************************************/
+/************************left的那个琴开始*********************************/
+.accordion dl{
+    width:99%;
+    display:block;
+    padding:10px;
+    color:#565664;
+}
+.accordion dt{
+    width:20px;
+    background:#f3f3f3;
+    font-size:25px;
+    border:1px solid #d3d3d3;
+    height:198px;
+    text-align: right;
+    padding:10px 10px 0 0;
+    font-weight:bold;
+    cursor: pointer;
+    display:inline-block;
+    float: left;
+    margin:0 3px 0 5px;
+    position:relative;
+}
+.accordion dd{
+    width:382px;
+    border:1px solid #565664;
+    height:208px;
+    line-height:44px;
+    font-size:1.1em;
+    font-weight:bold;
+    display:inline-block;
+    float:left;
+}
+.number{
+    position:absolute;
+    bottom:5px;
+    right:9px;
+}
+/************************left的那个琴结束*********************************/
+/******************************************代办事务页开始********************************************************/
+.ComOut{
+    width:100%;
+    height:400px;
+    margin-top:20px;
+}
+.ComOutLeft{
+    width:25%;
+    height:380px;
+    position: relative;
+}
+.ComOwn{
+    width:100%;
+    height:170px;
+    border:1px solid #6b6a69;
+    background:#fff;
+}
+.ComWeather{
+    width:100%;
+    height:190px;
+    border:1px solid #6b6a69;
+    position:absolute;
+    bottom:0;
+    background:#fff;
+}
+.ComOutRight{
+    width:74%;
+    height:380px;
+    border:1px solid #6b6a69;
+    position:relative;
+    background:#fff;
+}
+.ComRemind{
+    width:100%;
+    border:1px solid #6b6a69;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    overflow:auto;
+    position:relative;
+    background:#fff;
+}
+
+.ComTitle{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    background:#6b6a69;
+    text-indent: 30px;
+    color:#fff;
+}
+.ComArticle{
+    margin-left:10px;
+    line-height:25px;
+    font-size:15px;
+    position: relative;
+    cursor: pointer;
+}
+.ComArticle a:hover{
+    color:#6b6a69;
+}
+.ComTime{
+    position:absolute;
+    right:2%;
+}
+.ComDetail{
+    text-indent:40px;
+    line-height:20px;
+}
+.ComMore{
+    position:absolute;
+    bottom:10px;
+    right:20px;
+}
+.SelfNew{
+    text-align:center;
+    color:#3175b8;
+    margin-top:9px;
+}
+.SelfDetail{
+    color:#3175b8;
+}
+
+/*******************************************代办事务页结束*******************************************************/
+/*******************************************第一个欢迎页开始***************************************/
+.APP_{
+    margin:10px;
+}
+.APP_>img{
+    padding-top:25px;
+}
+/*******************************************第一个欢迎页结束***************************************/
+/*********************************修改密码开始**********************************/
+.changeOut{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:400px;
+    margin-top:-100px;
+    margin-left:-200px;
+    text-align: right;
+
+}
+.changeInput{
+    margin-bottom:20px;
+    width:300px;
+    height:30px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+/*********************************修改密码结束**********************************/

@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="../../../../css/yangshi/header/header.css"/>
+    <link rel="stylesheet" href="../../../../css/yangshi/footer/footer.css"/>
+    <link rel="stylesheet" href="../../../../css/yangshi/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <link rel="stylesheet" href="../../../../css/yangshi/base/kkpager_blue.css"/>
+    <link rel="stylesheet" href="../../../../css/yangshi/base/sweetalert.css"/>
+    <script src="../../../../js/jquery-1.11.3.js"></script>
+    <script src="../../../../js/html5shiv.min.js"></script>
+    <script src="../../../../js/respond.min.js"></script>
+    <script src="../../../../js/kkpager.min.js"></script>
+    <script src="../../../../js/jquery.easyui.min.js"></script>
+    <script src="../../../../js/sweetalert.min.js"></script>
+    <script src="../../../../js/mens.js"></script>
+    <script>
+        $(document).ready(function() {
+            jsonmenus(3);
+            jQuery("#allcheck").click(function(){
+                jQuery("input[name=id]").prop("checked",jQuery("#allcheck").prop("checked"));
+            });
+            var jsondata = [{id: 1, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:""},
+                {id: 2, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:""},
+                {id: 3, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:""},
+                {id: 4, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:""},
+                {id: 5, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:""},
+                {id: 6, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:" "},
+                {id: 7, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:" "},
+                {id: 8, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:" "},
+                {id: 9, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:" "},
+                {id: 10, code:"input", name: "安卓-网易新闻", garden: "Android", appkey: "788835ff-7d03-4595-a40a-88de8a8bb95d",state:"正常",business:"贾天旭(Tel:18611996030)",handle:" "}
+            ];
+            var table = $('#tablekey');
+            //  alert(jsondata.length);
+
+            for (var i = 0; i < jsondata.length; i++) {
+                //alert(i);
+                table.append("<tr>" +
+                        "<td align='center'>" + jsondata[i].id + "</td>" +
+                        "<td align='center'><input type='checkbox' name='id'></td>" +
+                        "<td align='center'>" + jsondata[i].name + "</td>" +
+                        "<td align='center'>" + jsondata[i].garden + "</td>" +
+                        "<td align='center'>" + jsondata[i].appkey + "</td>" +
+                        "<td align='center'  id='sta'>" +jsondata[i].state+ "</td>" +
+                        "<td align='center'>" + jsondata[i].business + "</td>" +
+                        "<td align='center'><a href='edit.html'>编辑</a><span>||</span><a href='#'>查看</a></td>" +
+                        "</tr>");
+            }
+
+        })
+    </script>
+    <title>功能主页面</title>
+</head>
+<body>
+
+<div class="DomUpBody">
+    <!--页面头部 css的样式放在header.css-->
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <!--header开始-->
+    <div class="header">
+        <div  class="headerTopRight">
+            <div class="wrap">
+                <ul>
+                    <li class="NEWS">
+                        <a href="" class="News">消息 <span class="NewsBar">(1)</span></a>
+                    </li>
+                    <li  class="USER">
+                        <h1 class="User"><i></i>虚拟客户<b></b></h1>
+                        <div class="change" >
+                            <a class="changePwd" onclick="shu(3)" href=""> <i></i>修改密码</a>
+                            <a class="changeExit" onclick="exit(3)" href=""> <i></i>退出</a>
+                        </div>
+                    </li>
+                    <li><a href=""  class="SDK">说明文档<i></i></a></li>
+                    <li><a class="SDK" onclick="sdk(3)" href="">SDK下载</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="wrap">
+            <a href=""><img src="../../../../img/yangshi/logo.png" class="logo" alt=""/></a>
+        </div>
+        <div  class="headerNav" id="divid">
+            <ul class="nav">
+
+            </ul>
+        </div>
+
+    </div>
+    <div class="headerNavBar"></div>
+    <div class="ask">
+        <ul>
+            <li>
+                <a href=""  class="askword asked">销售咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">商务咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">运营咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword customAsked">客服咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword back">返回顶部</a>
+            </li>
+            <li>
+                <button type="button" class="closeAsk">关闭</button>
+            </li>
+        </ul>
+    </div>
+    <div class="left_middle" >
+        <h1 class="Title">移动导航</h1>
+        <ul>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">我要去三</a></li>
+            <li><a href="">我要去四</a></li>
+        </ul>
+        <button type="button" class="closeTitle">关闭</button>
+    </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $(".nav li").hover(function() {
+                $('ul', this).fadeIn("fast");
+                $(this).children().addClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7","border-bottom":"1px solid #c8d8e7"});
+            }, function() {
+                $('ul', this).fadeOut("fast");
+                $(this).children().removeClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7","border-bottom":"1px solid transparent"});
+            });
+
+            $(".nav li a b").css("display","none");
+            $(".User").click(function(){
+                if($(".change").css("display")=="none"){
+                    $(".change").slideDown();
+                }else{
+                    $(".change").slideUp();
+                }
+            });
+            $(".News").click(function(){
+                if($(".NewsDeta").css("display")=="none"){
+                    $(".NewsDeta").slideDown();
+                }else{
+                    $(".NewsDeta").slideUp();
+                }
+            });
+            $(".closeAsk").click(function(){
+                $(".ask").hide();
+            });
+            $(".closeTitle").click(function(){
+                $(".left_middle").hide();
+            });
+            $(".changeExit").click(function(){
+                window.location.href="../login/login.html";
+            })
+        });
+    </script>
+    </html>
+
+
+    <div class="DomBody" > <!--内容区样式全部放在pagebody.css-->
+        <div class="DomBread">
+            <!--bread_nav面包屑开始-->
+            <div class="DomBread_nav">
+                <i></i> <a href="" class="first">订单管理</a>
+                <a>> </a>
+                <a href="">普通订单</a>
+                <a>> </a>
+                <a href="">策略列表</a>
+                <a>> </a>
+                <a href="">新增策略</a>
+            </div>
+            <!--bread_nav面包屑结束-->
+        </div> <!--面包屑（功能引栏）-->
+        <div class="clear"></div>
+        <div class="DomMatter"><!--内容区-->
+            <div id="a" class="DomEditMatter">
+                <table class="TableEdit"  cellspacing="0" cellpadding="0" width="100%" >
+                    <thead><tr><th colspan="8" align="left">策略-高级选项 <span style="color:red;">(本页请认真编辑 如果有疑问请联系客服)</span></th></tr></thead>
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="tab_Frequency"/><label>频次控制</label>
+                            <input type="checkbox" class="tab_Area"/><label>地域控制</label>
+                            <input type="checkbox" class="tab_NGT"/><label>人群控制</label>
+                            <input type="checkbox" class="tab_Daypart"/><label>时段控制</label>
+                            <input type="checkbox" class="tab_Velocity"/><label>速度控制</label>
+                        </td>
+                    </tr>
+                </table>
+                <table id="tab_Frequency" class="TableEdit"  cellspacing="0" cellpadding="0" width="100%" style="display:none" >
+                    <thead><tr><th colspan="8" align="left">策略-频次控制 </th></tr></thead>
+                    <tr>
+                        <td align="center">
+                            <select name=""  class="pageCheckbox">
+                                <option value="">单人</option>
+                                <option value="">设备号</option>
+                                <option value="">同ip</option>
+                            </select>
+                            <span>曝光</span>
+                            <input type="text" class="pageText"/>
+                            <select name=""   class="pageCheckbox">
+                                <option value="">天</option>
+                                <option value="">小时</option>
+                                <option value="">月</option>
+                                <option value="">星期</option>
+                            </select>
+                            <input type="text" class="pageText"/>
+                            <span>次</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <select name=""  class="pageCheckbox">
+                                <option value="">单人</option>
+                                <option value="">设备号</option>
+                                <option value="">同ip</option>
+                            </select>
+                            <span>曝光</span>
+                            <input type="text" class="pageText"/>
+                            <select name=""   class="pageCheckbox">
+                                <option value="">天</option>
+                                <option value="">小时</option>
+                                <option value="">月</option>
+                                <option value="">星期</option>
+                            </select>
+                            <input type="text" class="pageText"/>
+                            <span>次</span>
+                        </td>
+                    </tr>
+                </table>
+                 <table id="tab_Area" class="TableEdit"  cellspacing="0" cellpadding="0" width="100%" style="display:none">
+                     <thead>
+                     <tr>
+                         <th colspan="8" align="left">策略-地域控制 </th>
+                     </tr>
+                     </thead>
+                     <tr>
+                         <td align="center"><button class="Daypart_button">添加地域</button>
+                             <table style="margin-bottom:7px;" class="TablePage"  cellspacing="0" cellpadding="0" width="99%">
+                                 <thead>
+                                 <th align="left">序号 </th>
+                                 <th   align="left">编码 </th>
+                                 <th   align="left">名称 </th>
+                                 <th   align="left">比例 </th>
+                                 </thead>
+                                 <tr>
+                                     <td>1</td>
+                                     <td>001110021</td>
+                                     <td>河北</td>
+                                     <td>21%</td>
+                                 </tr>
+                                 <tr>
+                                     <td>2</td>
+                                     <td>001110021</td>
+                                     <td>河北</td>
+                                     <td>21%</td>
+                                 </tr>
+                                 <tr>
+                                     <td>3</td>
+                                     <td>001110021</td>
+                                     <td>河北</td>
+                                     <td>21%</td>
+                                 </tr>
+                                 <tr>
+                                     <td>4</td>
+                                     <td>001110021</td>
+                                     <td>河北</td>
+                                     <td>21%</td>
+                                 </tr>
+                             </table>
+                         </td>
+                     </tr>
+                 </table>
+                <table id="tab_NGT" class="TableEdit"  cellspacing="0" cellpadding="0" width="100%" style="display:none">
+                    <thead>
+                    <tr>
+                        <th colspan="8" align="left">策略-人群控制 </th>
+                    </tr>
+                    <tr>
+                        <td > <!-- 哐哐哐开始-->
+                            <div class="box_up_red">
+                                <span class="box_light_red"></span>
+                                <span class="box_out" >X</span>
+                                <div class="clear"></div>
+                                <h1 class="box_word_red">青少年</h1>
+                                <button  class="box_button_red">关闭</button>
+                            </div>
+                            <div class="box_up_green">
+                                <span class="box_light_green"></span>
+                                <span class="box_out" >X</span>
+                                <div class="clear"></div>
+                                <h1 class="box_word_green">家庭妇女</h1>
+                                <button  class="box_button_green">关闭</button>
+                            </div>
+                            <div class="box_up_blue">
+                                <span class="box_light_blue"></span>
+                                <span class="box_out" >X</span>
+                                <div class="clear"></div>
+                                <h1 class="box_word_blue">大学生</h1>
+                                <button  class="box_button_blue">关闭</button>
+                            </div>
+                            <div class="box_up_greens">
+                                <span class="box_light_greens"></span>
+                                <span class="box_out" >X</span>
+                                <div class="clear"></div>
+                                <h1 class="box_word_greens">家庭妇男</h1>
+                                <button  class="box_button_greens">关闭</button>
+                            </div>
+                            <div class="box_up_yellow">
+                                <span class="box_light_yellow"></span>
+                                <span class="box_out" >X</span>
+                                <div class="clear"></div>
+                                <h1 class="box_word_yellow">公司白领</h1>
+                                <button  class="box_button_yellow">关闭</button>
+                            </div>
+                            <!-- 框框框结束--></td>
+                    </tr>
+                    </thead>
+                </table>
+                  <table id="tab_Daypart" class="TableEdit" cellspacing="0" cellpadding="0" width="100%" style="display:none">
+                      <thead><tr><th colspan="8" align="left">策略-时段控制 </th></tr></thead>
+                      <tr>
+                          <td align="center"><button class="Daypart_button">添加时段</button>
+                              <table style="margin-bottom:7px;" class="TablePage" border="1" cellspacing="0" cellpadding="0" width="99%">
+                                  <thead>
+                                  <tr>
+                                      <th>日期</th>
+                                      <th>00:00-05:00</th>
+                                      <th>06:00-11:00</th>
+                                      <th>12:00-17:00</th>
+                                      <th>18:00-23:00</th>
+                                  </tr>
+                                  </thead>
+                                  <tr>
+                                      <td>星期一</td>
+                                      <td>1</td>
+                                      <td>6</td>
+                                      <td>12</td>
+                                      <td>18</td>
+                                  </tr>
+                                  <tr>
+                                      <td>星期二</td>
+                                      <td>1</td>
+                                      <td>6</td>
+                                      <td>12</td>
+                                      <td>18</td>
+                                  </tr>
+                                  <tr>
+                                      <td>星期三</td>
+                                      <td>1</td>
+                                      <td>6</td>
+                                      <td>12</td>
+                                      <td>18</td>
+                                  </tr>
+                                  <tr>
+                                      <td>星期四</td>
+                                      <td>1</td>
+                                      <td>6</td>
+                                      <td>12</td>
+                                      <td>18</td>
+                                  </tr>
+                                  <tr>
+                                      <td>星期五</td>
+                                      <td>1</td>
+                                      <td>6</td>
+                                      <td>12</td>
+                                      <td>18</td>
+                                  </tr>
+                                  <tr>
+                                      <td>星期六</td>
+                                      <td>1</td>
+                                      <td>6</td>
+                                      <td>12</td>
+                                      <td>18</td>
+                                  </tr>
+                                  <tr>
+                                      <td>星期日</td>
+                                      <td>1</td>
+                                      <td>6</td>
+                                      <td>12</td>
+                                      <td>18</td>
+                                  </tr>
+                              </table></td>
+                      </tr>
+                  </table>
+                   <table id="tab_Velocity" class="TableEdit" cellspacing="0" cellpadding="0" width="100%" style="display:none">
+                       <thead><tr><th colspan="8" align="left">策略-速度控制 </th></tr></thead>
+                       <tr>
+                           <td width="50%" align="right">
+                               <span>曝光均速：</span>
+                               <select name=""  class="pageCheckbox">
+                                   <option value="">启用</option>
+                                   <option value="">不启用</option>
+                               </select>
+                           </td>
+                           <td>
+                               <span>预算均速：</span>
+                               <select name=""  class="pageCheckbox">
+                                   <option value="">不启用</option>
+                                   <option value="">启用</option>
+                               </select>
+                           </td>
+                       </tr>
+                   </table>
+                 <table  class="TableEdit" cellspacing="0" cellpadding="0" width="100%">
+                    <tr>
+                        <td align="center" colspan="5">
+                            <button class="buttonA buttonAprev" >上一步</button>
+                            <button class="buttonA buttonAsubmit" >提交</button>
+                            <button class="buttonA buttonAnext" >下一步</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面尾部 footer.css-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="footer">
+    <div class="link">
+        <a href="#">关于我们</a>
+        <a href="">|</a>
+        <a href="#">联系我们</a>
+        <a href="">|</a>
+        <a href="#">服务条款</a>
+        <a href="">|</a>
+        <a href="#">隐私政策</a>
+        <a href="">|</a>
+        <a href="#">常见问题</a>
+        <a href="">京ICP备05032905号</a>
+    </div>
+</div>
+</body>
+</html>
+<!-- 页面尾部结束-->
+</body>
+
+<script>
+    $(document).ready(function(){
+//        人群控制的按钮代码开始
+        $(".box_out").click(function(){
+            $(this).parent().hide();
+        });
+
+        $(".box_button_red").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_red").css("background-position","0  -263px");
+                $(".box_word_red").css("color","#c3c3c3");
+                $(".box_button_red").css("background","#585858");
+                $(".box_up_red").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_red").css("background-position","0 -48px");
+                $(".box_word_red").css("color","#ffb600");
+                $(".box_button_red").css("background","#f26d4f");
+                $(".box_up_red").css({"border":"1px solid #f26d4f","border-left":"10px solid #f26d4f"});
+
+            }
+
+
+        });
+        $(".box_button_green").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_green").css("background-position","0 -263px");
+                $(".box_word_green").css("color","#c3c3c3");
+                $(".box_button_green").css("background","#585858");
+                $(".box_up_green").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_green").css("background-position","0 -48px");
+                $(".box_word_green").css("color","#ffb600");
+                $(".box_button_green").css("background","#a4cb70");
+                $(".box_up_green").css({"border":"1px solid #a4cb70","border-left":"10px solid #a4cb70"});
+
+            }
+
+
+        });
+        $(".box_button_blue").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_blue").css("background-position","0 -263px");
+                $(".box_word_blue").css("color","#c3c3c3");
+                $(".box_button_blue").css("background","#585858");
+                $(".box_up_blue").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_blue").css("background-position","0 -48px");
+                $(".box_word_blue").css("color","#ffb600");
+                $(".box_button_blue").css("background","#16a0e8");
+                $(".box_up_blue").css({"border":"1px solid #16a0e8","border-left":"10px solid #16a0e8"});
+
+            }
+
+
+        });
+        $(".box_button_greens").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_greens").css("background-position","0 -263px");
+                $(".box_word_greens").css("color","#c3c3c3");
+                $(".box_button_greens").css("background","#585858");
+                $(".box_up_greens").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_greens").css("background-position","0 -48px");
+                $(".box_word_greens").css("color","#ffb600");
+                $(".box_button_greens").css("background","#05b009");
+                $(".box_up_greens").css({"border":"1px solid #05b009","border-left":"10px solid #05b009"});
+            }
+        });
+        $(".box_button_yellow").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_yellow").css("background-position","0 -263px");
+                $(".box_word_yellow").css("color","#c3c3c3");
+                $(".box_button_yellow").css("background","#585858");
+                $(".box_up_yellow").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_yellow").css("background-position","0 -48px");
+                $(".box_word_yellow").css("color","#ffb600");
+                $(".box_button_yellow").css("background","#f9df06");
+                $(".box_up_yellow").css({"border":"1px solid #f9df06","border-left":"10px solid #f9df06"});
+
+            }
+
+
+        });
+//        人群控制的按钮代码结束
+//        页面最下面的三个按钮开始
+        $(".buttonAsubmit").click(function(){
+            $(".remind").show();
+        });
+        $(".buttonAprev").click(function(){
+            window.location.href="add.html";
+        });
+        $(".buttonAnext").click(function(){
+           window.location.href="thired.html";
+        });
+//        页面最下面的三个按钮结束
+        $(".tab_Frequency").click(function () {
+            if( $(this).prop("checked"))   {
+                $("#tab_Frequency").show();
+            }else{
+                $("#tab_Frequency").hide();
+            }
+        });
+        $(".tab_Area").click(function () {
+            if( $(this).prop("checked"))   {
+                $("#tab_Area").show();
+            }else{
+                $("#tab_Area").hide();
+            }
+        });
+        $(".tab_NGT").click(function () {
+            if( $(this).prop("checked"))   {
+                $("#tab_NGT").show();
+            }else{
+                $("#tab_NGT").hide();
+            }
+        });
+        $(".tab_Daypart").click(function () {
+            if( $(this).prop("checked"))   {
+                $("#tab_Daypart").show();
+            }else{
+                $("#tab_Daypart").hide();
+            }
+        });
+        $(".tab_Velocity").click(function () {
+            if( $(this).prop("checked"))   {
+                $("#tab_Velocity").show();
+            }else{
+                $("#tab_Velocity").hide();
+            }
+        });
+//        $(function(){
+//            $(".delButton").click(function() {
+//                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+//                    n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+//                        $.messager.confirm('提示', '你确认要删除应用吗', function(r){
+//                            if (r){
+//                                $("#tablekey").find("tr:eq("+n+")").remove();
+//                            }
+//                        });
+//                });
+//            });
+//        });
+        //冻结的按钮
+        $(".iceButton").click(function(){
+            var checklength = $("input[name='id']:checked").length;
+            if(checklength==0){
+                swal("OMG得选一条数据", "冻结操作失败了!", "error");
+                return ;
+            }
+
+            swal({
+                title: "您确定要冻结吗？",
+                text: "您确定要冻结这条数据？",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                confirmButtonText: "是的，我要冻结",
+                confirmButtonColor: "#ec6c62"
+            }, function() {
+//                $.ajax({
+//                    url: "do.php",
+//                    type: "DELETE"
+//                }).done(function(data) {
+//                    swal("操作成功!", "已成功删除数据！", "success");
+//                }).error(function(data) {
+//                    swal("OMG", "删除操作失败了!", "error");
+//                });
+
+                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+                    var   n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+                    $("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("冻结");
+                    // $("#tablekey").find("tr:eq("+n+")").remove();
+                    swal("操作成功","已成功冻结数据","success");
+                    $("input[name='id']:checked").removeAttr("checked");
+
+                });
+            });
+
+        });
+        //解冻的按钮
+        $(".iceoutButton").click(function(){
+            var checklength = $("input[name='id']:checked").length;
+            if(checklength==0){
+                swal("OMG得选一条冻结数据", "解冻操作失败了!", "error");
+                return ;
+            }
+
+            swal({
+                title: "您确定要解冻吗？",
+                text: "您确定要解冻这条数据？",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                confirmButtonText: "是的，我要解冻",
+                confirmButtonColor: "#ec6c62"
+            }, function() {
+//                $.ajax({
+//                    url: "do.php",
+//                    type: "DELETE"
+//                }).done(function(data) {
+//                    swal("操作成功!", "已成功删除数据！", "success");
+//                }).error(function(data) {
+//                    swal("OMG", "删除操作失败了!", "error");
+//                });
+
+                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+                    var   n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+                    $("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("正常");
+                    // $("#tablekey").find("tr:eq("+n+")").remove();
+                    swal("操作成功","已成功解冻数据","success");
+                    $("input[name='id']:checked").removeAttr("checked");
+
+                });
+            });
+
+        });
+        //删除的按钮
+
+        $(".delButton").click(function(){
+            var checklength = $("input[name='id']:checked").length;
+            if(checklength==0){
+                swal("OMG得选一条数据", "删除操作失败了!", "error");
+                return ;
+            }
+
+            swal({
+                title: "您确定要删除吗？",
+                text: "您确定要删除这条数据？",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                confirmButtonText: "是的，我要删除",
+                confirmButtonColor: "#ec6c62"
+            }, function() {
+//                $.ajax({
+//                    url: "do.php",
+//                    type: "DELETE"
+//                }).done(function(data) {
+//                    swal("操作成功!", "已成功删除数据！", "success");
+//                }).error(function(data) {
+//                    swal("OMG", "删除操作失败了!", "error");
+//                });
+
+                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+                    var   n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+                    //$("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("冻结");
+                    $("#tablekey").find("tr:eq("+n+")").remove();
+                    swal("操作成功","已成功删除数据","success");
+
+
+                });
+            });
+
+        });
+//添加按钮
+        $(".reviseButton").click(function(){
+            window.location.href="../../media/appexternal/add.html";
+        });
+        $(".last").click(function(){
+            if($(".DomSelectTable").css("display")=="none"){
+                $(".DomSelectTable").show();
+            }else{
+                $(".DomSelectTable").hide();
+            }
+        });
+    });
+    function getParameter(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
+
+    //init
+    $(function(){
+        var totalPage = 20;
+        var totalRecords = 390;
+        var pageNo = getParameter('pno');
+        if(!pageNo){
+            pageNo = 1;
+        }
+        //生成分页
+        //有些参数是可选的，比如lang，若不传有默认值
+        kkpager.generPageHtml({
+            pno : pageNo,
+            //总页码
+            total : totalPage,
+            //总数据条数
+            totalRecords : totalRecords,
+            //链接前部
+            hrefFormer : 'pager_test',
+            //链接尾部
+            hrefLatter : '.html',
+            getLink : function(n){
+                return this.hrefFormer + this.hrefLatter + "?pno="+n;
+            }
+            /*
+             ,lang				: {
+             firstPageText			: '首页',
+             firstPageTipText		: '首页',
+             lastPageText			: '尾页',
+             lastPageTipText			: '尾页',
+             prePageText				: '上一页',
+             prePageTipText			: '上一页',
+             nextPageText			: '下一页',
+             nextPageTipText			: '下一页',
+             totalPageBeforeText		: '共',
+             totalPageAfterText		: '页',
+             currPageBeforeText		: '当前第',
+             currPageAfterText		: '页',
+             totalInfoSplitStr		: '/',
+             totalRecordsBeforeText	: '共',
+             totalRecordsAfterText	: '条数据',
+             gopageBeforeText		: '&nbsp;转到',
+             gopageButtonOkText		: '确定',
+             gopageAfterText			: '页',
+             buttonTipBeforeText		: '第',
+             buttonTipAfterText		: '页'
+             }*/
+
+            //,
+            //mode : 'click',//默认值是link，可选link或者click
+            //click : function(n){
+            //	this.selectPage(n);
+            //  return false;
+            //}
+        });
+    });
+</script>
+<!--隔行变色开始-->
+<script>
+    $(document).ready(function(){
+        $(".TablePage tr:even,.TableView tr:even,.TableEdit tr:even").css("background","#f9f9f9");
+    })
+</script>
+<!--隔行变色结束-->
+</html>

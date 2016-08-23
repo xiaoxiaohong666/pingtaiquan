@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #232323;
+    list-style: none;
+    font-size:14px;
+}
+a{
+    text-decoration:none;
+}
+.clear{
+    clear:both;
+}
+@media screen and (min-width:1280px) and (max-width:1600px) {
+    .wrap{
+        width:1080px;
+        margin:0 auto;
+    }
+    .left{
+        left:17% !important;
+    }
+    .nav li a{
+        padding:0 5px;
+    }
+    .nav ul li a{
+        width:80px;
+    }
+}
+@media screen and (min-width:1600px) and (max-width:1920px) {
+    .wrap{
+        width:1510px;
+        margin:0 auto;
+    }
+    .nav li a{
+        padding:0 15px;
+    }
+    .nav ul li a{
+        width:108px;
+    }
+}
+/*头部最上角开始*/
+.header{
+    height:100px;
+    /*background:-webkit-gradient(linear , left top,left bottom,from(#acacac),to(#919191));*/
+    /*background:-moz-linear-gradient(top,#acacac,#919191);*/
+    /*background:#9a9a9a\9;*/
+    background:#fff;
+}
+.headerTopRight ul .USER{
+    position:relative;
+}
+.headerTopRight {
+    height:30px;
+    background: -webkit-radial-gradient(#2769af 60%,#e6edf6); /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(#2769af 60%,#e6edf6); /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(#2769af 60%,#e6edf6); /* Firefox 3.6 - 15 */
+    background: -ms-radial-gradient(#2769af 60%,#e6edf6); /* 标准的语法 */
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType =0, startColorstr = #2769af, endColorstr = #e6edf6);
+}
+.headerTopRight ul li h1,.News {
+    display:inline-block;
+    float:right;
+    height:30px;
+    line-height:30px;
+    font-size:12px;
+    padding-left:5px;
+    color:#fff;
+    cursor:pointer
+}
+.headerTopRight ul li .SDK{
+    float:right;
+    height:20px;
+    margin:5px 10px;
+    line-height:20px;
+    font-size:12px;
+    color:#fff;
+}
+.headerTopRight ul li h1 b{
+    background:url(../../../img/blue/icon1.png) no-repeat -133px -80px;
+    padding-right:15px;
+    margin-left:10px;
+}
+.headerTopRight ul li .User i{
+    background:url(../../../img/blue/cb_icon1.png) no-repeat -75px 0;
+    padding-left:20px;
+    margin-right:5px;
+}
+.NEWS{
+    float:left;
+}
+.headerTopRight  .NewsBar{
+    color:#fff;
+    font-weight:700;
+}
+.headerTopRight ul li .News{
+    position:relative;
+    font-weight:700;
+}
+.headerTopRight ul li .News:hover{
+    color:#fff;
+}
+/*修改开始*/
+.User{
+    position:relative;
+}
+.USER{
+    position:relative;
+}
+.change{
+    height:80px;
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:15px;
+    background:#2bbddc;
+    position:absolute;
+    z-index:9999;
+    top:30px;
+    right:0;
+    display:none;
+}
+.changePwd,.changeExit{
+    display:block;
+    padding-top:17px;
+    margin:0 10px;
+    font-weight:700;
+}
+.changePwd:hover,.changeExit:hover{
+    color:red;
+}
+.changePwd i{
+    background:url(../../../img/blue/ask.png) no-repeat -94px -65px;
+    padding-left:25px;
+    padding-bottom:20px;
+}
+.changeExit i{
+    background:url(../../../img/blue/ask.png) no-repeat -94px 0;
+    padding-left:25px;
+    padding-bottom:10px;
+}
+/*修改结束*/
+/*头部最上角结束*/
+.logo{
+    position:absolute;
+    top:45px;
+    border:none;
+}
+.headerNav{
+    margin:0 20%;
+}
+.nav{
+    margin-top:10px;
+    width:750px;
+    min-width:750px;
+}
+.nav li {
+    float: left;
+    display: block;
+    background: none;
+    position: relative;
+    z-index: 1;
+    text-align:center;
+}
+.nav li a {
+    display: block;
+    line-height: 40px;
+    color: #808080;
+    font-weight:700;
+    width:90px;
+    height:60px;
+    border:1px solid transparent;
+    font-size:15px;
+    position:relative;
+}
+.nav li>a:hover {
+    font-weight:bold;
+    color:#000;
+    background:#fff;
+    border-bottom:none;
+
+}
+.nav li>a.hover{
+    border:1px solid #c8d8e7;
+    border-bottom:none;
+    font-weight:bold;
+    color:#000;
+    background:#fff;
+    border-bottom:none;
+}
+.nav ul {
+    width:400px;
+    position: absolute;
+    display:none;
+    background:#fff;
+}
+.nav ul li:hover {
+    border-top:none;
+    background:transparent;
+    color:#313038;
+}
+.nav ul a {
+    display: block;
+    height: 15px;
+    line-height: 15px;
+    padding:8px;
+    margin-left:2px;
+    color: #5584bc;
+    font-size:12px;
+    position:relative;
+    margin-top:5px;
+
+}
+.nav ul a:hover{
+    border-bottom:1px solid #c8d8e7;
+    color:#2668b2;
+    font-weight:bold;
+}
+/*客户咨询开始*/
+.ask{
+    position:fixed;
+    right:0;
+    bottom:10%;
+    /*background:#c8c8c8;*/
+    background:#82c6f9;
+}
+.ask .askword{
+    color:#fff;
+    display:block;
+}
+.asked{
+    height:25px;
+    background:url(../../../img/blue/ask.png) no-repeat 2px 0;
+    padding-top:32px;
+    margin:10px;
+}
+.customAsked{
+    background:url(../../../img/blue/ask.png) no-repeat 3px -58px;
+    height:25px;
+    padding-top:32px;
+    margin:10px;
+}
+.back{
+    background:url(../../../img/blue/ask.png) no-repeat 3px -113px;
+    height:25px;
+    padding-top:32px;
+    margin:10px;
+}
+.closeAsk{
+    /*border:none;*/
+    width:70px;
+    background:#aed9f9;
+    border:1px solid #0491fb;
+}
+/*客户咨询结束*/
+/*滚动导航开始*/
+/*固定的导航开始*/
+.left_middle{
+    position:fixed;
+    left:0;
+    top:50%;
+    border:1px solid #e3e3e3;
+    color:#ababab;
+}
+.left_middle ul li a{
+    display:block;
+    line-height:42px;
+    padding:10px 10px;
+    color:#3d3d3d;
+    background:#cbe6fb;
+    border-bottom:1px solid #e3e3e3;
+}
+.left_middle ul li a:hover{
+    background:#0291fc;
+    color:#fff;
+}
+.left_middle .Title{
+    text-align:center;
+    height:20px;
+    line-height:20px;
+    background:#0291fc;
+    color:#fff;
+}
+.closeTitle{
+    width:100%;
+    border:none;
+    background:#0291fc;
+    color:#fff;
+    cursor: pointer;
+}
+/*固定的导航结束*/
+/*滚动导航结束*/
+/*俩按钮开始*/
+.right,.left{
+    height:40px;
+    line-height:40px;
+    background:#2c73ba;
+    color:#fff;
+    top:40px;
+    border:none;
+}
+.right{
+    background:url(../../../img/blue/cb_icon1.png) no-repeat 0 -181px;
+    padding-left:40px;
+    padding-bottom:2px;
+    margin-top:3px;
+    cursor: pointer;
+}
+.left{
+    background:url(../../../img/blue/cb_icon1.png) no-repeat -95px -177px;
+    padding-right:38px;
+    position:absolute;
+    left:18%;
+    cursor:pointer;
+}
+
+/*俩按钮结束*/
+
+

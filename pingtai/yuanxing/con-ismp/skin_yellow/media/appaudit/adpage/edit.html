@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="../../../../css/yellow/header/header.css"/>
+    <link rel="stylesheet" href="../../../../css/yellow/footer/footer.css"/>
+    <link rel="stylesheet" href="../../../../css/yellow/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <link rel="stylesheet" href="../../../../css/yellow/base/kkpager_blue.css"/>
+    <script src="../../../../js/jquery-1.11.3.js"></script>
+    <script src="../../../../js/html5shiv.min.js"></script>
+    <script src="../../../../js/respond.min.js"></script>
+    <script src="../../../../js/kkpager.min.js"></script>
+    <script src="../../../../tool/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../../../js/cmenujson.js"></script>
+    <script>
+        $(document).ready(function() {
+            menu(3);
+        })
+    </script>
+    <title>功能主页面</title>
+</head>
+<body>
+
+<div class="DomUpBody">
+    <!--页面头部 css的样式放在header.css-->
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <!--header开始-->
+    <div class="header">
+        <div  class="headerTopRight">
+            <div class="wrap">
+                <ul>
+                    <li class="NEWS">
+                        <a href="" class="News">消息 <span class="NewsBar">(1)</span></a>
+                    </li>
+                    <li  class="USER">
+                        <h1 class="User"><i></i>管理员<b></b></h1>
+                        <div class="change" >
+                            <a class="changePwd" onclick="shu(3)" href=""> <i></i>修改密码</a>
+                            <a class="changeExit" onclick="exit(3)" href=""> <i></i>退出</a>
+                        </div>
+                    </li>
+                    <li><a class="SDK" onclick="sdk(3)" href="">SDK下载</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="wrap">
+            <a href=""><img src="../../../../img/yellow/logo.png" class="logo" alt=""/></a>
+        </div>
+        <div  class="headerNav" id="divid">
+            <button  class="left" type="button" onclick="lfun()"></button>
+            <ul class="nav">
+
+            </ul>
+
+            <button  class="right" type="button" onclick="rfun()"></button>
+        </div>
+
+    </div>
+    <div class="headerNavBar"></div>
+    <div class="ask">
+        <ul>
+            <li>
+                <a href=""  class="askword asked">销售咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">商务咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">运营咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword customAsked">客服咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword back">返回顶部</a>
+            </li>
+            <li>
+                <button type="button" class="closeAsk">关闭</button>
+            </li>
+        </ul>
+    </div>
+    <div class="left_middle" >
+        <h1 class="Title">移动导航</h1>
+        <ul>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">我要去三</a></li>
+            <li><a href="">我要去四</a></li>
+        </ul>
+        <button type="button" class="closeTitle">关闭</button>
+    </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $(".nav li").hover(function() {
+                $('ul', this).fadeIn("fast");
+                $("a b",this).slideDown("fast");
+                $(this).children().addClass("hover");
+            }, function() {
+                $('ul', this).fadeOut("fast");
+                $(this).children().removeClass("hover");
+                $("a b",this).slideUp("fast");
+            });
+        });
+        $(document).ready(function(){
+            $(".nav li a b").css("display","none");
+        });
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $(".right_middle p,.right_middle ul").show();
+            });
+            $(".show").click(function(){
+                $(".right_middle p,.right_middle ul").hide();
+            })
+        });
+        $(document).ready(function(){
+            $(".User").click(function(){
+                if($(".change").css("display")=="none"){
+                    $(".change").slideDown();
+                }else{
+                    $(".change").slideUp();
+                }
+            });
+        });
+        $(document).ready(function(){
+            $(".closeAsk").click(function(){
+                $(".ask").hide();
+            });
+            $(".closeTitle").click(function(){
+                $(".left_middle").hide();
+            })
+        })
+    </script>
+    </html>
+
+
+    <div class="DomBody" > <!--内容区样式全部放在pagebody.css-->
+        <div class="wrap">
+            <!--bread_nav面包屑开始-->
+            <div class="DomBread_nav">
+                <i></i> <a href="" class="first">媒体管理</a>
+                <a>> </a>
+                <a href="">广告位管理</a>
+                <a>></a>
+                <a href="">编辑广告位</a>
+            </div>
+            <!--bread_nav面包屑结束-->
+        </div> <!--面包屑（功能引栏）-->
+        <div class="DomMatter"><!--内容区-->
+            <div class="DomPageMatter" style="background:#fff;">
+                <table class="TableEdit" border="1" cellspacing="0" cellpadding="0" width="100%">
+                    <thead><tr><th colspan="8" align="left">基本信息</th></tr></thead>
+                    <tr>
+                        <td width="35%" align="right">所属应用：</td>
+                        <td width="65%">
+                            <input type="text" value='meika' class="pageText">
+                            <label style="color:red;">找不到应用的情况下，请联系商务审核应用！</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">广告位名称：</td>
+                        <td><input type="text" class="pageText"/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">广告样式：</td>
+                        <td>
+                            <input type="radio" name="adv" class="radio"/>banner广告
+                            <input type="radio" name="adv" value="" class="pageRadio"/>插屏广告
+                            <input type="radio" name="adv" class="radio"/>开屏广告
+                            <input type="radio" name="adv" value="" class="pageRadio"/>视频广告
+                            <input type="radio" name="adv" class="radio"/>信息流广告
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">图片尺寸：</td>
+                        <td>
+                            <input type="text"  class="pageText"/> *
+                            <input type="text"   value="" class="pageText"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">图片格式后缀：</td>
+                        <td>
+                            <input type="checkbox" class= "pageCheckbox"/>.jpg
+                            <input type="checkbox"  value="" class="pageCheckbox"/>.jpeg
+                            <input type="checkbox"   class="pageCheckbox"/>.png
+                            <input type="checkbox"   value="" class="pageCheckbox"/>.gif
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">曝光区间：<h5 style="color:red;">(可以为估数)</h5></td>
+                        <td>
+                            <input type="text"  class="pageText"/> -
+                            <input type="text"   value="" class="pageText"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">点击区间：<h5 style="color:red;">(可以为估数)</h5></td>
+                        <td>
+                            <input type="text"  class="pageText"/> -
+                            <input type="text"   value="" class="pageText"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">素材审核：</td>
+                        <td>
+                            <input type="radio" name="adv" class="radio"/>先投后审
+                            <input type="radio" name="adv" value="" class="pageRadio"/>提前审核
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">广告位例图</td>
+                        <td><input type="button" class="buttonBase" value="添加例图"/></td>
+                    </tr>
+                    <tr>
+                        <td align="right">广告位描述：</td>
+                        <td>
+                                    <textarea class="pageTextarea">
+
+                                    </textarea>
+                        </td>
+                        <td align="right" colspan="2"><button type="button" class="button sub"></button></td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="4"><button class="buttonA" >提交</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面尾部 footer.css-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="footer">
+    <div class="link">
+        <a href="#">关于我们</a>
+        <a href="">|</a>
+        <a href="#">联系我们</a>
+        <a href="">|</a>
+        <a href="#">服务条款</a>
+        <a href="">|</a>
+        <a href="#">隐私政策</a>
+        <a href="">|</a>
+        <a href="#">常见问题</a>
+        <a href="">京ICP备05032905号</a>
+    </div>
+</div>
+</body>
+</html>
+<!-- 页面尾部结束-->
+</body>
+
+<script>
+    $(document).ready(function(){
+        $(".last").click(function(){
+            if($(".DomSelectTable").css("display")=="none"){
+                $(".DomSelectTable").show();
+            }else{
+                $(".DomSelectTable").hide();
+            }
+        });
+    });
+    function getParameter(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
+
+    //init
+    $(function(){
+        var totalPage = 20;
+        var totalRecords = 390;
+        var pageNo = getParameter('pno');
+        if(!pageNo){
+            pageNo = 1;
+        }
+        //生成分页
+        //有些参数是可选的，比如lang，若不传有默认值
+        kkpager.generPageHtml({
+            pno : pageNo,
+            //总页码
+            total : totalPage,
+            //总数据条数
+            totalRecords : totalRecords,
+            //链接前部
+            hrefFormer : 'pager_test',
+            //链接尾部
+            hrefLatter : '.html',
+            getLink : function(n){
+                return this.hrefFormer + this.hrefLatter + "?pno="+n;
+            }
+            /*
+             ,lang				: {
+             firstPageText			: '首页',
+             firstPageTipText		: '首页',
+             lastPageText			: '尾页',
+             lastPageTipText			: '尾页',
+             prePageText				: '上一页',
+             prePageTipText			: '上一页',
+             nextPageText			: '下一页',
+             nextPageTipText			: '下一页',
+             totalPageBeforeText		: '共',
+             totalPageAfterText		: '页',
+             currPageBeforeText		: '当前第',
+             currPageAfterText		: '页',
+             totalInfoSplitStr		: '/',
+             totalRecordsBeforeText	: '共',
+             totalRecordsAfterText	: '条数据',
+             gopageBeforeText		: '&nbsp;转到',
+             gopageButtonOkText		: '确定',
+             gopageAfterText			: '页',
+             buttonTipBeforeText		: '第',
+             buttonTipAfterText		: '页'
+             }*/
+
+            //,
+            //mode : 'click',//默认值是link，可选link或者click
+            //click : function(n){
+            //	this.selectPage(n);
+            //  return false;
+            //}
+        });
+    });
+</script>
+<script src="../../../../js/twoButton.js"></script>
+</html>

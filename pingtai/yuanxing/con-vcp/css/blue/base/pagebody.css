@@ -1,0 +1,984 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    font-size:14px;
+}
+a{
+    text-decoration:none;
+}
+.clear{
+    clear:both;
+}
+.lf{
+    float:left;
+}
+.rf{
+    float:right;
+}
+@media screen and (min-width:1180px) and (max-width:1600px) {
+    .wrap{
+        width:1080px;
+        margin:0 auto;
+    }
+    .DomView .flyL .word,.DomView .flyR .word{
+        font-size:25px!important;
+    }
+    .DomBread{
+        width:1080px;
+        margin:0 auto;
+    }
+
+    .DomSelect{
+        width:1080px;
+        margin:0 auto;
+    }
+    .DomSelectTable{
+        width:1080px;
+        margin:0 auto;
+    }
+    .DomMatter{
+        width:1080px;
+        margin:0 auto;
+    }
+    .DomView{
+        width:1080px;
+        margin:20px auto;
+    }
+    .ComUse{
+        width:1080px;
+        margin:0 auto 10px auto;
+        border:1px solid #3175b8;
+    }
+}
+@media screen and (min-width:1600px) and (max-width:1920px) {
+    .wrap{
+        width:1510px;
+        margin:0 auto;
+    }
+    .DomSelect{
+        width:1510px;
+        margin:0 auto;
+    }
+    .DomBread{
+        width:1510px;
+        margin:0 auto;
+        background:#fff;
+    }
+    .DomButton{
+        width:1510px;
+        margin:0 auto;
+        height:90px;
+        background:#fff;
+    }
+    .DomBread{
+        width:1510px;
+        margin:0 auto;
+        background:#fff;
+    }
+    .DomSelectTable{
+        width:1510px;
+        margin:0 auto;
+        background:#fff;
+    }
+    .DomMatter{
+        width:1510px;
+        margin:0 auto;
+        background:#cdcecf;
+    }
+    .DomView{
+        width:1510px;
+        margin:0 auto;
+    }
+    .ComUse{
+        width:1510px;
+        margin:0 auto 10px auto;
+        border:1px solid #3175b8;
+    }
+}
+/*媒体广告位管理页面的样式*/
+.DomUpBody {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    background:#fff;
+}
+.DomBody {
+    background:#fff;
+    /*border:20px solid #fff;*/
+    border-left:20px solid #fff;
+    border-right:20px solid #fff;
+    padding-bottom :30px;/*高度等于footer的高度*/
+}
+/*面包屑开始*/
+.DomBread_nav{
+    padding:19px 0;
+}
+.DomBread_nav a{
+    color:#515151;
+    font-size:14px;
+    font-weight: 200;
+}
+.DomBread_nav  i{
+    background:url(../../../img/blue/icon1.png) no-repeat -180px -170px;
+    padding-left:50px;
+    padding-top:20px;
+    padding-bottom:15px;
+    margin-right:8px;
+}
+/*面包屑结束*/
+/*最前边的按钮样式*/
+
+.DomButton button{
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    width:150px;
+    height:35px;
+    font-size:20px;
+    margin-top:25px;
+}
+/*最前边的样式结束*/
+/*页面上的展示框开始*/
+.DomView{
+    box-sizing: border-box;
+    height:170px;
+    box-shadow:0 0 10px #e4ebf1;
+    border:2px solid #e4ebf1;
+    margin-bottom:20px;
+}
+.DomView .flyL{
+    width:23%;
+    float:left;
+    height:130px;
+    margin-top:20px;
+    background:#f9f9f9;
+}
+.DomView .flyR{
+    width:23%;
+    float:right;
+    height:130px;
+    margin-top:20px;
+    background:#f9f9f9;
+}
+.DomView .flyL .word,.DomView .flyR .word{
+    display:inline-block;
+    font-size:40px;
+    margin-bottom:20px;
+    float:right;
+    padding-top:40px;
+}
+.DomView .clickSun{
+    border-left:40px solid #fff;
+}
+.DomView .clickRate {
+    border-right:40px solid #fff;
+}
+.DomView .exposeSun .word{
+    color:#31a423;
+}
+.DomView .clickSun .word{
+    color:#e5883a;
+}
+.DomView .clickRate .word{
+    color:#db74a1;
+}
+.DomView .total .word{
+    color:#aa48c3;
+}
+/*页面上的展示框结束*/
+
+/*媒体TablePage部分开始*/
+.DomMatter{
+
+}
+.DomPageMatter{
+    margin:0 auto;
+    background:#fff;
+}
+.DomPageMatter .TableHeader{
+    height:50px;
+    border:2px solid #e3eaf2;
+    box-shadow: 0 0 10px #e3eaf2;
+    border-bottom:none;
+    background:#fff;
+    font-family: Arial,Verdana,"microsoft yahei";
+}
+.DomPageMatter .first{
+    float:left;
+    font-size:18px;
+    height:50px;
+    line-height:50px;
+    color: #000;
+    margin-left:10px;
+    border-radius:5px;
+}
+.DomPageMatter .last{
+    float:right;
+    color:#fff;
+    font-size:15px;
+    margin-right:10px;
+}
+.TablePage{
+    border:2px solid #dbe0e4;
+    box-shadow:0 0 10px #dbe0e4;
+    border-top:none;
+    text-align:center;
+    font-family: Arial,Verdana,"microsoft yahei";
+}
+.TablePage tr{
+    border-bottom:5px solid #dce0e2;
+}
+.TablePageEasy{
+    text-align:center;
+    font-family: Arial,Verdana,"microsoft yahei";
+}
+.TablePageEasy tr td{
+    width:230px;
+    height:35px;
+}
+.TablePageEasy tr:hover{
+    background:#e1ecfe;
+}
+.TablePageEasy thead tr th{
+    text-align:center;
+    background:#f7f7f7;
+    height:45px;
+    font-size:16px;
+    color:#000;
+}
+
+.TablePage  tr td{
+    width:230px;
+    height:60px;
+}
+.little{
+    display:inline-block;
+    width:6px;
+    height:6px;
+    border-radius:6px;
+    background:green;
+    vertical-align: middle;
+    margin-right:5px;
+}
+.TablePage tr:hover{
+    cursor:pointer;
+}
+.TablePage thead tr th{
+    text-align:center;
+    background:#f5f9fd;
+    height:60px;
+    font-size:16px;
+    color:#276ab0;
+    border-top:1px solid #dce0e3;
+    border-bottom:2px solid #b1d2f3;
+}
+.Daypart_button{
+    margin:7px 0;
+    width:100px;
+    height:30px;
+    font-size:15px;
+    border:none;
+    box-shadow:2px 2px 2px #000;
+    border-radius:5px;
+}
+/*tablePage部分结束*/
+/* TableEdit部分开始*/
+.DomEditMatter{
+    background:#fff;
+}
+.TableEdit thead tr th{
+    font-size:20px;
+    background:#f5f9fd;
+    padding:6px;
+    font-family: Arial,Verdana,"microsoft yahei";
+    font-weight:400;
+    color:#276ab0;
+    border-top:1px solid #dce0e3;
+    border-bottom:2px solid #b1d2f3;
+}
+.TableEdit{
+    border:2px solid #dbe0e4;
+    box-shadow:0 0 10px #dbe0e4;
+    width:100%;
+
+}
+.TableEdit tr td{
+    height:50px;
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    color:#000;
+}
+/* TableEdit部分结束*/
+/*TableView部分开始*/
+.DomViewMatter{
+    background:#fafbfd;
+}
+.TableView{
+    width:100%;
+    color:#6a6a6a;
+    border:2px solid #dbe0e4;
+    box-shadow:0 0 10px #dbe0e4;
+    margin-bottom:20px;
+}
+.TableView tr th{
+    font-size:18px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    background:#f5f9fd;
+    padding:6px;
+    border-top:1px solid #dce0e3;
+    border-bottom:2px solid #b1d2f3;
+}
+.TableView tr td{
+    padding:5px ;
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+}
+/*TableView部分结束*/
+
+/*.............................................编辑区文本框.....................................................*/
+/*TableEdit中的select和input*/
+.pageTextarea{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    margin:20px 10px;
+    border-radius:5px;
+}
+.pageSelect{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    margin:20px 5px;
+    border-radius:5px;
+    color:#6a6a6a;
+}
+.pageRadio{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.pageCheckbox{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.pageText{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:30px;
+    line-height:30px;
+    margin:20px 10px;
+    border-radius:5px;
+}
+.pageButton,.sub{
+    border:none;
+}
+/*.............................................编辑区的end.....................................................*/
+
+/*..................................................查询区begin................................................................*/
+/*搜索的样式开始*/
+.DomSelect{
+    margin-top:30px;
+    box-shadow:0 0 10px #e4ebf1;
+    border:1.5px solid #e4ebf1;
+    margin-bottom:20px;
+}
+.DomSelectLine{
+    background:#fff;
+    border-bottom:1px solid #dce0e3;
+    width:100%;
+    height:40px;
+}
+.DomSelectLine .first{
+    float:left;
+    height:25px;
+    padding-left:25px;
+    border:none;
+    background:transparent;
+    font-size:15px;
+    font-weight:700;
+    color:#2e2f33;
+}
+.DomSelectLine .last{
+    float:right;
+    background:url(../../../img/blue/icon1.png) no-repeat 0 -90px;
+    height:25px;
+    padding-left:25px;
+    border:none;
+}
+.DomSelectLine button{
+    margin:6px;
+    color:#1858b2;
+}
+/*搜索的样式结束*/
+/*搜索table样式*/
+.DomSelectTable{
+    background:#fff;
+}
+.DomSelectTable tr td{
+    height:35px;
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+}
+/*搜索table样式中文本框样式*/
+.SearchTextarea{
+    height:50px;
+    margin:20px 10px;
+}
+.SearchSelect{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:25px;
+    margin:20px 5px;
+    border-radius:5px;
+    color:#6a6a6a;
+}
+.SearchRadio{
+    height:25px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.SearchCheckbox{
+    height:25px;
+    margin:20px 5px;
+    vertical-align: middle;
+}
+.SearchText{
+    font-size:14px;
+    font-weight:500;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    height:25px;
+    line-height:25px;
+    margin:20px 10px;
+    border-radius:5px;
+}
+.SearchButton,.sub{
+    border:none;
+    background:#2769af;
+    color:#fff;
+    width:114px;
+    height:30px;
+    font-size:15px;
+    border-radius:5px;
+}
+
+/*..................................................查询区的end................................................................*/
+/***************************************************按钮的样式start****************************************************************************/
+/*更新按钮开始*/
+.updateButton{
+    background:#2bbddc;
+    color:#fff;
+    border:none;
+    border-bottom:4px solid #1ba6c3;
+    border-top:4px solid transparent;
+    cursor: pointer;
+}
+.updateButton:hover{
+    background:#1ba6c3;
+    color:#dedede;
+    border-bottom:4px solid transparent;
+    border-top:4px solid #0a839d;
+}
+/*更新按钮结束*/
+/*编辑按钮开始*/
+.reviseButton{
+    background:#2bbddc;
+    color:#fff;
+    border:none;
+    border-bottom:4px solid #1ba6c3;
+    border-top:4px solid transparent;
+    cursor: pointer;
+}
+.reviseButton:hover{
+    background:#1ba6c3;
+    color:#dedede;
+    border-top:4px solid #0a839d;
+}
+/*编辑按钮结束*/
+/*查询按钮的样式开始*/
+.fundButton{
+    background:#2bbddc;
+    color:#fff;
+    border:none;
+    border-bottom:4px solid #1ba6c3;
+    border-top:4px solid transparent;
+    cursor: pointer;
+}
+.fundButton:hover{
+    background:#1ba6c3;
+    color:#dedede;
+    border-top:4px solid #0a839d;
+}
+
+/*查询按钮的样式结束*/
+/*删除按钮的样式开始*/
+.delButton{
+    background:#2bbddc;
+    color:#fff;
+    border:none;
+    border-bottom:4px solid #1ba6c3;
+    border-top:4px solid transparent;
+    cursor: pointer;
+}
+.delButton:hover{
+    background:#1ba6c3;
+    color:#dedede;
+    border-top:4px solid #0a839d;
+}
+/*删除按钮的样式结束*/
+/*冻结按钮的样式开始*/
+.iceButton{
+    background:#2bbddc;
+    color:#fff;
+    border:none;
+    border-bottom:4px solid #1ba6c3;
+    border-top:4px solid transparent;
+
+}
+.iceButton:hover{
+    background:#1ba6c3;
+    color:#dedede;
+    border-top:4px solid #0a839d;
+}
+/*冻结按钮的样式结束*/
+/*解冻按钮的样式开始*/
+.iceoutButton{
+    background:#2bbddc;
+    color:#fff;
+    border:none;
+    border-bottom:4px solid #1ba6c3;
+    border-top:4px solid transparent;
+    cursor: pointer;
+}
+.iceoutButton:hover{
+    background:#1ba6c3;
+    color:#dedede;
+    border-top:4px solid #0a839d;
+}
+/*解冻按钮的样式结束*/
+/*禁用按钮的样式开始*/
+.disButton{
+    border:none;
+    border-top:4px solid transparent;
+    border-bottom:4px solid #aeaeae;
+    background:#dedede;
+    color:#787878;
+}
+/*禁用按钮的样式结束*/
+/****************************************************按钮的样式结束*****************************************************************************************/
+/****************************************************table中的按钮样式开始*********************************************************************************************************/
+.buttonA{
+    background:#2bbddc;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+    color:#fff;
+    border:none;
+    border-bottom:4px solid #1ba6c3;
+}
+.buttonB{
+    background:#2bbddc;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+    color:#fff;
+}
+.buttonC{
+    background:#2bbddc;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+    color:#fff;
+}
+.buttonD{
+    background:#2bbddc;
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+    color:#fff;
+}
+.buttonBase{
+    font-family: Arial,Verdana,"microsoft yahei" ;
+    padding:2px 20px;
+    font-size:15px;
+}
+.select_ads{
+    width:150px;
+    height:40px;
+    box-shadow:2px 2px 2px #000;
+    margin:15px 0 5px 15px;
+}
+.close_ads{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background:#ddd;
+    line-height:20px;
+    cursor: pointer;
+}
+.close_ads:hover{
+    background:#2bbddc;
+    color:#fff;
+}
+/****************************************************table中的按钮结束**********************************************************************************************************************/
+/**********************************commonButton开始只能在查询区用***************************************************/
+.commonButton{
+    background:#6f6f77;
+    color:#fff;
+}
+.commonButton:hover{
+    background: #6f6f77;
+    color:#47474f;
+}
+/**************************commButton结束************************************/
+/*******************************A标签样式 begin*******************************************/
+.AlabelGreen{
+    color: green;
+    margin: 0 8px;
+}
+/*******************************A标签样式 end*******************************************/
+
+/*提示语放在label中的*/
+.remind{
+    color:red;
+    margin:0 10px;
+    display:none;
+}
+/****************************************四个不同颜色的启用开始********************************************************/
+.box_up_red,.box_up_green,.box_up_blue,.box_up_greens,.box_up_yellow{
+    text-align:center;
+    width:254px;
+    border:1px solid #f26d4f;
+    border-left:10px solid #f26d4f;
+    border-radius:10px;
+    margin:10px 10px;
+    float:left;
+}
+.box_up_green{
+    border:1px solid #a4cb70;
+    border-left:10px solid #a4cb70;
+}
+.box_up_blue{
+    border:1px solid #16a0e8;
+    border-left:10px solid #16a0e8;
+}
+.box_up_greens{
+    border:1px solid #05b009;
+    border-left:10px solid #05b009;
+}
+.box_up_yellow{
+    border:1px solid #f9df06;
+    border-left:10px solid #f9df06;
+}
+
+.box_light_red,.box_light_green,.box_light_blue,.box_light_greens,.box_light_yellow{
+    background:url(../../../img/blue/box_box.png) no-repeat 0 -48px;
+    padding-left:30px;
+    padding-bottom:15px;
+    margin-left:-180px;
+}
+.box_light_red{
+    background-position:0 0;
+}
+/*.box_light_green{*/
+/*background:url(../../img/box_box.png) no-repeat 0 -48px;*/
+/*padding-left:30px;*/
+/*padding-bottom:10px;*/
+/*margin-left:-180px;*/
+/*}*/
+/*.box_light_blue{*/
+/*background:url(../../img/box_box.png) no-repeat 0 -98px;*/
+/*padding-left:30px;*/
+/*padding-bottom:10px;*/
+/*margin-left:-180px;*/
+/*}*/
+/*.box_light_greens{*/
+/*background:url(../../img/box_box.png) no-repeat 0 -156px;*/
+/*padding-left:30px;*/
+/*padding-bottom:10px;*/
+/*margin-left:-180px;*/
+/*}*/
+/*.box_light_yellow{*/
+/*background:url(../../img/box_box.png) no-repeat 0 -210px;*/
+/*padding-left:30px;*/
+/*padding-bottom:10px;*/
+/*margin-left:-180px;*/
+/*}*/
+.box_out{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#bababa;
+    color:#fff;
+    line-height:20px;
+    float:right;
+    cursor:pointer;
+}
+.box_out:hover{
+    background:red;
+}
+.box_word_red,.box_word_green,.box_word_blue,.box_word_greens,.box_word_yellow{
+    color:#ffb600;
+    font-family:'微软雅黑';
+    font-size:30px;
+    padding:10px;
+
+}
+.box_button_red,.box_button_green,.box_button_blue,.box_button_greens,.box_button_yellow{
+    color:#fff;
+    background:#f26d4f;
+    font-size:15px;
+    padding:10px 15px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+.box_button_green{
+    background:#a4cb70;
+}
+.box_button_blue{
+    background:#16a0e8;
+}
+.box_button_greens{
+    background:#05b009;
+}
+.box_button_yellow{
+    background:#f9df06;
+}
+/****************************************四个不同颜色的启用结束********************************************************/
+/****************************************遮罩层的样式开始*******************************************************/
+#fullbg {
+    background-color:#bdbdbd;
+    left:0;
+    opacity:0.4;
+    position:fixed;
+    top:0;
+    z-index:3;
+    -moz-opacity:0.4;
+    width:100%;
+}
+#dialog {
+    background-color:#fff;
+    border:5px solid #454646;
+    height:400px;
+    width:900px;
+    left:25%;
+    padding:1px;
+    top:25%;
+    z-index:5;
+    border-radius:5px;
+    display:none;
+}
+.close_layer{
+    display:block;
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    background:#ddd;
+    text-align:center;
+    line-height:20px;
+    cursor: pointer;
+    position:absolute;
+    right:0;
+    top:0;
+}
+.close_layer:hover{
+    background:#f6749c;
+    color:#fff;
+}
+.banner{
+    margin:10px;
+}
+/*****************************************遮罩层样式结束**************************************/
+/*****************************************SDK下载开始**********************************************/
+.PhoneSDK{
+    background:url(../../../img/blue/sdk.png) no-repeat 0 -144px;
+    padding-right:220px;
+    padding-bottom:456px;
+    margin:0 0  200px 200px;
+}
+.PhoneSDK:hover{
+    background:url(../../../img/blue/sdk.png) no-repeat -239px -144px;
+}
+.SDKheight{
+    height:500px;
+    background:#f3f3f3;
+}
+.SDKdown{
+    background:#f3f3f3;
+}
+.SDK1{
+    width:25%;
+    margin-top:100px;
+    margin-left:100px;
+    text-align:center;
+}
+.SDK2{
+    width:25%;
+    margin-top:100px;
+    text-align:center;
+}
+.SDKp{
+    width:35%;
+    margin-top:20px;
+}
+.SDKlimit{
+    width:185px;
+}
+.iphoneSDK,.androidSDK{
+    display:block;
+    margin-top:10px;
+    border:1px solid #ddd;
+    background:#fbfbfb;
+    height:40px;
+    line-height:40px;
+    border-radius:10px;
+}
+.iphoneSDK i{
+    background:url( ../../../img/blue/sdk.png) no-repeat 0 -60px;
+    padding-left:50px;
+    padding-top:9px;
+    padding-bottom:10px;
+}
+.androidSDK i{
+    background:url(../../../img/blue/sdk.png) no-repeat 0 0;
+    padding-left:50px;
+    padding-top:9px;
+    padding-bottom:10px;
+}
+.MoreDown{
+    padding-left:40px;
+}
+.vers{
+    padding-left:160px;
+}
+.vers1{
+    display:block;
+    padding:10px 0;
+}
+/*****************************************SDK下载结束**********************************************/
+/******************************************代办事务页开始********************************************************/
+.ComOut{
+    width:100%;
+    height:400px;
+    background:#fff;
+    margin-top:20px;
+}
+.ComOutLeft{
+    width:25%;
+    height:380px;
+    background:#fff;
+    position: relative;
+}
+.ComOwn{
+    width:100%;
+    height:170px;
+    border:1px solid #3175b8;
+}
+.ComWeather{
+    width:100%;
+    height:190px;
+    border:1px solid #3175b8;
+    position:absolute;
+    bottom:0;
+}
+.ComOutRight{
+    width:74%;
+    height:380px;
+    border:1px solid #3175b8;
+    position:relative;
+}
+.ComRemind{
+    width:100%;
+    border:1px solid #3175b8;
+    background:#fff;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    overflow:auto;
+    position:relative;
+}
+
+.ComTitle{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    background:#3175b8;
+    text-indent: 30px;
+    color:#fff;
+}
+.ComArticle{
+    margin-left:10px;
+    line-height:25px;
+    font-size:15px;
+    position: relative;
+    cursor: pointer;
+}
+.ComArticle a:hover{
+    color:#3175b8;
+}
+.ComTime{
+    position:absolute;
+    right:2%;
+}
+.ComDetail{
+    text-indent:40px;
+    line-height:20px;
+}
+.ComMore{
+    position:absolute;
+    bottom:10px;
+    right:20px;
+}
+.SelfNew{
+    text-align:center;
+    color:#3175b8;
+    margin-top:9px;
+}
+.SelfDetail{
+    color:#3175b8;
+}
+
+/*******************************************代办事务页结束*******************************************************/
+/*******************************************第一个欢迎页开始***************************************/
+.APP_{
+    margin:10px;
+}
+.APP_>img{
+    padding-top:25px;
+}
+/*******************************************第一个欢迎页结束***************************************/
+/*********************************修改密码开始**********************************/
+.changeOut{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:400px;
+    margin-top:-100px;
+    margin-left:-200px;
+    text-align: right;
+
+}
+.changeInput{
+    margin-bottom:20px;
+    width:300px;
+    height:30px;
+    border:1px solid #ddd;
+    border-radius:5px;
+}
+/*********************************修改密码结束**********************************/
+
+

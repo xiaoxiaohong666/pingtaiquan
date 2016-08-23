@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="../../css/gray/header/header.css"/>
+    <link rel="stylesheet" href="../../css/gray/footer/footer.css"/>
+    <link rel="stylesheet" href="../../css/gray/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <link rel="stylesheet" href="../../css/gray/base/kkpager_blue.css"/>
+    <script src="../../js/jquery-1.11.3.js"></script>
+    <script src="../../js/html5shiv.min.js"></script>
+    <script src="../../js/respond.min.js"></script>
+    <script src="../../js/kkpager.min.js"></script>
+    <script src="../../tool/My97DatePicker/WdatePicker.js"></script>
+    <script src="../../js/menujson.js"></script>
+    <script>
+        $(document).ready(function(){
+            menujson(1);
+        });
+    </script>
+    <script></script>
+    <title>功能主页面</title>
+</head>
+<body>
+<div class="DomUpBody">
+    <!--页面头部 css的样式放在header.css-->
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <!--header开始-->
+    <div class="header">
+        <div  class="headerTopRight">
+            <div class="wrap">
+                <ul>
+                    <li class="NEWS">
+                        <a href="#" class="News">消息 <span class="NewsBar">(1)</span></a>
+                    </li>
+                    <li class="USER">
+                        <h1 class="User"><i></i>管理员<b></b></h1>
+                        <div class="change" >
+                            <a class="changePwd" href="change.html"> <i></i>修改密码</a>
+                            <a class="changeExit" href="login.html"> <i></i>退出</a>
+                        </div>
+                    </li>
+                    <li><a href="" class="SDK">说明文档</a></li>
+                    <li><a class="SDK" onclick="sdk(1)" href="#">SDK下载</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="wrap">
+            <a href=""><img src="../../img/gray/logo.png" class="logo" alt=""/></a>
+        </div>
+        <div  class="headerNav" id="divid">
+            <button  class="left" type="button" onclick="lfun()"></button>
+            <ul class="nav">
+
+            </ul>
+
+            <button  class="right" type="button" onclick="rfun()"></button>
+        </div>
+
+    </div>
+    <div class="headerNavBar"></div>
+    <div class="ask">
+        <ul>
+            <li>
+                <a href=""  class="askword asked">销售咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">商务咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">运营咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword customAsked">客服咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword back">返回顶部</a>
+            </li>
+            <li>
+                <button type="button" class="closeAsk">关闭</button>
+            </li>
+        </ul>
+    </div>
+    <div class="left_middle" >
+        <h1 class="Title">移动导航</h1>
+        <ul>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">我要去三</a></li>
+            <li><a href="">我要去四</a></li>
+        </ul>
+        <button type="button" class="closeTitle">关闭</button>
+    </div>
+
+    </body>
+    <script>
+        $(document).ready(function() {
+
+            $(".nav li").hover(function() {
+                $('ul', this).fadeIn("fast");
+                // $("a b",this).slideDown("fast");
+                $(this).children().addClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7"});
+            }, function() {
+                $('ul', this).fadeOut("fast");
+                // $("a b",this).slideUp("fast");
+                $(this).children().removeClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid transparent"});
+            });
+        });
+        $(document).ready(function(){
+            $(".nav li a b").css("display","none");
+        });
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $(".right_middle p,.right_middle ul").show();
+            });
+            $(".show").click(function(){
+                $(".right_middle p,.right_middle ul").hide();
+            })
+        });
+        $(document).ready(function(){
+            $(".User").click(function(){
+                if($(".change").css("display")=="none"){
+                    $(".change").slideDown();
+                }else{
+                    $(".change").slideUp();
+                }
+            });
+        });
+        $(document).ready(function(){
+            $(".closeAsk").click(function(){
+                $(".ask").hide();
+            });
+            $(".closeTitle").click(function(){
+                $(".left_middle").hide();
+            });
+        });
+
+    </script>
+    </html>
+    <div class="DomBody" style="padding-bottom:185px;" > <!--内容区样式全部放在pagebody.css-->
+        <div class="DomMatter"><!--内容区-->
+            <div class="ComOut">
+                <div class="ComOutLeft lf">
+                    <div class="ComOwn">
+                        <h1 class="ComTitle">个人信息</h1>
+                        <p class="SelfNew">登录账户 :<span class="SelfDetail">张三</span></p>
+                        <p class="SelfNew">公司名称 :<span class="SelfDetail">MCAs</span></p>
+                        <p class="SelfNew">联系手机 :<span class="SelfDetail">13720207598</span></p>
+                        <p class="SelfNew">账户状态 :<span class="SelfDetail">正常</span></p>
+                    </div>
+                    <div class="ComWeather">
+                        <h1 class="ComTitle">天气</h1>
+                        <iframe allowtransparency="true" frameborder="0" width="100%" style="margin:25px auto;" height="96" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=2&z=1&t=0&v=0&d=1&bd=0&k=000000&f=0080ff&q=1&e=1&a=1&c=54511&w=195&h=96&align=center"></iframe>
+                    </div>
+                </div>
+                <div class="ComOutRight rf">
+                    <h1 class="ComTitle">任务中心</h1>
+                    <p class="ComArticle"><a href="">现在没有与您相关的任务信息!</a><span class="ComTime"></span></p>
+                    <!--<p class="ComArticle"><a href="">2 虚假医药广告真该歇歇了</a><span class="ComTime">2016-06-11</span></p>-->
+                    <!--<p class="ComArticle"><a href="">3 打击广告作弊，哪些经验值得借鉴？</a><span class="ComTime">2016-06-12</span></p>-->
+                    <!--<p class="ComArticle"><a href="">4 品牌新营销：女人一生要听多少次“千万</a><span class="ComTime">2016-06-14</span></p>-->
+                    <!--<p class="ComArticle"><a href="">5 大众花了3秒拍出了这支2分钟的广告！</a><span class="ComTime">2016-06-19</span></p>-->
+                    <!--<p class="ComArticle"><a href="">6 《中国互联网电视发展蓝皮书》 日前发布</a><span class="ComTime">2016-06-20</span></p>-->
+                    <!--<a href="" class="ComMore">点击加载更多</a>-->
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="ComRemind">
+                <h1 class="ComTitle">信息中心</h1>
+                <p style="text-indent: 40px;padding-top:20px; cursor:pointer;">1 发布真实有效的广告！</p>
+                <p style="text-indent: 40px; cursor:pointer;">2 网络广告的放置方法！</p>
+                <p style="text-indent: 40px; cursor:pointer;">3 网络广告类型！</p>
+                <p style="text-indent: 40px; cursor:pointer;">4 最新最全网络广告法！</p>
+                <p style="text-indent: 40px; cursor:pointer;">5 广告对生活的影响！</p>
+                <a href="" class="ComMore">加载更多</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--页面尾部 footer.css-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="footer" style="margin-top:-195px;">
+    <div class="ComUse">
+        <h1 class="ComTitle">应用</h1>
+        <p style="text-align:center;line-height:100px">
+            <a href="http://changba.com/" class="APP_"><img src="../../img/blue/APP_01.png" alt=""/></a>
+            <a href="http://lbsyun.baidu.com/" class="APP_"><img src="../../img/blue/APP_02.png" alt=""/></a>
+            <a href="http://meiyan.meitu.com/" class="APP_"><img src="../../img/blue/APP_03.png" alt=""/></a>
+            <a href="http://www.qunar.com/" class="APP_"><img src="../../img/blue/APP_04.png" alt=""/></a>
+            <a href="http://www.vip.com/" class="APP_"><img src="../../img/blue/APP_05.png" alt=""/></a>
+            <a href="http://toutiao.com/" class="APP_"><img src="../../img/blue/APP_06.png" alt=""/></a>
+            <a href="http://changba.com/" class="APP_"><img src="../../img/blue/APP_07.png" alt=""/></a>
+            <a href="http://lbsyun.baidu.com/" class="APP_"><img src="../../img/blue/APP_08.png" alt=""/></a>
+            <a href="http://meiyan.meitu.com/" class="APP_"><img src="../../img/blue/APP_09.png" alt=""/></a>
+            <a href="http://www.qunar.com/" class="APP_"><img src="../../img/blue/APP_10.png" alt=""/></a>
+            <a href="http://www.vip.com/" class="APP_"><img src="../../img/blue/APP_11.png" alt=""/></a>
+            <a href="http://toutiao.com/" class="APP_"><img src="../../img/blue/APP_12.png" alt=""/></a>
+        </p>
+    </div>
+    <div class="link">
+        <a href="#">关于我们</a>
+        <a href="">|</a>
+        <a href="#">联系我们</a>
+        <a href="">|</a>
+        <a href="#">服务条款</a>
+        <a href="">|</a>
+        <a href="#">隐私政策</a>
+        <a href="">|</a>
+        <a href="#">常见问题</a>
+        <a href="">京ICP备05032905号</a>
+    </div>
+</div>
+</body>
+</html>
+<!-- 页面尾部结束-->
+</body>
+
+<script>
+    $(document).ready(function(){
+        $(".last").click(function(){
+            if($(".DomSelectTable").css("display")=="none"){
+                $(".DomSelectTable").show();
+            }else{
+                $(".DomSelectTable").hide();
+            }
+        });
+    })
+</script>
+<script src="../../js/twoButton.js"></script>
+
+</html>

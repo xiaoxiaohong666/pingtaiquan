@@ -1,0 +1,180 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-size:12px;
+    box-sizing: border-box;
+    font-family: "Î¢ÈíÑÅºÚ";
+}
+a{
+    text-decoration:none;
+}
+a{
+    color:#666;
+}
+.lf{
+    float:left;
+}
+.rf{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+.bg{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+}
+.bg > img {
+    height:100%;
+    min-height:720px;
+    width:100%;
+    border:0;
+    padding-bottom:50px;
+}
+
+.wrap{
+    width:1510px;
+    margin:0 auto;
+}
+.main{
+    width:100%;
+    top:10%;
+}
+.logo{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    margin-top:20px;
+}
+.main_out{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    border:3px solid #9aa8fe;
+    box-shadow:0 0 20px #8272fb;
+    width:350px;
+    height:380px;
+    background:#fff;
+}
+.logodown{
+    padding-left:10px;
+}
+.middle{
+    height:75px;
+    text-align:center;
+}
+.down{
+    font-size:13px;
+    color:red;
+    margin-top:15px;
+    margin-bottom:2px;
+    margin-left:45px;
+}
+.up{
+    width:15px;
+    height:15px;
+    vertical-align: middle;
+}
+.right{
+    margin-bottom:38px;
+    position:relative;
+    color:#fff;
+    width:328px;
+}
+.email,.pass,.passtest{
+    padding-left:35px;
+    width:250px;
+    height:50px;
+    line-height:50px;
+    border:1px solid #9aa8fe;
+    box-shadow:0 0 5px #9aa8fe;
+    border-radius:5px;
+    margin-left:45px;
+    background:#fff;
+    font-size:17px;
+}
+.emailicon,.passicon,.passtesticon{
+    background:url(../../../img/yangshi/login/icon.png) no-repeat 0 0;
+    display:block;
+    width:25px;
+    height:25px;
+    position:absolute;
+    top:15px;
+    left:55px;
+}
+.passicon{
+    background-position:0 -76px;
+}
+.passtesticon{
+    background-position:0 -160px;
+}
+.passtest{
+    width:160px;
+    height:50px;
+    line-height:50px;
+    border-radius:5px;
+    border:1px solid #bfbfc0;
+}
+.rember_user{
+    position:absolute;
+    top:60px;
+    right:30px;
+    font-size:15px;
+    color:#848487;
+}
+.rember_user i{
+    background:url(../../../img/yangshi/login/icon.png) no-repeat 0 190px;
+}
+.LG{
+    display:inline-block;
+    font-size:20px;
+    font-weight:bold;
+    width:120px;
+    height:50px;
+    background:#9aa8fe;
+    color:#fff;
+    border-radius:5px;
+    border:none;
+    box-shadow:0 2px 2px #9aa8fe;
+    margin-left:45px;
+    float:left;
+}
+.fright{
+    border:2px solid #9aa8fe;
+    box-shadow:0 0 5px #9aa8fe;
+    font-size:20px;
+    font-weight:bold;
+    width:120px;
+    height:50px;
+    line-height:50px;
+    border-radius:5px;
+    text-align:center;
+    background:#fff;
+    color:#adb8fe;
+    float:right;
+    margin-right:30px;
+}
+.footer{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    height:50px;
+    line-height:50px;
+    background:#af93fe;
+    text-align:center;
+}
+.link a{
+    color:#fff;
+    font-size:20px;
+}

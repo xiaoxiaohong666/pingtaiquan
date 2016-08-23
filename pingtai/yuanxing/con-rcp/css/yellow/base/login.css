@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+    font-size:12px;
+}
+a{
+    text-decoration:none;
+}
+a{
+    color:#666;
+}
+.bg{
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+}
+.bg > img {
+    height:100%;
+    min-height:720px;
+    width:100%;
+    border:0;
+}
+
+.wrap{
+    width:1510px;
+    margin:0 auto;
+}
+.main{
+    position:absolute;
+    width:100%;
+    top:10%;
+}
+.login{
+    width:319px;
+    height:653px;
+    background:url(../../../img/yellow/login/lognbg.png) no-repeat;
+}
+.logn{
+    background:url(../../../img/yellow/login/iconics.png) no-repeat 0 -153px;
+    padding-left:65px;
+    padding-bottom:65px;
+}
+.logo{
+    margin-top:150px;
+}
+.logodown{
+    padding-left:10px;
+}
+.middle{
+    height:75px;
+    text-align:center;
+}
+.down{
+    color:red;
+    margin:10px 25px;
+}
+.up{
+    width:15px;
+    height:15px;
+    vertical-align: middle;
+}
+.right{
+    margin-left:25px;
+    margin-right:10px;
+    margin-bottom:15px;
+    position:relative;
+    color:#fff;
+}
+.email,.pass{
+    padding-left:20px;
+    width:240px;
+    height:30px;
+    border:1px solid #5f6064;
+    border-radius:5px;
+    background:#33363c;
+    color:#fff;
+}
+.emailicon,.passicon{
+    background:url(../../../img/yellow/login/iconics.png) no-repeat 0 -133px;
+    display:block;
+    width:15px;
+    height:15px;
+    position:absolute;
+    top:9px;
+    left:5px;
+}
+.passicon{
+    background-position:0 -74px;
+}
+.passtest{
+    width:120px;
+    height:30px;
+    line-height:30px;
+    border-radius:5px;
+    border:1px solid #f39801;
+}
+.LG{
+    width:260px;
+    height:30px;
+    background:#f39801;
+    border:1px solid #9b937c;
+    color:#fff;
+    border-radius:5px;
+}
+.fleft{
+    color:#fff;
+}
+.fright{
+   float:right;
+    padding-right:23px;
+    color:#fff;
+}

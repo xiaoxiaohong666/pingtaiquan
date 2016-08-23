@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="../../../css/gray/header/header.css"/>
+    <link rel="stylesheet" href="../../../css/gray/footer/footer.css"/>
+    <link rel="stylesheet" href="../../../css/gray/base/pagebody.css"/> <!-- 存放主体部分的css样式 -->
+    <link rel="stylesheet" href="../../../css/gray/base/kkpager_blue.css"/>
+    <link rel="stylesheet" href="../../../css/gray/base/sweetalert.css"/>
+    <script src="../../../js/jquery-1.11.3.js"></script>
+    <script src="../../../js/html5shiv.min.js"></script>
+    <script src="../../../js/respond.min.js"></script>
+    <script src="../../../js/kkpager.min.js"></script>
+    <script src="../../../js/jquery.easyui.min.js"></script>
+    <script src="../../../js/sweetalert.min.js"></script>
+    <script src="../../../js/menujson.js"></script>
+    <script>
+        $(document).ready(function() {
+            menujson(2);
+            jQuery("#allcheck").click(function(){
+                jQuery("input[name=id]").prop("checked",jQuery("#allcheck").prop("checked"));
+            });
+            var jsondata = [{id: 1, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:""},
+                {id: 2, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:""},
+                {id: 3, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:""},
+                {id: 4, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:""},
+                {id: 5, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:""},
+                {id: 6, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:" "},
+                {id: 7, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:" "},
+                {id: 8, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:" "},
+                {id: 9, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:" "},
+                {id: 10, code:"input", name: "安卓-网易新闻", garden: "Android", time: "2016-02-02",money:"0.0", state:"正常",handle:" "}
+            ];
+            var table = $('#tablekey');
+            //  alert(jsondata.length);
+
+            for (var i = 0; i < jsondata.length; i++) {
+                //alert(i);
+                table.append("<tr>" +
+                        "<td align='center'>" + jsondata[i].id + "</td>" +
+                        "<td align='center'>" + jsondata[i].name + "</td>" +
+                        "<td align='center'>" + jsondata[i].garden + "</td>" +
+                        "<td align='center'>" + jsondata[i].time + "</td>" +
+                        "<td align='center'>" + jsondata[i].money + "</td>" +
+                        "<td align='center'  id='sta'>" +jsondata[i].state+ "</td>" +
+                        "<td align='center'><a href='edit.html'>进入策略</a><span>||</span><a href='#'>确认下单</a><span>||</span><a href='#'>强制删除</a></td>" +
+                        "</tr>");
+            }
+
+        })
+    </script>
+    <title>功能主页面</title>
+</head>
+<body>
+
+<div class="DomUpBody">
+    <!--页面头部 css的样式放在header.css-->
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+    <!--header开始-->
+    <div class="header">
+        <div  class="headerTopRight">
+            <div class="wrap">
+                <ul>
+                    <li class="NEWS">
+                        <a href="" class="News">消息 <span class="NewsBar">(1)</span></a>
+                    </li>
+                    <li  class="USER">
+                        <h1 class="User"><i></i>管理员<b></b></h1>
+                        <div class="change" >
+                            <a class="changePwd" onclick="shu(2)" href=""> <i></i>修改密码</a>
+                            <a class="changeExit" onclick="exit(2)" href=""> <i></i>退出</a>
+                        </div>
+                    </li>
+                    <li><a class="SDK" onclick="sdk(2)" href=" ">SDK下载</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="wrap">
+            <a href=""><img src="../../../img/gray/logo.png" class="logo" alt=""/></a>
+        </div>
+        <div  class="headerNav" id="divid">
+            <button  class="left" type="button" onclick="lfun()"></button>
+            <ul class="nav">
+
+            </ul>
+
+            <button  class="right" type="button" onclick="rfun()"></button>
+        </div>
+
+    </div>
+    <div class="headerNavBar"></div>
+    <div class="ask">
+        <ul>
+            <li>
+                <a href=""  class="askword asked">销售咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">商务咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword asked">运营咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword customAsked">客服咨询</a>
+            </li>
+            <li>
+                <a href="" class="askword back">返回顶部</a>
+            </li>
+            <li>
+                <button type="button" class="closeAsk">关闭</button>
+            </li>
+        </ul>
+    </div>
+    <div class="left_middle" >
+        <h1 class="Title">移动导航</h1>
+        <ul>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">统计报表</a></li>
+            <li><a href="">我要去三</a></li>
+            <li><a href="">我要去四</a></li>
+        </ul>
+        <button type="button" class="closeTitle">关闭</button>
+    </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $(".nav li").hover(function() {
+                $('ul', this).fadeIn("fast");
+                // $("a b",this).slideDown("fast");
+                $(this).children().addClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid #c8d8e7"});
+            }, function() {
+                $('ul', this).fadeOut("fast");
+                // $("a b",this).slideUp("fast");
+                $(this).children().removeClass("hover");
+                $(".headerNavBar").css({"border-top":"1px solid transparent"});
+            });
+        });
+        $(document).ready(function(){
+            $(".nav li a b").css("display","none");
+        });
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $(".right_middle p,.right_middle ul").show();
+            });
+            $(".show").click(function(){
+                $(".right_middle p,.right_middle ul").hide();
+            })
+        });
+        $(document).ready(function(){
+            $(".User").click(function(){
+                if($(".change").css("display")=="none"){
+                    $(".change").slideDown();
+                }else{
+                    $(".change").slideUp();
+                }
+            });
+        });
+        $(document).ready(function(){
+            $(".closeAsk").click(function(){
+                $(".ask").hide();
+            });
+            $(".closeTitle").click(function(){
+                $(".left_middle").hide();
+            })
+        })
+    </script>
+    </html>
+
+
+    <div class="DomBody" > <!--内容区样式全部放在pagebody.css-->
+        <div class="wrap">
+            <!--bread_nav面包屑开始-->
+            <div class="DomBread_nav">
+                <i></i> <a href="" >订单管理</a>
+                <a>> </a>
+                <a href="">客户订单</a>
+            </div>
+            <!--bread_nav面包屑结束-->
+        </div> <!--面包屑（功能引栏）-->
+        <!--按钮区-->
+        <!--<video src="../../img/xiaoshiping.mp4" controls></video>-->
+        <div class="DomSelect"> <!--查询条件区-->
+            <div class="DomSelectLine">
+                <p class="wrap">
+                    <button type="button" class="first">查询</button>
+                    <button type="button" class="last"></button>
+                </p>
+            </div>
+            <div class="wrap">
+                <table class="DomSelectTable">
+                    <tr>
+                        <td width="100px" align="right">订单状态：</td>
+                        <td >
+                            <select style="width:200px" name="" class="SearchSelect">
+                                <option value="">-全部-</option>
+                                <option value="">阿泰</option>
+                                <option value="">meika</option>
+                                <option value="">大功率的牛</option>
+                            </select>
+                        </td>
+                        <td width="100px" align="right"> 选择客户：</td>
+                        <td>
+                            <select style="width:200px" name="" class="SearchSelect">
+                                <option value="">1</option>
+                                <option value="">项目1</option>
+                                <option value="">项目2</option>
+                                <option value="">项目3</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div><!--查询条件区-->
+        <div class="clear"></div>
+        <div class="DomMatter"><!--内容区-->
+            <div class="DomPageMatter" style="background:#fff;">
+                <div class="clear"></div>
+                <table id="tablekey"  class="TablePage" border="1" bordercolor="#ddd" cellspacing="0" cellpadding="0" >
+                    <thead>
+                    <tr>
+                        <th width="5%">序号</th>
+                        <th width="15%">客户名称</th>
+                        <th width="10%">订单名称</th>
+                        <th width="20%">创建时间</th>
+                        <th width="10%">预估总价（元）</th>
+                        <th width="10%">状态</th>
+                        <th width="15%">操作</th>
+                    </tr>
+                    </thead>
+                </table>
+                <div class="wrap">
+
+                    <div id="kkpager">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面尾部 footer.css-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="footer">
+    <div class="link">
+        <a href="#">关于我们</a>
+        <a href="">|</a>
+        <a href="#">联系我们</a>
+        <a href="">|</a>
+        <a href="#">服务条款</a>
+        <a href="">|</a>
+        <a href="#">隐私政策</a>
+        <a href="">|</a>
+        <a href="#">常见问题</a>
+        <a href="">京ICP备05032905号</a>
+    </div>
+</div>
+</body>
+</html>
+<!-- 页面尾部结束-->
+</body>
+
+<script>
+    $(document).ready(function(){
+//        $(function(){
+//            $(".delButton").click(function() {
+//                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+//                    n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+//                        $.messager.confirm('提示', '你确认要删除应用吗', function(r){
+//                            if (r){
+//                                $("#tablekey").find("tr:eq("+n+")").remove();
+//                            }
+//                        });
+//                });
+//            });
+//        });
+        //冻结的按钮
+        $(".iceButton").click(function(){
+            var checklength = $("input[name='id']:checked").length;
+            if(checklength==0){
+                swal("OMG得选一条数据", "冻结操作失败了!", "error");
+                return ;
+            }
+
+            swal({
+                title: "您确定要冻结吗？",
+                text: "您确定要冻结这条数据？",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                confirmButtonText: "是的，我要冻结",
+                confirmButtonColor: "#ec6c62"
+            }, function() {
+//                $.ajax({
+//                    url: "do.php",
+//                    type: "DELETE"
+//                }).done(function(data) {
+//                    swal("操作成功!", "已成功删除数据！", "success");
+//                }).error(function(data) {
+//                    swal("OMG", "删除操作失败了!", "error");
+//                });
+
+                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+                    var   n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+                    $("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("冻结");
+                    // $("#tablekey").find("tr:eq("+n+")").remove();
+                    swal("操作成功","已成功冻结数据","success");
+                    $("input[name='id']:checked").removeAttr("checked");
+
+                });
+            });
+
+        });
+        //解冻的按钮
+        $(".iceoutButton").click(function(){
+            var checklength = $("input[name='id']:checked").length;
+            if(checklength==0){
+                swal("OMG得选一条冻结数据", "解冻操作失败了!", "error");
+                return ;
+            }
+
+            swal({
+                title: "您确定要解冻吗？",
+                text: "您确定要解冻这条数据？",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                confirmButtonText: "是的，我要解冻",
+                confirmButtonColor: "#ec6c62"
+            }, function() {
+//                $.ajax({
+//                    url: "do.php",
+//                    type: "DELETE"
+//                }).done(function(data) {
+//                    swal("操作成功!", "已成功删除数据！", "success");
+//                }).error(function(data) {
+//                    swal("OMG", "删除操作失败了!", "error");
+//                });
+
+                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+                    var   n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+                    $("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("正常");
+                    // $("#tablekey").find("tr:eq("+n+")").remove();
+                    swal("操作成功","已成功解冻数据","success");
+                    $("input[name='id']:checked").removeAttr("checked");
+
+                });
+            });
+
+        });
+        //删除的按钮
+
+        $(".delButton").click(function(){
+            var checklength = $("input[name='id']:checked").length;
+            if(checklength==0){
+                swal("OMG得选一条数据", "删除操作失败了!", "error");
+                return ;
+            }
+
+            swal({
+                title: "您确定要删除吗？",
+                text: "您确定要删除这条数据？",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                confirmButtonText: "是的，我要删除",
+                confirmButtonColor: "#ec6c62"
+            }, function() {
+//                $.ajax({
+//                    url: "do.php",
+//                    type: "DELETE"
+//                }).done(function(data) {
+//                    swal("操作成功!", "已成功删除数据！", "success");
+//                }).error(function(data) {
+//                    swal("OMG", "删除操作失败了!", "error");
+//                });
+
+                $("input[name='id']:checked").each(function() { // 遍历选中的checkbox
+                    var   n = $(this).parents("tr").index()+1;  // 获取checkbox所在行的顺序
+                    //$("#tablekey").find("tr:eq("+n+")").find($("#sta")).text("冻结");
+                    $("#tablekey").find("tr:eq("+n+")").remove();
+                    swal("操作成功","已成功删除数据","success");
+
+
+                });
+            });
+
+        });
+//添加按钮
+        $(".reviseButton").click(function(){
+            window.location.href="add.html";
+        });
+        $(".last").click(function(){
+            if($(".DomSelectTable").css("display")=="none"){
+                $(".DomSelectTable").show();
+            }else{
+                $(".DomSelectTable").hide();
+            }
+        });
+    });
+    function getParameter(name) {
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
+
+    //init
+    $(function(){
+        var totalPage = 20;
+        var totalRecords = 390;
+        var pageNo = getParameter('pno');
+        if(!pageNo){
+            pageNo = 1;
+        }
+        //生成分页
+        //有些参数是可选的，比如lang，若不传有默认值
+        kkpager.generPageHtml({
+            pno : pageNo,
+            //总页码
+            total : totalPage,
+            //总数据条数
+            totalRecords : totalRecords,
+            //链接前部
+            hrefFormer : 'pager_test',
+            //链接尾部
+            hrefLatter : '.html',
+            getLink : function(n){
+                return this.hrefFormer + this.hrefLatter + "?pno="+n;
+            }
+            /*
+             ,lang				: {
+             firstPageText			: '首页',
+             firstPageTipText		: '首页',
+             lastPageText			: '尾页',
+             lastPageTipText			: '尾页',
+             prePageText				: '上一页',
+             prePageTipText			: '上一页',
+             nextPageText			: '下一页',
+             nextPageTipText			: '下一页',
+             totalPageBeforeText		: '共',
+             totalPageAfterText		: '页',
+             currPageBeforeText		: '当前第',
+             currPageAfterText		: '页',
+             totalInfoSplitStr		: '/',
+             totalRecordsBeforeText	: '共',
+             totalRecordsAfterText	: '条数据',
+             gopageBeforeText		: '&nbsp;转到',
+             gopageButtonOkText		: '确定',
+             gopageAfterText			: '页',
+             buttonTipBeforeText		: '第',
+             buttonTipAfterText		: '页'
+             }*/
+
+            //,
+            //mode : 'click',//默认值是link，可选link或者click
+            //click : function(n){
+            //	this.selectPage(n);
+            //  return false;
+            //}
+        });
+    });
+</script>
+<script src="../../../js/twoButton.js"></script>
+</html>
