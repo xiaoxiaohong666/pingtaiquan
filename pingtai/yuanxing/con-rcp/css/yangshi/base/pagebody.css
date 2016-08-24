@@ -247,6 +247,7 @@ a{
 
 .TablePage  tr td{
     height:60px;
+    width:300px;
 }
  .little{
      display:inline-block;

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../../css/blue/base/kkpager_blue.css"/>
     <link rel="stylesheet" href="../../../css/blue/base/easyui.css"/>
     <link rel="stylesheet" href="../../../css/blue/base/sweetalert.css"/>
-    <link rel="stylesheet" href="../../../css/tree.css"/>
+    <link rel="stylesheet" href="../../../css/blue/tree.css"/>
     <script src="../../../js/jquery-1.11.3.js"></script>
     <script src="../../../js/html5shiv.min.js"></script>
     <script src="../../../js/respond.min.js"></script>
@@ -418,10 +418,12 @@
 
             $(".Searchtable").click(function(){
                 if($("#checkbox").prop("checked")){
+                    $("#tablepagepage").css("display","none");
                     $(".TreeTable").css("display",'block');
                 }
                 else{
                     $("#tablepagepage").css("display","block");
+                    $(".TreeTable").css("display",'none');
                 }
             });
 //            if($(".MediaTree").attr("checked")=="checked"){

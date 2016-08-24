@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/div.css"/> <!-- 存放主体部分的css样式 -->
+    <script src="js/jquery-1.11.3.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="wrap">
+        <table border="1" cellpadding="0" cellspacing="0" class="token_table">
+            <tr>
+                <td id="aaa"  height="300px" width="800px">
+                    <input type="text" class="token_input" placeholder="请输入你要查的东西"/>
+                    <button class="token_click" onclick="myclick()">点击查询</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+
+    function myclick(){
+        var zhi=$( ".token_input").val();
+        $( ".token_input").val("").removeAttr("placeholder");
+        $(".token_table tr td").append(
+               "<div class='token'>"+"<span class='token_label'>"+zhi+"</span>"+"<a href='#' class='token_close' onclick='close_token(this)'>"+"x"+"</a>"+"</div>"
+        );
+//            var zhi=$( ".token_input").val();
+//            $(".token_label").append('<span>'+zhi+'</span>');
+//        $(".token").css("display","inline-block");
+    }
+    function close_token(a){
+//        $(this).parent().hide();
+        $(a).parent().hide();
+
+    }
+
+
+</script>
+</html>

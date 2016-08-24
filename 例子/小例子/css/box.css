@@ -1,0 +1,100 @@
+
+
+/****************************************四个不同颜色的启用开始********************************************************/
+.box_up_red,.box_up_green,.box_up_blue,.box_up_greens,.box_up_yellow{
+    text-align:center;
+    width:254px;
+    border:1px solid #f26d4f;
+    border-left:10px solid #f26d4f;
+    border-radius:10px;
+    margin:10px 10px;
+    float:left;
+}
+.box_up_green{
+    border:1px solid #a4cb70;
+    border-left:10px solid #a4cb70;
+}
+.box_up_blue{
+    border:1px solid #16a0e8;
+    border-left:10px solid #16a0e8;
+}
+.box_up_greens{
+    border:1px solid #05b009;
+    border-left:10px solid #05b009;
+}
+.box_up_yellow{
+    border:1px solid #f9df06;
+    border-left:10px solid #f9df06;
+}
+.box_light_red{
+    background:url(../img/box_box.png) no-repeat 0 0;
+    padding-left:30px;
+    padding-bottom:10px;
+    margin-left:-180px;
+}
+.box_light_green{
+    background:url(../img/box_box.png) no-repeat 0 -48px;
+    padding-left:30px;
+    padding-bottom:10px;
+    margin-left:-180px;
+}
+.box_light_blue{
+    background:url(../img/box_box.png) no-repeat 0 -98px;
+    padding-left:30px;
+    padding-bottom:10px;
+    margin-left:-180px;
+}
+.box_light_greens{
+    background:url(../img/box_box.png) no-repeat 0 -156px;
+    padding-left:30px;
+    padding-bottom:10px;
+    margin-left:-180px;
+}
+.box_light_yellow{
+    background:url(../img/box_box.png) no-repeat 0 -210px;
+    padding-left:30px;
+    padding-bottom:10px;
+    margin-left:-180px;
+}
+.box_out{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    background:#bababa;
+    color:#fff;
+    line-height:20px;
+    float:right;
+    cursor:pointer;
+}
+.box_out:hover{
+    background:red;
+}
+.box_word_red,.box_word_green,.box_word_blue,.box_word_greens,.box_word_yellow{
+    color:#ffb600;
+    font-family:'微软雅黑';
+    font-size:30px;
+    padding:10px;
+
+}
+.box_button_red,.box_button_green,.box_button_blue,.box_button_greens,.box_button_yellow{
+    color:#fff;
+    background:#f26d4f;
+    font-size:15px;
+    padding:10px 15px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+.box_button_green{
+    background:#a4cb70;
+}
+.box_button_blue{
+    background:#16a0e8;
+}
+.box_button_greens{
+    background:#05b009;
+}
+.box_button_yellow{
+    background:#f9df06;
+}
+/****************************************四个不同颜色的启用结束********************************************************/

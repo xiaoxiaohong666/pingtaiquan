@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/left.css"/> <!-- 存放主体部分的css样式 -->
+    <script src="js/jquery-1.11.3.js"></script>
+    <title></title>
+</head>
+<body>
+<div class="wrap">
+   <div  class="accordion">
+       <dl>
+           <dt class="active">
+               <span>性别</span>
+              <span class="number" >01</span>
+           </dt>
+           <dd class="dd"  style="display:none;">
+               <label>男</label>
+               <input type="radio" name="radio"/>
+               <label>女</label>
+               <input type="radio" name="radio"/>
+           </dd>
+           <dt class="active">
+               <span>年龄</span>
+               <span  class="number" >02</span>
+           </dt>
+           <dd class="dd"  style="display:none;" >
+              <span>1</span>
+               <span>2</span>
+           </dd>
+           <dt class="active">
+               <span>月薪</span>
+               <span  class="number" >03</span>
+           </dt>
+           <dd class="dd"  style="display:none;" >
+               <span>100万</span>
+               <span>20万</span>
+           </dd>
+           <dt class="active">
+               <span>年薪</span>
+               <span  class="number">04</span>
+           </dt>
+           <dd class="dd"  style="display:none;">
+               <span>1003万</span>
+               <span>203万</span>
+           </dd>
+           <dt class="active">
+               <span>职业</span>
+               <span  class="number" >05</span>
+           </dt>
+           <dd class="dd"  style="display:none;">
+               <span>1003万</span>
+               <span>203万</span>
+           </dd>
+           <dt class="active">
+               <span>教育程度</span>
+               <span  class="number" >06</span>
+           </dt>
+           <dd class="dd"  style="display:none;">
+               <span>1003万</span>
+               <span>203万</span>
+           </dd>
+           <dt class="active">
+               <span>行业</span>
+               <span class="number" >07</span>
+           </dt>
+           <dd class="dd"  style="display:none;">
+               <span>1003万</span>
+               <span>203万</span>
+           </dd>
+           <dt class="active">
+               <span>人生经历</span>
+               <span  class="number" >08</span>
+           </dt>
+           <dd class="dd"  style="display:none;">
+               <span>1003万</span>
+               <span>203万</span>
+           </dd>
+           <dt class="active">
+               <span>关键</span>
+               <span  class="number">09</span>
+           </dt>
+           <dd class="dd"  style="display:none;">
+               <span>1003万</span>
+               <span>203万</span>
+           </dd>
+       </dl>
+   </div>
+</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.active').click(function () {
+            $(this).parent().find(".dd").hide();
+            $(this).next('.dd'). toggle();
+        });
+    });
+</script>
+</html>

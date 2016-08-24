@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <link rel="stylesheet" href="css/box.css"/> <!-- 存放主体部分的css样式 -->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        (function (){  if(navigator.userAgent.indexOf("Firefox")>0||navigator.userAgent.indexOf("Safari")>0||navigator.userAgent.indexOf("Camino")>0){  }else{        window.location.href="error.html";    }})();
+    </script>
+    <title>功能主页面</title>
+</head>
+<body>
+<div class="DomUpBody">
+    <div class="DomBody" > <!--内容区样式全部放在pagebody.css-->
+
+        <div class="DomMatter"><!--内容区-->
+            <div class="DomPageMatter">
+                <div id="a" class="DomEditMatter">
+                    <!-- 哐哐哐开始-->
+                    <div class="box_up_red">
+                        <span class="box_light_red"></span>
+                        <span class="box_out" >X</span>
+                        <div class="clear"></div>
+                        <h1 class="box_word_red">天常常野茫茫</h1>
+                        <button  class="box_button_red">关闭</button>
+                    </div>
+                    <div class="box_up_green">
+                        <span class="box_light_green"></span>
+                        <span class="box_out" >X</span>
+                        <div class="clear"></div>
+                        <h1 class="box_word_green">啊啊啊啊啊</h1>
+                        <button  class="box_button_green">关闭</button>
+                    </div>
+                    <div class="box_up_blue">
+                        <span class="box_light_blue"></span>
+                        <span class="box_out" >X</span>
+                        <div class="clear"></div>
+                        <h1 class="box_word_blue">啊啊啊啊啊</h1>
+                        <button  class="box_button_blue">关闭</button>
+                    </div>
+                    <div class="box_up_greens">
+                        <span class="box_light_greens"></span>
+                        <span class="box_out" >X</span>
+                        <div class="clear"></div>
+                        <h1 class="box_word_greens">啊啊</h1>
+                        <button  class="box_button_greens">关闭</button>
+                    </div>
+                    <div class="box_up_yellow">
+                        <span class="box_light_yellow"></span>
+                        <span class="box_out" >X</span>
+                        <div class="clear"></div>
+                        <h1 class="box_word_yellow">啊啊啊啊啊</h1>
+                        <button  class="box_button_yellow">关闭</button>
+                    </div>
+                    <!-- 框框框结束-->
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+    $(document).ready(function(){
+        $(".last").click(function(){
+            if($(".DomSelectTable").css("display")=="none"){
+                $(".DomSelectTable").show();
+            }else{
+                $(".DomSelectTable").hide();
+            }
+        });
+
+        $(".box_out").click(function(){
+            $(this).parent().hide();
+        });
+
+        $(".box_button_red").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_red").css("background-position","0 -263px");
+                $(".box_word_red").css("color","#c3c3c3");
+                $(".box_button_red").css("background","#585858");
+                $(".box_up_red").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_red").css("background-position","0 0");
+                $(".box_word_red").css("color","#ffb600");
+                $(".box_button_red").css("background","#f26d4f");
+                $(".box_up_red").css({"border":"1px solid #f26d4f","border-left":"10px solid #f26d4f"});
+
+            }
+
+
+        });
+        $(".box_button_green").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_green").css("background-position","0 -263px");
+                $(".box_word_green").css("color","#c3c3c3");
+                $(".box_button_green").css("background","#585858");
+                $(".box_up_green").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_green").css("background-position","0 -48px");
+                $(".box_word_green").css("color","#ffb600");
+                $(".box_button_green").css("background","#a4cb70");
+                $(".box_up_green").css({"border":"1px solid #a4cb70","border-left":"10px solid #a4cb70"});
+
+            }
+
+
+        });
+        $(".box_button_blue").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_blue").css("background-position","0 -263px");
+                $(".box_word_blue").css("color","#c3c3c3");
+                $(".box_button_blue").css("background","#585858");
+                $(".box_up_blue").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_blue").css("background-position","0 -98px");
+                $(".box_word_blue").css("color","#ffb600");
+                $(".box_button_blue").css("background","#16a0e8");
+                $(".box_up_blue").css({"border":"1px solid #16a0e8","border-left":"10px solid #16a0e8"});
+
+            }
+
+
+        });
+        $(".box_button_greens").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_greens").css("background-position","0 -263px");
+                $(".box_word_greens").css("color","#c3c3c3");
+                $(".box_button_greens").css("background","#585858");
+                $(".box_up_greens").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_greens").css("background-position","0 -156px");
+                $(".box_word_greens").css("color","#ffb600");
+                $(".box_button_greens").css("background","#05b009");
+                $(".box_up_greens").css({"border":"1px solid #05b009","border-left":"10px solid #05b009"});
+
+            }
+
+
+        });
+        $(".box_button_yellow").click(function(){
+            if($(this).text()=="关闭"){
+                $(this).text("启用");
+                $(".box_light_yellow").css("background-position","0 -263px");
+                $(".box_word_yellow").css("color","#c3c3c3");
+                $(".box_button_yellow").css("background","#585858");
+                $(".box_up_yellow").css({"border":"1px solid #585858","border-left":"10px solid #585858"});
+            }else{
+                $(this).text("关闭");
+                $(".box_light_yellow").css("background-position","0 -210px");
+                $(".box_word_yellow").css("color","#ffb600");
+                $(".box_button_yellow").css("background","#f9df06");
+                $(".box_up_yellow").css({"border":"1px solid #f9df06","border-left":"10px solid #f9df06"});
+
+            }
+
+
+        });
+
+    })
+
+</script>
+</html>
