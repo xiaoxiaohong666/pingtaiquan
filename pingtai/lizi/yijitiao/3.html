@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.3.js"></script>
+</head>
+<script>
+    function gto(url){
+        var newurl= url+document.location.search;
+       // alert(newurl);
+        window.location.href = newurl;
+
+    }
+//    var getParams = function(url) {
+//        if(url === undefined || typeof(url) != 'string'){
+//            return null;
+//        }
+//        items = url.split('?')[1].split('&');
+//        var json = {};
+//        for(var i=0; i< items.length;i++) {
+//            var item = items[i].split('=');
+//            alert(item[1]);
+//            json[item[0]] = item[1];
+//        }
+//        console.log(json);
+//    };
+//    var url=document.referrer;
+//    getParams(url);
+</script>
+<body>
+
+<a href="#" onclick="gto('4.html')">跳到4</a>
+</body>
+</html>

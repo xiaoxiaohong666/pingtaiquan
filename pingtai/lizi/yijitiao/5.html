@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+
+        var getParams = function(url) {
+            if(url === undefined || typeof(url) != 'string'){
+                return null;
+            }
+            items = url.split('?')[1].split('&');
+            var json = {};
+            for(var i=0; i< items.length;i++) {
+//                var item = items[i].split('=');
+
+
+            }
+            var item =items[1].split('=');
+
+            json[item[0]] = item[1];
+            return(item[1]);
+        };
+        var url=document.location.href;
+        var aaa=getParams(url);
+       // alert(aaa);
+        $(document).ready(function(){
+            if(aaa=="blue"){
+                $("h1").css("color",'blue');
+            }else if(aaa=="yellow"){
+                $("h1").css("color",'yellow');
+            }else if(aaa=="gray"){
+                $("h1").css("color",'gray');
+            }
+        });
+
+//(function(){
+//    var urlToObject=function(url){
+//        var urlObject = {};
+//        if (/\?/.test(url)){
+//            var urlString=url.substring(url.indexOf("?")+1);
+//            var urlArray=urlString.split("&");
+//            for(var i=0,len=urlArray.length;i<len;i++){
+//                var urlItem=urlArray[i];
+//                var item = urlItem.split("=");
+//                urlObject[item[0]]=item[1];
+//            }
+//            return urlObject;
+//        }
+//    };
+//    var testUrl="http://softwhy.com/index.php?a=0&b=1&c=2";
+//    var result=urlToObject(testUrl);
+//    for (var key in result){
+//        alert(key);
+//        console.log(result[key]);
+//    }
+//})();
+
+
+//function fetchRequestParmValue(url,paras) {
+//    var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+//    var paraObj = {};
+//    for (i = 0; j = paraString[i]; i++) {
+//        paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+//    }
+//    var returnValue = paraObj[paras.toLowerCase()];
+//    alert(returnValue);
+//    if (typeof (returnValue) == "undefined") {
+//        return "";
+//    } else {
+//        return returnValue;
+//    }
+//}
+//var url=document.location.href;
+//var aaa = fetchRequestParmValue(url,222);
+//        alert(aaa);
+    </script>
+</head>
+<body>
+   <h1>我是最后了</h1>
+</body>
+</html>

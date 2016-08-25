@@ -5,6 +5,12 @@
     <title></title>
     <link rel="stylesheet" href="../../css/blue/base/login.css"/>
     <script src="../../js/jquery-1.11.3.js"></script>
+    <script>
+        function goto(url){
+            var newurl =url+ document.location.search;
+            window.location.href=newurl;
+        }
+    </script>
 </head>
 <body>
 <div class="bg">
@@ -42,7 +48,7 @@
                 <input id="rmbuser" type="checkbox" class="rember_user"/>
             </p>
             <p class="right">
-                <input type="button" class="LG" value="登 录" id="subButton"/>
+                <input type="button" class="LG" value="登 录" id="subButton" onclick="goto('welcome.html')"/>
             </p>
             <p  class="right">
                 <a href="change.html"  class="fleft" ><i></i>忘记密码？</a>
@@ -52,12 +58,4 @@
     </form>
 </div>
 </body>
-<script>
-    $(document).ready(function(){
-        $(".LG").click(function(){
-            window.location.href="welcome.html";
-        })
-    })
-
-</script>
 </html>

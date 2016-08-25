@@ -14,7 +14,7 @@
     <script src="../../tool/My97DatePicker/WdatePicker.js"></script>
     <script src="../../js/menujson.js"></script>
     <script>
-        function getParams(url) {
+         function getParams(url) {
             if(url === undefined || typeof(url) != 'string'){
                 return null;
             }
@@ -22,15 +22,15 @@
             var json = {};
             for(var i=0; i< items.length;i++) {
                 var item = items[i].split('=');
-                var jsonName=(item[1]);
+               var jsonName=(item[1]);
                 json[item[0]] = item[1];
             }
             return jsonName;
 
         }
         var url=document.location.href;
-        var jsonname =  getParams(url);
 
+         var jsonname =  getParams(url);
         $(document).ready(function(){
             if(jsonname=="Media"){
                 menujsonMedia(1);
@@ -38,8 +38,6 @@
                 menujsonClient(1);
             }else if(jsonname=="Run"){
                 menujsonRun(1);
-            }else{
-                menujson(1);
             }
         });
     </script>
@@ -81,12 +79,12 @@
             <a href=""><img src="../../img/blue/logo.png" class="logo" alt=""/></a>
         </div>
         <div  class="headerNav" id="divid">
-            <button  class="left" type="button" onclick="lfun()"></button>
+
             <ul class="nav">
 
             </ul>
 
-            <button  class="right" type="button" onclick="rfun()"></button>
+
         </div>
 
     </div>
@@ -267,6 +265,4 @@
         });
     })
 </script>
-<script src="../../js/twoButton.js"></script>
-
 </html>
