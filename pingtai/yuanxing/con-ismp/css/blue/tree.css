@@ -50,9 +50,11 @@
     text-align:left;
 }
 .TreeTable tr:last-child td:nth-child(n){
-    border-bottom:none;
+     border-bottom:none;
+ }
+.TreeTable1{
+  width:100%;
 }
-
 /*TreeNodeTableµÄÑùÊ½*/
 .TreenodeTable{
     width:100%;
@@ -89,4 +91,23 @@
 }
 .kong_2{
     margin-left:60px;
+}
+.CityOrStrageOut{
+    position:relative;
+}
+.CityOrStrage{
+    position:absolute;
+    left:30px;
+    bottom:-10px;
+    display:none;
+}
+.cityorstrage{
+    display:inline-block;
+    width:50px;
+    height:18px;
+    text-align: center;
+    border-radius:15px;
+    background:#2f73b9;
+    color:#fff;
+    margin:5px;
 }
